@@ -1,0 +1,35 @@
+html, body {
+  font-family: 'Gotham', sans-serif;
+  font-size: 62.5%;
+}
+
+input {
+  font-family: 'Gotham', sans-serif;
+}
+
+.game {
+  margin: 0 auto;
+  max-width: 500px;
+  min-height: 100%;
+  padding: 20px;
+
+  .question {
+    align-content: flex-end;
+
+    p {
+      font-size: 3rem;
+    }
+  }
+
+  > form {
+    padding: 2rem 0;
+
+    input {
+      width: 100%;
+      border: 2px solid #EEE;
+      padding: 1.5rem;
+      font-size: 2rem;
+      border-radius: 5px;
+    }
+  }
+}
