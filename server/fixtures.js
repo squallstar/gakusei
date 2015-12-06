@@ -1,25 +1,23 @@
-// Cleanup collections
-Word.remove({});
-Phrase.remove({});
+Meteor.startup(function () {
 
-// Insert words
-Word.insert({ type: 'object', romaji: 'ringo', kana: ['りんご'] });
+  let fixtures = [
+    [Phrase, 'phrases'],
+    [Word, 'words']
+  ];
 
-Word.insert({ type: 'place', romaji: 'table', kana: ['テーブル'] });
+  _.each(fixtures, (fixture) => {
+    let [ collection, fileName ] = fixture;
 
-Word.insert({ type: 'pointer', romaji: 'this', kana: ['これ'] });
-Word.insert({ type: 'pointer', romaji: 'that', kana: ['それ', 'あれ'] });
+    // Cleanup collection
+    collection.remove({});
 
-Word.insert({ type: 'pointer-object', romaji: 'this', kana: ['この'] });
-Word.insert({ type: 'pointer-object', romaji: 'that', kana: ['その', 'あの'] });
+    // Read fixtures
+    let data = JSON.parse(Assets.getText('fixtures/' + fileName + '.json'));
 
-// Insert phrases
-Phrase.insert({
-  romaji: '{{pointer-object}}{{object}}, please.',
-  kana: '{{pointer-object}}{{object}}、ください。'
-});
+    // Insert data
+    _.each(data, (datum) => {
+      collection.insert(datum);
+    });
+  });
 
-Phrase.insert({
-  romaji: '{{pointer}} wa {{object}}　desu.',
-  kana: '{{pointer}}は{{object}}です.'
 });

@@ -1,0 +1,8 @@
+[
+  { "type": "object", "romaji": "ringo", "kana": ["りんご"] },
+  { "type": "place", "romaji": "table", "kana": ["テーブル"] },
+  { "type": "pointer", "romaji": "this", "kana": ["これ"] },
+  { "type": "pointer", "romaji": "that", "kana": ["それ", "あれ"] },
+  { "type": "pointer-object", "romaji": "this", "kana": ["この"] },
+  { "type": "pointer-object", "romaji": "that", "kana": ["その", "あの"] }
+]
