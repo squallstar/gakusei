@@ -1,7 +1,7 @@
 <template name="question">
   <div class="question">
-    {{#if story}}<h4>{{story.title}}</h4>{{/if}}
     <h5>{{title}}</h5>
     <p>{{{description}}}</p>
+    {{#if story}}<h6>({{story.title}})</h6>{{/if}}
   </div>
 </template>

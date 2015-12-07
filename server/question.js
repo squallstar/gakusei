@@ -58,7 +58,7 @@ Meteor.methods({
       });
     });
 
-    question.type = _.sample(['kana-to-english', 'english-to-kana', 'kana-to-romaji']);
+    question.type = _.sample(['kana-to-english', 'english-to-kana']);
 
     switch (question.type) {
       case 'kana-to-english':
@@ -71,11 +71,11 @@ Meteor.methods({
         question.description = phrase.english;
         question.answer = phrase.kana;
         break;
-      case 'kana-to-romaji':
-        question.title = 'Translate the following Japanese text to Romaji.';
-        question.description = phrase.kana;
-        question.answer = phrase.romaji;
-        break;
+      // case 'kana-to-romaji':
+      //   question.title = 'Translate the following Japanese text to Romaji.';
+      //   question.description = phrase.kana;
+      //   question.answer = phrase.romaji;
+      //   break;
     }
 
     question.description = capitalizeFirstLetter(question.description);

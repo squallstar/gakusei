@@ -1,8 +1,8 @@
 [
   {
     "english": "{{pointer-object}} {{object}}, please.",
-    "romaji": "{{pointer-object}} {{object}}, kudasai.",
-    "kana": "{{pointer-object}}{{object}}、ください。",
+    "romaji": "{{pointer-object}} {{object}} o kudasai.",
+    "kana": "{{pointer-object}}{{object}}をください。",
     "story": "at-the-shop"
   },
   {
