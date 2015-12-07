@@ -1,8 +1,68 @@
 [
-  { "type": "object", "romaji": "ringo", "kana": ["りんご"] },
-  { "type": "place", "romaji": "table", "kana": ["テーブル"] },
-  { "type": "pointer", "romaji": "this", "kana": ["これ"] },
-  { "type": "pointer", "romaji": "that", "kana": ["それ", "あれ"] },
-  { "type": "pointer-object", "romaji": "this", "kana": ["この"] },
-  { "type": "pointer-object", "romaji": "that", "kana": ["その", "あの"] }
+  {
+    "type": "object",
+    "romaji": "ringo",
+    "english": "apple",
+    "kana": ["りんご"]
+  },
+  {
+    "type": "place",
+    "romaji": "teboru",
+    "english": "table",
+    "kana": ["テーブル"]
+  },
+  {
+    "type": "pointer",
+    "romaji": "kore",
+    "english": "this",
+    "kana": ["これ"]
+  },
+  {
+    "type": "pointer",
+    "romaji": "sore",
+    "english": "that",
+    "kana": ["それ"]
+  },
+  {
+    "type": "pointer",
+    "romaji": "are",
+    "english": "that",
+    "kana": ["あれ"]
+  },
+  {
+    "type": "pointer-object",
+    "romaji": "kono",
+    "english": "this",
+    "kana": ["この"]
+  },
+  {
+    "type": "pointer-object",
+    "romaji": "sono",
+    "english": "that",
+    "kana": ["その"]
+  },
+  {
+    "type": "pointer-object",
+    "romaji": "ano",
+    "english": "that",
+    "kana": ["あの"]
+  },
+  {
+    "type": "pointer-person",
+    "romaji": "kochira",
+    "english": "this",
+    "kana": ["こちら"]
+  },
+  {
+    "type": "name",
+    "romaji": "mariko",
+    "english": "Mariko",
+    "kana": ["まりこ"]
+  },
+  {
+    "type": "suffix",
+    "romaji": "san",
+    "english": "Mrs.",
+    "kana": ["さん"]
+  }
 ]
