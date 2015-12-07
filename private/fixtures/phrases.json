@@ -82,5 +82,11 @@
     "romaji": "{{time}} ni {{transport}} de {{place}} ni {{verb-going}}.",
     "kana": "{{time}}に{{transport}}で{{place}}に{{verb-going}}。",
     "story": "travelling"
+  },
+  {
+    "english": "{{time}} I'm {{verg-going}} to {{place}} with {{suffix}} {{name}}.",
+    "romaji": "{{time}} ni {{name}}{{suffix}} to {{place}} ni {{verb-going}}.",
+    "kana": "{{time}}に{{name}}{{suffix}}と{{place}}に{{verb-going}}。",
+    "story": "travelling"
   }
 ]
