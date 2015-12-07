@@ -18,6 +18,5 @@ fourseven:scss
 check
 reactive-var
 meteorhacks:npm
-
-
+fortawesome:fontawesome
 npm-container

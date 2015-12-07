@@ -24,7 +24,7 @@ Meteor.methods({
     return Answer.insert({
       correct: accuracy === 100,
       accuracy: accuracy,
-      errors: parts,
+      parts: parts,
       question: question,
       answer: userAnswer,
       created_at: Date.now()

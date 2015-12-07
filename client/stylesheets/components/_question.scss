@@ -4,6 +4,8 @@
   min-height: 100%;
   background-color: #FFF;
   box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 1;
 
   .question {
     padding: 5rem 2rem 2rem;

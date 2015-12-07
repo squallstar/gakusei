@@ -1,8 +1,18 @@
 <template name="answer">
-  <article>
-    {{> question question}}
-    <div class="answer">
-      {{answer}}
+  <div class="answer {{className}}">
+    <header>
+      <i class="fa fa-{{icon}}"></i>
+    </header>
+    <div class="content">
+      <div class="question">
+        <h4>{{{question.description}}}</h4>
+        <h5>{{{question.answer}}}</h5>
+      </div>
+      <div class="parts">
+        {{#each parts}}
+          <span class={{type}}>{{value}}</span>
+        {{/each}}
+      </div>
     </div>
-  </article>
+  </div>
 </template>

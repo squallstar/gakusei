@@ -1,0 +1,74 @@
+.answers {
+  position: relative;
+  margin: 0 auto;
+  max-width: 400px;
+
+  .answer {
+    background-color: #FFF;
+    display: flex;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    position: relative;
+
+    header {
+      width: 50px;
+      display: flex;
+      flex: 0 1 auto;
+      justify-content: center;
+      align-items: center;
+
+      i {
+        color: #FFF;
+        font-size: 2rem;
+      }
+    }
+
+    &.correct {
+
+      header {
+        background-color: #77962B;
+      }
+    }
+
+    &.wrong {
+
+      header {
+        background-color: #E64B45;
+      }
+    }
+
+    .content {
+      padding: 2rem;
+
+      .question {
+
+        h4 {
+          font-size: 1.7rem;
+          font-weight: normal;
+          margin-bottom: 2rem;
+        }
+
+        h5 {
+          font-size: 1.5rem;
+          font-weight: normal;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .parts {
+
+        span {
+          color: #77962B;
+          font-size: 1.5rem;
+
+          &.added {
+            color: #E64B45;
+          }
+
+          &.removed {
+            color: #AAA;
+          }
+        }
+      }
+    }
+  }
+}
