@@ -12,24 +12,40 @@ Meteor.methods({
       // Get a random word of this type
       let word = _.sample(_.filter(words, (w) => { return w.type === wordType; }));
 
-      if (word) {
-        phrase.kana = phrase.kana.replace(placeholder, _.sample(word.kana));
-        phrase.romaji = phrase.romaji.replace(placeholder, _.sample(word.romaji));
-      }
+      _.each(['english', 'romaji', 'kana'], function (locale) {
+        let replaceWith = word[locale];
+
+        if (locale === 'kana' && word.kanji) {
+          // Furigana
+          replaceWith = '<ruby><rb>' + word.kanji + '</rb><rp>(</rp><rt>' + word.kana + '</rt><rp>)</rp></ruby>';
+        }
+
+        phrase[locale] = phrase[locale].replace(placeholder, replaceWith);
+      });
     });
 
-    let question.type = _.sample(['translate-from', 'translate-to', 'reply']);
+    question.type = _.sample(['kana-to-english', 'english-to-kana', 'romaji-to-kana']);
 
     switch (question.type) {
-      case 'translate-from':
-        question.question = 1; //todo
+      case 'kana-to-english':
+        question.title = 'Translate the following text to English.';
+        question.description = phrase.kana;
+        question.answer = phrase.english;
         break;
-      case 'translate-to':
+      case 'english-to-kana':
+        question.title = 'Translate the following text to Japanese.';
+        question.description = phrase.english;
+        question.answer = phrase.kana;
         break;
-      case 'reply':
+      case 'romaji-to-kana':
+        question.title = 'Translate the following romaji to Japanese.';
+        question.description = phrase.romaji;
+        question.answer = phrase.kana;
         break;
     }
 
-    return phrase;
+    question.description = capitalizeFirstLetter(question.description);
+
+    return question;
   }
 });

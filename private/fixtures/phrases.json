@@ -1,7 +1,7 @@
 [
   {
-    "english": "{{pointer-object}}{{object}}, please.",
-    "romaji": "{{pointer-object}}{{object}}, kudasai.",
+    "english": "{{pointer-object}} {{object}}, please.",
+    "romaji": "{{pointer-object}} {{object}}, kudasai.",
     "kana": "{{pointer-object}}{{object}}、ください。"
   },
   {
@@ -31,7 +31,7 @@
   },
   {
     "english": "please come in.",
-    "romaji": "dōzo ",
-    "kana": "{{pointer-person}}は{{name}}{{suffix}}です."
+    "romaji": "dōzo ohairi kudasai.",
+    "kana": "どうぞおはいりください。"
   }
 ]
