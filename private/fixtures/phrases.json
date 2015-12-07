@@ -10,14 +10,14 @@
     "kana": "{{pointer}}は{{object}}です。"
   },
   {
-    "english": "there is a {{object}} on {{pointer-object}} {{place}}.",
-    "romaji": "{{pointer-object}} {{place}} no ue ni {{object}} ga arimasu.",
-    "kana": "{{pointer-object}}{{place}}の上に{{object}}があります。"
+    "english": "there is a {{object}} {{position}} {{pointer-object}} {{place}}.",
+    "romaji": "{{pointer-object}} {{place}} no {{position}} ni {{object}} ga arimasu.",
+    "kana": "{{pointer-object}}{{place}}の{{position}}に{{object}}があります。"
   },
   {
     "english": "there isn't a {{object}} on {{pointer-object}} {{place}}.",
-    "romaji": "{{pointer-object}} {{place}} no ue ni {{object}} ga arimasen.",
-    "kana": "{{pointer-object}}{{place}}の上に{{object}}がありません。"
+    "romaji": "{{pointer-object}} {{place}} no {{position}} ni {{object}} ga arimasen.",
+    "kana": "{{pointer-object}}{{place}}の{{position}}に{{object}}がありません。"
   },
   {
     "english": "Good morning",

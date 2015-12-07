@@ -3,79 +3,98 @@
     "type": "object",
     "romaji": "ringo",
     "english": "apple",
-    "kana": ["りんご"]
+    "kana": "りんご"
   },
   {
     "type": "place",
     "romaji": "teboru",
     "english": "table",
-    "kana": ["テーブル"]
+    "kana": "テーブル"
+  },
+  {
+    "type": "place",
+    "romaji": "reizōko",
+    "kana": "れいぞうこ",
+    "kanji": "冷蔵庫"
+  },
+  {
+    "type": "position",
+    "romaji": "ue",
+    "kana": "うえ",
+    "kanji": "上"
+  },
+  {
+    "type": "position",
+    "romaji": "naka",
+    "kana": "なか",
+    "kanji": "中"
   },
   {
     "type": "pointer",
     "romaji": "kore",
     "english": "this",
-    "kana": ["これ"]
+    "kana": "これ"
   },
   {
     "type": "pointer",
     "romaji": "sore",
     "english": "that",
-    "kana": ["それ"]
+    "kana": "それ"
   },
   {
     "type": "pointer",
     "romaji": "are",
     "english": "that",
-    "kana": ["あれ"]
+    "kana": "あれ"
   },
   {
     "type": "pointer-object",
     "romaji": "kono",
     "english": "this",
-    "kana": ["この"]
+    "kana": "この"
   },
   {
     "type": "pointer-object",
     "romaji": "sono",
     "english": "that",
-    "kana": ["その"]
+    "kana": "その"
   },
   {
     "type": "pointer-object",
     "romaji": "ano",
     "english": "that",
-    "kana": ["あの"]
+    "kana": "あの"
   },
   {
     "type": "pointer-person",
     "romaji": "kochira",
     "english": "this",
-    "kana": ["こちら"]
+    "kana": "こちら"
   },
   {
     "type": "name",
     "romaji": "mariko",
     "english": "Mariko",
-    "kana": ["まりこ"]
+    "kana": "まりこ",
+    "kanji": "真理子"
   },
   {
     "type": "name",
     "romaji": "sumisu",
     "english": "Smith",
-    "kana": ["スミス"]
+    "kana": "スミス"
   },
   {
     "type": "name",
     "romaji": "yamada",
     "english": "Yamada",
-    "kana": ["やまだ"],
-    "kanji": ["山田"]
+    "kana": "やまだ",
+    "kanji": "山田"
   },
   {
     "type": "suffix",
     "romaji": "san",
     "english": "Mrs.",
-    "kana": ["さん"]
+    "kana": "さん"
   }
 ]
