@@ -2,32 +2,38 @@
   {
     "english": "{{pointer-object}} {{object}}, please.",
     "romaji": "{{pointer-object}} {{object}}, kudasai.",
-    "kana": "{{pointer-object}}{{object}}、ください。"
+    "kana": "{{pointer-object}}{{object}}、ください。",
+    "story": "at-the-shop"
   },
   {
     "english": "{{pointer}} is a {{object}}.",
-    "romaji": "{{pointer}} ha {{object}} desu.",
-    "kana": "{{pointer}}は{{object}}です。"
+    "romaji": "{{pointer}} wa {{object}} desu.",
+    "kana": "{{pointer}}は{{object}}です。",
+    "story": "describing-things"
   },
   {
-    "english": "there is a {{object}} {{position}} {{pointer-object}} {{place}}.",
-    "romaji": "{{pointer-object}} {{place}} no {{position}} ni {{object}} ga arimasu.",
-    "kana": "{{pointer-object}}{{place}}の{{position}}に{{object}}があります。"
+    "english": "there is a {{object}} {{position}} {{pointer-object}} {{container}}.",
+    "romaji": "{{pointer-object}} {{container}} no {{position}} ni {{object}} ga arimasu.",
+    "kana": "{{pointer-object}}{{container}}の{{position}}に{{object}}があります。",
+    "story": "describing-things"
   },
   {
-    "english": "there isn't a {{object}} {{position}} {{pointer-object}} {{place}}.",
-    "romaji": "{{pointer-object}} {{place}} no {{position}} ni {{object}} ga arimasen.",
-    "kana": "{{pointer-object}}{{place}}の{{position}}に{{object}}がありません。"
+    "english": "there isn't a {{object}} {{position}} {{pointer-object}} {{container}}.",
+    "romaji": "{{pointer-object}} {{container}} no {{position}} ni {{object}} ga arimasen.",
+    "kana": "{{pointer-object}}{{container}}の{{position}}に{{object}}がありません。",
+    "story": "describing-things"
   },
   {
     "english": "Good morning.",
     "romaji": "ohayou gozaimasu.",
-    "kana": "おはようございます。"
+    "kana": "おはようございます。",
+    "story": "conversation"
   },
   {
     "english": "{{pointer-person}} is {{suffix}} {{name}}.",
-    "romaji": "{{pointer-person}} ha {{name}}{{suffix}} desu.",
-    "kana": "{{pointer-person}}は{{name}}{{suffix}}です."
+    "romaji": "{{pointer-person}} wa {{name}}{{suffix}} desu.",
+    "kana": "{{pointer-person}}は{{name}}{{suffix}}です.",
+    "story": "describing-things"
   },
   {
     "english": "please come in.",
@@ -64,5 +70,17 @@
     "romaji": "iie, {{transport}} de kimashita.",
     "kana": "いいえ、{{transport}}で来ました。",
     "story": "at-home-6"
+  },
+  {
+    "english": "{{suffix}} {{name}} is {{verb-going}} to {{place}} by {{transport}}.",
+    "romaji": "{{name}}{{suffix}} wa {{transport}} de {{place}} ni {{verb-going}}.",
+    "kana": "{{name}}{{suffix}}は{{transport}}で{{place}}に{{verb-going}}。",
+    "story": "travelling"
+  },
+  {
+    "english": "{{time}} I'm {{verg-going}} to {{place}} by {{transport}}.",
+    "romaji": "{{time}} ni {{transport}} de {{place}} ni {{verb-going}}.",
+    "kana": "{{time}}に{{transport}}で{{place}}に{{verb-going}}。",
+    "story": "travelling"
   }
 ]

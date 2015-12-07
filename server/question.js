@@ -7,7 +7,12 @@ Meteor.methods({
         question = {},
         phrase,
         placeholders,
-        story = previousQuestion ? previousQuestion.story : null;
+        story;
+
+    // When there is a story, we have 80% chance to keep on with the story
+    if (previousQuestion && previousQuestion.story && _.sample([1,2,3,4]) > 1) {
+      story = previousQuestion.story;
+    }
 
     // If given a story, we try to find the next one in the series
     if (story) {

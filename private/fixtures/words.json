@@ -1,139 +1,207 @@
 [
   {
     "type": "object",
-    "romaji": "ringo",
     "english": "apple",
+    "romaji": "ringo",
     "kana": "りんご"
   },
   {
     "type": "object",
-    "romaji": "banana",
     "english": "banana",
+    "romaji": "banana",
     "kana": "バナナ"
   },
   {
     "type": "object",
-    "romaji": "hana",
     "english": "flower",
+    "romaji": "hana",
     "kana": "はな",
-    "kana": "花"
+    "kanji": "花"
   },
   {
-    "type": "place",
-    "romaji": "teboru",
+    "type": "container",
     "english": "table",
+    "romaji": "teboru",
     "kana": "テーブル"
   },
   {
-    "type": "place",
+    "type": "container",
+    "english": "fridge",
     "romaji": "reizōko",
     "kana": "れいぞうこ",
     "kanji": "冷蔵庫"
   },
   {
     "type": "position",
+    "english": "on",
     "romaji": "ue",
     "kana": "うえ",
     "kanji": "上"
   },
   {
     "type": "position",
+    "english": "inside",
     "romaji": "naka",
     "kana": "なか",
     "kanji": "中"
   },
   {
+    "type": "position",
+    "english": "under",
+    "romaji": "shita",
+    "kana": "した",
+    "kanji": "下"
+  },
+  {
+    "type": "position",
+    "english": "in front of the",
+    "romaji": "mae",
+    "kana": "まえ",
+    "kanji": "前"
+  },
+  {
     "type": "pointer",
-    "romaji": "kore",
     "english": "this",
+    "romaji": "kore",
     "kana": "これ"
   },
   {
     "type": "pointer",
-    "romaji": "sore",
     "english": "that",
+    "romaji": "sore",
     "kana": "それ"
   },
   {
     "type": "pointer",
-    "romaji": "are",
     "english": "that",
+    "romaji": "are",
     "kana": "あれ"
   },
   {
     "type": "pointer-object",
-    "romaji": "kono",
     "english": "this",
+    "romaji": "kono",
     "kana": "この"
   },
   {
     "type": "pointer-object",
-    "romaji": "sono",
     "english": "that",
+    "romaji": "sono",
     "kana": "その"
   },
   {
     "type": "pointer-object",
-    "romaji": "ano",
     "english": "that",
+    "romaji": "ano",
     "kana": "あの"
   },
   {
     "type": "pointer-person",
-    "romaji": "kochira",
     "english": "this",
+    "romaji": "kochira",
     "kana": "こちら"
   },
   {
     "type": "name",
-    "romaji": "mariko",
     "english": "Mariko",
+    "romaji": "mariko",
     "kana": "まりこ",
     "kanji": "真理子"
   },
   {
     "type": "name",
-    "romaji": "sumisu",
     "english": "Smith",
+    "romaji": "sumisu",
     "kana": "スミス"
   },
   {
     "type": "name",
-    "romaji": "yamada",
     "english": "Yamada",
+    "romaji": "yamada",
     "kana": "やまだ",
     "kanji": "山田"
   },
   {
     "type": "suffix",
-    "romaji": "san",
     "english": "Mrs.",
+    "romaji": "san",
     "kana": "さん"
   },
   {
     "type": "transport",
-    "romaji": "kuruma",
     "english": "car",
+    "romaji": "kuruma",
     "kana": "くるま",
     "kanji": "車"
   },
   {
     "type": "transport",
+    "english": "bus",
     "romaji": "basu",
-    "english": "bas",
     "kana": "バス"
   },
   {
     "type": "transport",
-    "romaji": "gitensha",
     "english": "bicycle",
+    "romaji": "gitensha",
     "kana": "ぎてんしゃ",
     "kanji": "着てんしゃ"
   },
   {
     "type": "transport",
-    "romaji": "takushii",
     "english": "taxi",
+    "romaji": "takushii",
     "kana": "タクシー"
+  },
+  {
+    "type": "place",
+    "english": "Tokyo",
+    "romaji": "Tōkyō",
+    "kana": "東京"
+  },
+  {
+    "type": "place",
+    "english": "London",
+    "romaji": "London",
+    "kana": "ロンドン"
+  },
+  {
+    "type": "verb-going",
+    "english": "going",
+    "romaji": "ikimasu",
+    "kana": "行きます"
+  },
+  {
+    "type": "verb-going",
+    "english": "coming",
+    "romaji": "kimasu",
+    "kana": "来ます"
+  },
+  {
+    "type": "verb-going",
+    "english": "returning",
+    "romaji": "kaerimasu",
+    "kana": "かえります"
+  },
+  {
+    "type": "time",
+    "english": "today",
+    "romaji": "kyo",
+    "kana": "きょう",
+    "kanji": "今日"
+  },
+  {
+    "type": "time",
+    "english": "yesterday",
+    "romaji": "kinō",
+    "kana": "きのう",
+    "kanji": "昨日"
+  },
+  {
+    "type": "time",
+    "english": "tomorrow",
+    "romaji": "ashita",
+    "kana": "あした",
+    "kanji": "明日"
   }
 ]

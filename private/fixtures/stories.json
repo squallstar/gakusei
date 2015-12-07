@@ -2,5 +2,21 @@
   {
     "title": "At home",
     "slug": "at-home"
+  },
+  {
+    "title": "Travelling",
+    "slug": "travelling"
+  },
+  {
+    "title": "Describing things and people",
+    "slug": "describing-things"
+  },
+  {
+    "title": "Conversation",
+    "slug": "conversation"
+  },
+  {
+    "title": "At the shop",
+    "slug": "at-the-shop"
   }
 ]
