@@ -2,7 +2,8 @@ Meteor.methods({
   getQuestion: function () {
     let phrase = _.sample(Phrase.find().fetch()),
         words = Word.find().fetch(),
-        placeholders = phrase.kana.match(/{{[a-z\-]+}}/g);
+        placeholders = phrase.kana.match(/{{[a-z\-]+}}/g),
+        question = {};
 
     // Replace placeholders
     _.each(placeholders, function (placeholder) {
@@ -16,6 +17,18 @@ Meteor.methods({
         phrase.romaji = phrase.romaji.replace(placeholder, _.sample(word.romaji));
       }
     });
+
+    let question.type = _.sample(['translate-from', 'translate-to', 'reply']);
+
+    switch (question.type) {
+      case 'translate-from':
+        question.question = 1; //todo
+        break;
+      case 'translate-to':
+        break;
+      case 'reply':
+        break;
+    }
 
     return phrase;
   }
