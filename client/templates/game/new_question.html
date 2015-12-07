@@ -1,6 +1,9 @@
 <template name="newQuestion">
-  {{> question currentQuestion}}
-  <form>
-    <input type="text" />
-  </form>
+  <div class="question-card">
+    {{> question currentQuestion}}
+    <form>
+      <input type="text" />
+      <label>Answer</label>
+    </form>
+  </div>
 </template>
