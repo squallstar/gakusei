@@ -17,6 +17,17 @@ Meteor.methods({
       }
     });
 
+    let task = _.sample(['translate-from', 'translate-to', 'reply']);
+
+    switch (task) {
+      case 'translate-from':
+        break;
+      case 'translate-to':
+        break;
+      case 'reply':
+        break;
+    }
+
     return phrase;
   }
 });
