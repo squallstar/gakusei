@@ -1,9 +1,37 @@
+const REGEXP_STORY_SLUG = /\-([0-9]+)$/;
+const REGEXP_OBJ_PLACEHOLDER = /{{[a-z\-]+}}/g;
+
 Meteor.methods({
-  getQuestion: function () {
-    let phrase = _.sample(Phrase.find().fetch()),
-        words = Word.find().fetch(),
-        placeholders = phrase.kana.match(/{{[a-z\-]+}}/g),
-        question = {};
+  getQuestion: function (previousQuestion) {
+    let words = Word.find().fetch(),
+        question = {},
+        phrase,
+        placeholders,
+        story = previousQuestion && previousQuestion.story;
+
+    // If given a story, we try to find the next one in the series
+    if (story) {
+      check(String, story);
+
+      let number = story.match(REGEXP_STORY_SLUG);
+      if (number.length === 2) {
+        number = story.replace(REGEXP_STORY_SLUG, '-' + parseInt(number[1]));
+        phrase = Phrase.findOne({ story: number });
+      }
+    }
+
+    // Extract a random phrase
+    if (!phrase) {
+      phrase = _.sample(Phrase.find().fetch());
+    }
+
+    // Populate the story
+    if (phrase.story) {
+      phrase.story = Story.findOne({ slug: phrase.story.replace(REGEXP_STORY_SLUG, '') });
+    }
+
+    // Find placeholders
+    placeholders = phrase.kana.match(REGEXP_OBJ_PLACEHOLDER)
 
     // Replace placeholders
     _.each(placeholders, function (placeholder) {
@@ -24,7 +52,7 @@ Meteor.methods({
       });
     });
 
-    question.type = _.sample(['kana-to-english', 'english-to-kana', 'romaji-to-kana']);
+    question.type = _.sample(['kana-to-english', 'english-to-kana', 'kana-to-romaji']);
 
     switch (question.type) {
       case 'kana-to-english':
@@ -37,10 +65,10 @@ Meteor.methods({
         question.description = phrase.english;
         question.answer = phrase.kana;
         break;
-      case 'romaji-to-kana':
-        question.title = 'Translate the following romaji to Japanese.';
-        question.description = phrase.romaji;
-        question.answer = phrase.kana;
+      case 'kana-to-romaji':
+        question.title = 'Translate the following Japanese text to Romaji.';
+        question.description = phrase.kana;
+        question.answer = phrase.romaji;
         break;
     }
 

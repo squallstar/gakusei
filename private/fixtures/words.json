@@ -6,6 +6,19 @@
     "kana": "りんご"
   },
   {
+    "type": "object",
+    "romaji": "banana",
+    "english": "banana",
+    "kana": "バナナ"
+  },
+  {
+    "type": "object",
+    "romaji": "hana",
+    "english": "flower",
+    "kana": "はな",
+    "kana": "花"
+  },
+  {
     "type": "place",
     "romaji": "teboru",
     "english": "table",

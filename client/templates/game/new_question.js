@@ -8,7 +8,7 @@ Template.newQuestion.onCreated(function () {
   this.question = new ReactiveVar({});
 
   this.nextQuestion = (next) => {
-    Meteor.call('getQuestion', (err, question) => {
+    Meteor.call('getQuestion', this.question.get(), (err, question) => {
       this.question.set(question);
 
       if (typeof next === 'function') {

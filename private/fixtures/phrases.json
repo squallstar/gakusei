@@ -6,16 +6,16 @@
   },
   {
     "english": "{{pointer}} is a {{object}}.",
-    "romaji": "{{pointer}} ha {{object}}　desu.",
+    "romaji": "{{pointer}} ha {{object}} desu.",
     "kana": "{{pointer}}は{{object}}です。"
   },
   {
-    "english": "there is a {{object}} {{position}} {{pointer-object}} {{place}}.",
+    "english": "there is a {{object}} {{position}} the {{place}}.",
     "romaji": "{{pointer-object}} {{place}} no {{position}} ni {{object}} ga arimasu.",
     "kana": "{{pointer-object}}{{place}}の{{position}}に{{object}}があります。"
   },
   {
-    "english": "there isn't a {{object}} on {{pointer-object}} {{place}}.",
+    "english": "there isn't a {{object}} on the {{place}}.",
     "romaji": "{{pointer-object}} {{place}} no {{position}} ni {{object}} ga arimasen.",
     "kana": "{{pointer-object}}{{place}}の{{position}}に{{object}}がありません。"
   },
@@ -32,6 +32,13 @@
   {
     "english": "please come in.",
     "romaji": "dōzo ohairi kudasai.",
-    "kana": "どうぞおはいりください。"
+    "kana": "どうぞおはいりください。",
+    "story": "at-home-1"
+  },
+  {
+    "english": "please this way.",
+    "romaji": "dōzo kochira e.",
+    "kana": "どうぞこちらへ。",
+    "story": "at-home-2"
   }
 ]

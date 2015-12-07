@@ -16,8 +16,17 @@ input {
   .question {
     align-content: flex-end;
 
+    h4 {
+      font-weight: normal;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #777;
+    }
+
     p {
-      font-size: 3rem;
+      font-size: 2.5rem;
+      font-weight: 600;
+      line-height: 1.5;
     }
   }
 

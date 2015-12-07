@@ -1,0 +1,1 @@
+Story = new Mongo.Collection('stories');

@@ -1,6 +1,7 @@
 Meteor.startup(function () {
 
   let fixtures = [
+    [Story, 'stories'],
     [Phrase, 'phrases'],
     [Word, 'words']
   ];
