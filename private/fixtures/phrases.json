@@ -78,15 +78,27 @@
     "story": "travelling"
   },
   {
-    "english": "{{time}} I'm {{verb-going}} to {{place}} by {{transport}}.",
-    "romaji": "{{time}} ni {{transport}} de {{place}} ni {{verb-going}}.",
-    "kana": "{{time}}に{{transport}}で{{place}}に{{verb-going}}。",
+    "english": "{{time-future}} I'm {{verb-going}} to {{place}} by {{transport}}.",
+    "romaji": "{{time-future}} ni {{transport}} de {{place}} ni {{verb-going}}.",
+    "kana": "{{time-future}}に{{transport}}で{{place}}に{{verb-going}}。",
     "story": "travelling"
   },
   {
-    "english": "{{time}} I'm {{verb-going}} to {{place}} with {{suffix}} {{name}}.",
-    "romaji": "{{time}} ni {{name}}{{suffix}} to {{place}} ni {{verb-going}}.",
-    "kana": "{{time}}に{{name}}{{suffix}}と{{place}}に{{verb-going}}。",
+    "english": "{{time-future}} I'm {{verb-going}} to {{place}} with {{suffix}} {{name}}.",
+    "romaji": "{{time-future}} ni {{name}}{{suffix}} to {{place}} ni {{verb-going}}.",
+    "kana": "{{time-future}}に{{name}}{{suffix}}と{{place}}に{{verb-going}}。",
     "story": "travelling"
+  },
+  {
+    "english": "What are you going to do during the {{weekend}}?",
+    "romaji": "{{weekend}} ni nani o shimasu ka.",
+    "kana": "{{weekend}}に何をしますか。",
+    "story": "weekend-plans-1"
+  },
+  {
+    "english": "I'm going to see a movie with {{suffix}} {{name}} on {{weekday}}",
+    "romaji": "{{weekend}} ni {{name}}{{suffix}} to eiga o mimasu",
+    "kana": "{{weekend}}に{{name}}{{suffix}}と映画おみます。",
+    "story": "weekend-plans-2"
   }
 ]

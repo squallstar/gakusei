@@ -184,24 +184,45 @@
     "kana": "かえります"
   },
   {
-    "type": "time",
-    "english": "today",
-    "romaji": "kyo",
-    "kana": "きょう",
-    "kanji": "今日"
-  },
-  {
-    "type": "time",
+    "type": "time-past",
     "english": "yesterday",
     "romaji": "kinō",
     "kana": "きのう",
     "kanji": "昨日"
   },
   {
-    "type": "time",
+    "type": "time-future",
+    "english": "today",
+    "romaji": "kyo",
+    "kana": "きょう",
+    "kanji": "今日"
+  },
+  {
+    "type": "time-future",
     "english": "tomorrow",
     "romaji": "ashita",
     "kana": "あした",
     "kanji": "明日"
+  },
+  {
+    "type": "weekend",
+    "english": "weekend",
+    "romaji": "shūmatsu",
+    "kana": "しゅうまつ",
+    "kanji": "週末"
+  },
+  {
+    "type": "weekday",
+    "english": "Sunday",
+    "romaji": "nichiyōbi",
+    "kana": "にちようび",
+    "kanji": "日曜日"
+  },
+  {
+    "type": "weekday",
+    "english": "Saturday",
+    "romaji": "doyōbi",
+    "kana": "どようび",
+    "kanji": "土曜日"
   }
 ]

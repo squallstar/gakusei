@@ -9,12 +9,15 @@ Meteor.methods({
         diffs = diff.diffChars(cleanAnswer, cleanUserAnswer),
         parts = [],
         errors = 0,
+        corrects = 0,
         accuracy;
 
     // Parse differences
     diffs.forEach(function (part) {
       if (part.removed) {
         errors += part.count;
+      } else if (!part.added) {
+        corrects += part.count;
       }
 
       parts.push({
@@ -23,7 +26,7 @@ Meteor.methods({
       });
     });
 
-    accuracy = Math.round((cleanupAnswer.length - errors) * 100 / cleanupAnswer.length);
+    accuracy = Math.round(100 * corrects / (corrects + errors));
     if (accuracy < 0) {
       accuracy = 0;
     }

@@ -27,6 +27,10 @@ Template.newQuestion.events({
     var $input = template.$('form input'),
         answer = $input.val();
 
+    if (!answer) {
+      return;
+    }
+
     Meteor.call('submitAnswer', template.question.get(), answer, function () {
       template.nextQuestion(() => {
         $input.val('');
