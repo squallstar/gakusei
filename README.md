@@ -7,3 +7,5 @@ Work in progress
 ```
 $ meteor
 ```
+
+![Application](https://pbs.twimg.com/media/CVpd6LsXIAAVh3y.png:large)
