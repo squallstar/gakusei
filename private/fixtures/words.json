@@ -60,6 +60,19 @@
     "kana": ["まりこ"]
   },
   {
+    "type": "name",
+    "romaji": "sumisu",
+    "english": "Smith",
+    "kana": ["スミス"]
+  },
+  {
+    "type": "name",
+    "romaji": "yamada",
+    "english": "Yamada",
+    "kana": ["やまだ"],
+    "kanji": ["山田"]
+  },
+  {
     "type": "suffix",
     "romaji": "san",
     "english": "Mrs.",
