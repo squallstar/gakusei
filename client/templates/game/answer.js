@@ -1,11 +1,22 @@
+const WARN_ACCURACY = 50;
+
 Template.answer.helpers({
   className: function () {
-    return this.correct ? 'correct' : 'wrong';
+    if (this.correct) {
+      return 'correct';
+    } else if (this.accuracy > WARN_ACCURACY) {
+      return 'partial';
+    } else {
+      return 'wrong';
+    }
   },
   icon: function () {
-    return this.correct ? 'check': 'times';
-  },
-  perfectScore: function () {
-    return this.accuracy === 100;
+    if (this.correct) {
+      return 'check';
+    } else if (this.accuracy > WARN_ACCURACY) {
+      return 'exclamation';
+    } else {
+      return 'times';
+    }
   }
 });

@@ -28,6 +28,13 @@
       }
     }
 
+    &.partial {
+
+      header {
+        background-color: #ECB438;
+      }
+    }
+
     &.wrong {
 
       header {
@@ -64,11 +71,11 @@
           font-size: 1.5rem;
 
           &.added {
-            display: none;
             color: #E64B45;
           }
 
           &.removed {
+            display: none;
             color: #AAA;
           }
         }
@@ -80,9 +87,13 @@
         color: #AAA;
       }
 
-      &:hover {
+      &:hover .parts span {
 
-        .parts span.added {
+        &.added {
+          display: none;
+        }
+
+        &.removed {
           display: inline;
         }
       }

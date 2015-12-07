@@ -1,18 +1,19 @@
+// NPM libraries
 const diff = Meteor.npmRequire('diff');
 
 Meteor.methods({
   submitAnswer: function (question, userAnswer) {
-    // Replace tags
-    let answer = question.answer.replace(/<([a-z]+) ?\/?>/g, '');
-
-    let diffs = diff.diffChars(answer, userAnswer),
+    // Cleanup the answer before diffing
+    let cleanAnswer = cleanupAnswer(question.answer),
+        cleanUserAnswer = cleanupAnswer(userAnswer),
+        diffs = diff.diffChars(cleanAnswer, cleanUserAnswer),
         parts = [],
         errors = 0,
         accuracy;
 
     // Parse differences
     diffs.forEach(function (part) {
-      if (part.added || part.removed) {
+      if (part.removed) {
         errors += part.count;
       }
 
@@ -22,10 +23,14 @@ Meteor.methods({
       });
     });
 
-    accuracy = Math.round((answer.length - errors) * 100 / answer.length);
+    accuracy = Math.round((cleanupAnswer.length - errors) * 100 / cleanupAnswer.length);
     if (accuracy < 0) {
       accuracy = 0;
     }
+
+    // Normalize data
+    userAnswer = capitalizeFirstLetter(userAnswer);
+    question.answer = capitalizeFirstLetter(question.answer);
 
     return Answer.insert({
       correct: accuracy > 90,
@@ -37,3 +42,7 @@ Meteor.methods({
     });
   }
 });
+
+function cleanupAnswer (str) {
+  return str.replace(/(<([^>]+)>)|[\.,。 ]/ig, '').toLowerCase();
+}
