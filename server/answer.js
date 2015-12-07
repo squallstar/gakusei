@@ -12,7 +12,10 @@ Meteor.methods({
 
     // Parse differences
     diffs.forEach(function (part) {
-      errors += part.count;
+      if (part.added || part.removed) {
+        errors += part.count;
+      }
+
       parts.push({
         type: part.added ? 'added' : (part.removed ? 'removed' : null),
         value: part.value
@@ -20,9 +23,12 @@ Meteor.methods({
     });
 
     accuracy = Math.round((answer.length - errors) * 100 / answer.length);
+    if (accuracy < 0) {
+      accuracy = 0;
+    }
 
     return Answer.insert({
-      correct: accuracy === 100,
+      correct: accuracy > 90,
       accuracy: accuracy,
       parts: parts,
       question: question,

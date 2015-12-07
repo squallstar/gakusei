@@ -4,5 +4,8 @@ Template.answer.helpers({
   },
   icon: function () {
     return this.correct ? 'check': 'times';
+  },
+  perfectScore: function () {
+    return this.accuracy === 100;
   }
 });

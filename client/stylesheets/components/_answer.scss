@@ -10,11 +10,10 @@
     position: relative;
 
     header {
-      width: 50px;
       display: flex;
-      flex: 0 1 auto;
       justify-content: center;
       align-items: center;
+      min-width: 50px;
 
       i {
         color: #FFF;
@@ -38,6 +37,7 @@
 
     .content {
       padding: 2rem;
+      flex: 1;
 
       .question {
 
@@ -50,23 +50,40 @@
         h5 {
           font-size: 1.5rem;
           font-weight: normal;
-          margin-bottom: 1rem;
         }
       }
 
       .parts {
+        padding: 1rem 0;
+        width: 100%;
+        display: block;
+        font-size: 0; /* removes inline spacing */
 
         span {
           color: #77962B;
           font-size: 1.5rem;
 
           &.added {
+            display: none;
             color: #E64B45;
           }
 
           &.removed {
             color: #AAA;
           }
+        }
+      }
+
+      .accuracy {
+        display: block;
+        font-style: italic;
+        color: #AAA;
+      }
+
+      &:hover {
+
+        .parts span.added {
+          display: inline;
         }
       }
     }

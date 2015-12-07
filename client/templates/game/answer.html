@@ -6,13 +6,16 @@
     <div class="content">
       <div class="question">
         <h4>{{{question.description}}}</h4>
-        <h5>{{{question.answer}}}</h5>
+        {{#unless perfectScore}}
+          <h5>{{{question.answer}}}</h5>
+        {{/unless}}
       </div>
       <div class="parts">
         {{#each parts}}
-          <span class={{type}}>{{value}}</span>
+          <span class={{type}}>{{{value}}}</span>
         {{/each}}
       </div>
+      <span class="accuracy">{{accuracy}}% accuracy</span>
     </div>
   </div>
 </template>
