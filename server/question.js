@@ -7,15 +7,15 @@ Meteor.methods({
         question = {},
         phrase,
         placeholders,
-        story = previousQuestion && previousQuestion.story;
+        story = previousQuestion ? previousQuestion.story : null;
 
     // If given a story, we try to find the next one in the series
     if (story) {
-      check(String, story);
+      check(story.slug, String);
 
-      let number = story.match(REGEXP_STORY_SLUG);
-      if (number.length === 2) {
-        number = story.replace(REGEXP_STORY_SLUG, '-' + parseInt(number[1]));
+      let number = story.slug.match(REGEXP_STORY_SLUG);
+      if (number && number.length === 2) {
+        number = story.slug.replace(REGEXP_STORY_SLUG, '-' + (parseInt(number[1])+1));
         phrase = Phrase.findOne({ story: number });
       }
     }
@@ -27,11 +27,12 @@ Meteor.methods({
 
     // Populate the story
     if (phrase.story) {
-      phrase.story = Story.findOne({ slug: phrase.story.replace(REGEXP_STORY_SLUG, '') });
+      question.story = Story.findOne({ slug: phrase.story.replace(REGEXP_STORY_SLUG, '') });
+      question.story.slug = phrase.story;
     }
 
     // Find placeholders
-    placeholders = phrase.kana.match(REGEXP_OBJ_PLACEHOLDER)
+    placeholders = phrase.kana.match(REGEXP_OBJ_PLACEHOLDER);
 
     // Replace placeholders
     _.each(placeholders, function (placeholder) {

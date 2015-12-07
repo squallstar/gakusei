@@ -109,5 +109,31 @@
     "romaji": "san",
     "english": "Mrs.",
     "kana": "さん"
+  },
+  {
+    "type": "transport",
+    "romaji": "kuruma",
+    "english": "car",
+    "kana": "くるま",
+    "kanji": "車"
+  },
+  {
+    "type": "transport",
+    "romaji": "basu",
+    "english": "bas",
+    "kana": "バス"
+  },
+  {
+    "type": "transport",
+    "romaji": "gitensha",
+    "english": "bicycle",
+    "kana": "ぎてんしゃ",
+    "kanji": "着てんしゃ"
+  },
+  {
+    "type": "transport",
+    "romaji": "takushii",
+    "english": "taxi",
+    "kana": "タクシー"
   }
 ]

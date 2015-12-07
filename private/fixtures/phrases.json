@@ -10,18 +10,18 @@
     "kana": "{{pointer}}は{{object}}です。"
   },
   {
-    "english": "there is a {{object}} {{position}} the {{place}}.",
+    "english": "there is a {{object}} {{position}} {{pointer-object}} {{place}}.",
     "romaji": "{{pointer-object}} {{place}} no {{position}} ni {{object}} ga arimasu.",
     "kana": "{{pointer-object}}{{place}}の{{position}}に{{object}}があります。"
   },
   {
-    "english": "there isn't a {{object}} on the {{place}}.",
+    "english": "there isn't a {{object}} {{position}} {{pointer-object}} {{place}}.",
     "romaji": "{{pointer-object}} {{place}} no {{position}} ni {{object}} ga arimasen.",
     "kana": "{{pointer-object}}{{place}}の{{position}}に{{object}}がありません。"
   },
   {
-    "english": "Good morning",
-    "romaji": "ohayou gozaimasu",
+    "english": "Good morning.",
+    "romaji": "ohayou gozaimasu.",
     "kana": "おはようございます。"
   },
   {
@@ -36,9 +36,33 @@
     "story": "at-home-1"
   },
   {
+    "english": "escuse me.",
+    "romaji": "shitsurei shimasu.",
+    "kana": "しつれいします。",
+    "story": "at-home-2"
+  },
+  {
     "english": "please this way.",
     "romaji": "dōzo kochira e.",
     "kana": "どうぞこちらへ。",
-    "story": "at-home-2"
+    "story": "at-home-3"
+  },
+  {
+    "english": "thank you.",
+    "romaji": "arigatou gozaimasu",
+    "kana": "ありがとうございます。",
+    "story": "at-home-4"
+  },
+  {
+    "english": "did you come by {{transport}}?",
+    "romaji": "{{transport}} de kimashita ka?",
+    "kana": "{{transport}}で来ましたか。",
+    "story": "at-home-5"
+  },
+  {
+    "english": "no, I came by {{transport}}.",
+    "romaji": "iie, {{transport}} de kimashita.",
+    "kana": "いいえ、{{transport}}で来ました。",
+    "story": "at-home-6"
   }
 ]
