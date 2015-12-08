@@ -40,6 +40,11 @@
       width: 100%;
       border: 0;
       font-size: 3rem;
+
+      &:disabled {
+        background-color: #FFF;
+        color: #CCC;
+      }
     }
 
     label {
