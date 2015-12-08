@@ -5,7 +5,7 @@ Template.answer.helpers({
     return Template.instance().showWords.get();
   },
   hasWords: function () {
-    return !this.correct && this.question.words && this.question.words.length;
+    return this.question.words && this.question.words.length;
   },
   className: function () {
     if (this.correct) {
