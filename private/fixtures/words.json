@@ -128,14 +128,28 @@
   },
   {
     "type": "name",
+    "english": "Nakamura",
+    "romaji": "nakamura",
+    "kana": "なかむら",
+    "kanji": "中村"
+  },
+  {
+    "type": "name",
     "english": "Yamada",
     "romaji": "yamada",
     "kana": "やまだ",
     "kanji": "山田"
   },
   {
+    "type": "name",
+    "english": "Yamamoto",
+    "romaji": "yamamoto",
+    "kana": "やまもと",
+    "kanji": "山本"
+  },
+  {
     "type": "suffix",
-    "english": "Mrs.",
+    "english": "Mr.",
     "romaji": "san",
     "kana": "さん"
   },
