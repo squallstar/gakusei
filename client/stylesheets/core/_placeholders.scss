@@ -1,0 +1,14 @@
+%clear {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+%reset-appareance {
+  -moz-appareance: none;
+  -o-appareance: none;
+  -webkit-appearance: none;
+  appareance: none;
+}
