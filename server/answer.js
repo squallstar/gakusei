@@ -10,7 +10,7 @@ Meteor.methods({
       // Let's also replace long wovels
       // TODO: do it better and with all wovels
       question.answer = question.answer
-        .replace('aa |aa\.', 'ā');
+        .replace('aa |aa\.', 'ā')
         .replace('ou |ou\.', 'ō');
     }
 
