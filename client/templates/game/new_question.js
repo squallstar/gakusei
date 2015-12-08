@@ -36,9 +36,17 @@ Template.newQuestion.events({
       $input.blur();
     }
 
+    // Disable input while loading
+    $input.prop('disabled', true);
+
     Meteor.call('submitAnswer', template.question.get(), answer, function () {
       template.nextQuestion(() => {
-        $input.val('');
+        $input.val('').prop('disabled', false);
+
+        // Focus input on desktop
+        if (!Meteor.isMobile) {
+          $input.focus();
+        }
       });
     });
   }
