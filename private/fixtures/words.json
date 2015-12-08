@@ -227,6 +227,12 @@
   },
   {
     "type": "place",
+    "english": "the USA",
+    "romaji": "amerika",
+    "kana": "アメリカ"
+  },
+  {
+    "type": "place",
     "english": "Canada",
     "romaji": "kanada",
     "kana": "カナダ"
@@ -235,13 +241,15 @@
     "type": "verb-going",
     "english": "going",
     "romaji": "ikimasu",
-    "kana": "行きます"
+    "kana": "いきます",
+    "kanji": "行きます"
   },
   {
     "type": "verb-going",
     "english": "coming",
     "romaji": "kimasu",
-    "kana": "来ます"
+    "kana": "きます",
+    "kanji": "来ます"
   },
   {
     "type": "verb-going",
