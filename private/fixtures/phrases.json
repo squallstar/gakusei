@@ -27,6 +27,36 @@
     "english": "Good morning.",
     "romaji": "ohayou gozaimasu.",
     "kana": "おはようございます。",
+    "story": "conversation-1"
+  },
+  {
+    "english": "Good afternoon.",
+    "romaji": "konnichiwa.",
+    "kana": "こんにちは。",
+    "story": "conversation-2"
+  },
+  {
+    "english": "Good evening.",
+    "romaji": "konbanwa.",
+    "kana": "こんばんは。",
+    "story": "conversation-3"
+  },
+  {
+    "english": "I play {{sport}}.",
+    "romaji": "{{sport}} o shimasu.",
+    "kana": "{{sport}}をします。",
+    "story": "conversation"
+  },
+  {
+    "english": "Do you play {{sport}}?",
+    "romaji": "{{sport}} o shimasu ka.",
+    "kana": "{{sport}}をしますか。",
+    "story": "conversation"
+  },
+  {
+    "english": "Does {{suffix}} {{name}} play {{sport}}?",
+    "romaji": "{{name}}{{suffix}} wa {{sport}} o shimasu ka.",
+    "kana": "{{name}}{{suffix}}は{{sport}}をしますか。",
     "story": "conversation"
   },
   {

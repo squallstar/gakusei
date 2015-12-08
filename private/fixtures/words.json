@@ -13,6 +13,18 @@
   },
   {
     "type": "object",
+    "english": "melon",
+    "romaji": "meron",
+    "kana": "メロン"
+  },
+  {
+    "type": "object",
+    "english": "pineapple",
+    "romaji": "painappuru",
+    "kana": "パイナップル"
+  },
+  {
+    "type": "object",
     "english": "flower",
     "romaji": "hana",
     "kana": "はな",
@@ -136,6 +148,13 @@
   },
   {
     "type": "transport",
+    "english": "car",
+    "romaji": "kuruma",
+    "kana": "くるま",
+    "kanji": "車"
+  },
+  {
+    "type": "transport",
     "english": "bus",
     "romaji": "basu",
     "kana": "バス"
@@ -155,15 +174,35 @@
   },
   {
     "type": "place",
+    "english": "Osaka",
+    "romaji": "Ōsaka",
+    "kana": "おおさか",
+    "kanji": "大阪"
+  },
+  {
+    "type": "place",
     "english": "Tokyo",
     "romaji": "Tōkyō",
-    "kana": "東京"
+    "kana": "とうきょう",
+    "kanji": "東京"
   },
   {
     "type": "place",
     "english": "London",
     "romaji": "London",
     "kana": "ロンドン"
+  },
+  {
+    "type": "place",
+    "english": "Italy",
+    "romaji": "itaria",
+    "kana": "イタリア"
+  },
+  {
+    "type": "place",
+    "english": "United Kingdom",
+    "romaji": "igirisu",
+    "kana": "イギリス"
   },
   {
     "type": "verb-going",
@@ -220,9 +259,34 @@
   },
   {
     "type": "weekday",
+    "english": "Monday",
+    "romaji": "getsuyōbi",
+    "kana": "げつようび",
+    "kanji": "月曜日"
+  },
+  {
+    "type": "weekday",
     "english": "Saturday",
     "romaji": "doyōbi",
     "kana": "どようび",
     "kanji": "土曜日"
+  },
+  {
+    "type": "sport",
+    "english": "Badminton",
+    "romaji": "badominton",
+    "kana": "バドミントン"
+  },
+  {
+    "type": "sport",
+    "english": "Tennis",
+    "romaji": "tenisu",
+    "kana": "テニス"
+  },
+  {
+    "type": "sport",
+    "english": "Soccer",
+    "romaji": "sakkā",
+    "kana": "サッカー"
   }
 ]
