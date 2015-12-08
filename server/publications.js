@@ -4,7 +4,7 @@ Meteor.publish('answers', function (options) {
   check(options.limit, Number);
 
   // Also publish the total count
-  Counts.publish(this, 'answersCount', Answer.find());
+  Counts.publish(this, 'answersCount', Answer.find(), { noReady: true });
 
   return Answer.find({}, {
     sort: { created_at: -1 },
