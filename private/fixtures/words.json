@@ -258,6 +258,13 @@
     "kana": "かえります"
   },
   {
+    "type": "noun-rude",
+    "english": "excuse me",
+    "romaji": "shitsurei",
+    "kana": "しつれい",
+    "kanji": "失礼"
+  },
+  {
     "type": "time-past",
     "english": "yesterday",
     "romaji": "kinō",

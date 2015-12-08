@@ -72,9 +72,9 @@
     "story": "at-home-1"
   },
   {
-    "english": "excuse me.",
-    "romaji": "shitsurei shimasu.",
-    "kana": "しつれいします。",
+    "english": "{{noun-rude}}.",
+    "romaji": "{{noun-rude}} shimasu.",
+    "kana": "{{noun-rude}}します。",
     "story": "at-home-2"
   },
   {
