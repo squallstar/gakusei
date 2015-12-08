@@ -128,7 +128,7 @@
   {
     "english": "I'm going to see a movie with {{suffix}} {{name}} on {{weekday}}",
     "romaji": "{{weekday}} ni {{name}}{{suffix}} to eiga o mimasu",
-    "kana": "{{weekday}}に{{name}}{{suffix}}と映画おみます。",
+    "kana": "{{weekday}}に{{name}}{{suffix}}と映画を見ます。",
     "story": "weekend-plans-2"
   }
 ]
