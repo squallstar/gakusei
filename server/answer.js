@@ -25,9 +25,9 @@ Meteor.methods({
 
     // Parse differences
     diffs.forEach(function (part) {
-      if (part.removed) {
+      if (part.removed || part.added) {
         errors += part.count;
-      } else if (!part.added) {
+      } else {
         corrects += part.count;
       }
 
