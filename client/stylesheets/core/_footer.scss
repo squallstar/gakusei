@@ -1,0 +1,15 @@
+#footer {
+  max-width: 500px;
+  margin: 3rem auto;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    color: #AAA;
+    font-size: 1.4rem;
+
+    &:hover {
+      color: #555;
+    }
+  }
+}
