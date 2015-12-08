@@ -26,7 +26,7 @@ Meteor.methods({
         let wordType = '{{' + previousQuestion.words[0].type + '}}';
         phrase = Phrase.findOne({ $text: { $search: wordType } });
         phrase.story = 'kanji-use';
-        question.type = 'english-to-kana';
+        question.type = GAME.KANA;
       } else {
         // Extract a follow up phrase from the same story
         let number = story.slug.match(REGEXP_STORY_SLUG);
@@ -49,7 +49,7 @@ Meteor.methods({
 
         // Set up references
         phrase.story = 'kanji';
-        question.type = 'kanji-to-kana';
+        question.type = GAME.KANJI;
       } else {
         phrase = _.sample(Phrase.find().fetch());
       }
@@ -94,22 +94,22 @@ Meteor.methods({
 
     // The type could already have been set above when studying kanji
     if (!question.type) {
-      question.type = _.sample(['kana-to-english', 'english-to-kana']);
+      question.type = _.sample([GAME.ENGLISH, GAME.KANA]);
     }
 
     switch (question.type) {
-      case 'kana-to-english':
+      case GAME.ENGLISH:
         question.title = 'Translate the following text to English.';
         question.description = phrase.kana;
         question.answer = phrase.english;
         break;
-      case 'english-to-kana':
+      case GAME.KANA:
         question.title = 'Translate the following text to Japanese.';
         question.description = phrase.english;
         question.answer = phrase.kana;
         question.answer_alternative = phrase.romaji;
         break;
-      case 'kanji-to-kana':
+      case GAME.KANJI:
         question.title = 'Type the reading of the following kanji in hiragana.';
         question.description = phrase.kanji;
         question.answer = phrase.kana;

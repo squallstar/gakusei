@@ -21,6 +21,7 @@ Meteor.methods({
         parts = [],
         errors = 0,
         corrects = 0,
+        accuracyForCorrect = question.type === GAME.KANJI ? 100 : 80,
         accuracy;
 
     // Parse differences
@@ -47,7 +48,7 @@ Meteor.methods({
     question.answer = capitalizeFirstLetter(question.answer);
 
     return Answer.insert({
-      correct: accuracy > 80,
+      correct: accuracy >= accuracyForCorrect,
       accuracy: accuracy,
       parts: parts,
       question: question,
