@@ -36,7 +36,7 @@ Meteor.methods({
     question.answer = capitalizeFirstLetter(question.answer);
 
     return Answer.insert({
-      correct: accuracy > 90,
+      correct: accuracy > 80,
       accuracy: accuracy,
       parts: parts,
       question: question,
