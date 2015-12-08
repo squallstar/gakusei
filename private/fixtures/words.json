@@ -115,10 +115,10 @@
   },
   {
     "type": "name",
-    "english": "Mariko",
-    "romaji": "mariko",
-    "kana": "まりこ",
-    "kanji": "真理子"
+    "english": "Watanabe",
+    "romaji": "watanabe",
+    "kana": "わたなべ",
+    "kanji": "渡辺"
   },
   {
     "type": "name",
@@ -146,6 +146,13 @@
     "romaji": "yamamoto",
     "kana": "やまもと",
     "kanji": "山本"
+  },
+  {
+    "type": "name",
+    "english": "Tanaka",
+    "romaji": "tanaka",
+    "kana": "たなか",
+    "kanji": "田中"
   },
   {
     "type": "suffix",
