@@ -70,6 +70,7 @@ Meteor.methods({
         question.title = 'Translate the following text to Japanese.';
         question.description = phrase.english;
         question.answer = phrase.kana;
+        question.answer_alternative = phrase.romaji;
         break;
       // case 'kana-to-romaji':
       //   question.title = 'Translate the following Japanese text to Romaji.';
