@@ -115,6 +115,52 @@
           }
         }
       }
+
+      .words-toggle {
+        display: inline-block;
+        margin-top: 2rem;
+        color: #AAA;
+        font-size: 1.3rem;
+        text-decoration: none;
+        font-weight: normal;
+
+        &:hover {
+          color: $color-primary;
+        }
+      }
+
+      .words {
+        margin-top: 1rem;
+        display: flex;
+
+        li {
+          background-color: #FFF;
+          box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+          margin: 0 1rem 1rem 0;
+
+          h3 {
+            background-color: $color-primary;
+            padding: 1rem;
+            color: #FFF;
+            font-size: 2rem;
+            font-weight: normal;
+          }
+
+          .content {
+            padding: 1rem;
+
+            h4 {
+              font-weight: normal;
+              font-size: 1.5rem;
+              margin-bottom: 1rem;
+            }
+
+            p {
+
+            }
+          }
+        }
+      }
     }
   }
 }

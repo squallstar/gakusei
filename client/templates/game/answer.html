@@ -14,6 +14,22 @@
         {{/each}}
       </div>
       <span class="accuracy">{{accuracy}}% accuracy</span>
+      {{#if hasWords}}
+        <a href="#" data-toggle-words class="words-toggle">
+          {{#if isShowingWords}}
+            <i class="fa fa-minus"></i> Hide vocabulary
+          {{else}}
+            <i class="fa fa-plus"></i> Show vocabulary
+          {{/if}}
+        </a>
+        {{#if isShowingWords}}
+          <ul class="words">
+            {{#each question.words}}
+              {{> word}}
+            {{/each}}
+          </ul>
+        {{/if}}
+      {{/if}}
     </div>
   </div>
 </template>
