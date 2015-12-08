@@ -57,6 +57,8 @@ Meteor.methods({
   }
 });
 
+// Removes html tags, parenthesis and their content (e.g. furigana)
+// and returns all to lowercase
 function cleanupAnswer (str) {
-  return str.replace(/(<([^>]+)>)|[\.,。 ]/ig, '').toLowerCase();
+  return str.replace(/(\(.+\))|(<([^>]+)>)|[\.,。 ]/ig, '').toLowerCase();
 }
