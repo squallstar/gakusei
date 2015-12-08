@@ -25,7 +25,7 @@ Template.newQuestion.events({
     event.preventDefault();
 
     var $input = template.$('form input'),
-        answer = $input.val();
+        answer = $input.val().trim();
 
     if (!answer) {
       return;
