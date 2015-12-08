@@ -102,21 +102,21 @@
     "story": "at-home-6"
   },
   {
-    "english": "{{suffix}} {{name}} is {{verb-going}} to {{place}} by {{transport}}.",
-    "romaji": "{{name}}{{suffix}} wa {{transport}} de {{place}} ni {{verb-going}}.",
-    "kana": "{{name}}{{suffix}}は{{transport}}で{{place}}に{{verb-going}}。",
+    "english": "{{suffix}} {{name}} is {{verb-direction}} to {{place}} by {{transport}}.",
+    "romaji": "{{name}}{{suffix}} wa {{transport}} de {{place}} ni {{verb-direction}}.",
+    "kana": "{{name}}{{suffix}}は{{transport}}で{{place}}に{{verb-direction}}。",
     "story": "travelling"
   },
   {
-    "english": "{{time-future}} I'm {{verb-going}} to {{place}} by {{transport}}.",
-    "romaji": "{{time-future}} ni {{transport}} de {{place}} ni {{verb-going}}.",
-    "kana": "{{time-future}}に{{transport}}で{{place}}に{{verb-going}}。",
+    "english": "{{time-future}} I'm {{verb-direction}} to {{place}} by {{transport}}.",
+    "romaji": "{{time-future}} ni {{transport}} de {{place}} ni {{verb-direction}}.",
+    "kana": "{{time-future}}に{{transport}}で{{place}}に{{verb-direction}}。",
     "story": "travelling"
   },
   {
-    "english": "{{time-future}} I'm {{verb-going}} to {{place}} with {{suffix}} {{name}}.",
-    "romaji": "{{time-future}} ni {{name}}{{suffix}} to {{place}} ni {{verb-going}}.",
-    "kana": "{{time-future}}に{{name}}{{suffix}}と{{place}}に{{verb-going}}。",
+    "english": "{{time-future}} I'm {{verb-direction}} to {{place}} with {{suffix}} {{name}}.",
+    "romaji": "{{time-future}} ni {{name}}{{suffix}} to {{place}} ni {{verb-direction}}.",
+    "kana": "{{time-future}}に{{name}}{{suffix}}と{{place}}に{{verb-direction}}。",
     "story": "travelling"
   },
   {

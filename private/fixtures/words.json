@@ -245,21 +245,21 @@
     "kana": "カナダ"
   },
   {
-    "type": "verb-going",
+    "type": "verb-direction",
     "english": "going",
     "romaji": "ikimasu",
     "kana": "いきます",
     "kanji": "行きます"
   },
   {
-    "type": "verb-going",
+    "type": "verb-direction",
     "english": "coming",
     "romaji": "kimasu",
     "kana": "きます",
     "kanji": "来ます"
   },
   {
-    "type": "verb-going",
+    "type": "verb-direction",
     "english": "returning",
     "romaji": "kaerimasu",
     "kana": "かえります"
