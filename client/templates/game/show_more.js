@@ -1,4 +1,10 @@
 Template.showMore.helpers({
+  isVisible: function () {
+    return Counts.get('answersCount') > Session.get(ENTRIES_LIMIT);
+  },
+  answersCount: function () {
+    return Counts.get('answersCount');
+  },
   currentLimit: function () {
     return Session.get(ENTRIES_LIMIT);
   }

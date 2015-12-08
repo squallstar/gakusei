@@ -19,6 +19,5 @@ check
 reactive-var
 meteorhacks:npm
 fortawesome:fontawesome
-
-
+tmeasday:publish-counts
 npm-container

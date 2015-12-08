@@ -1,7 +1,9 @@
 <template name="showMore">
+  {{#if isVisible}}
   <div class="answer">
     <div class="content">
-      <p class="note">Showing last {{currentLimit}} answers. <a href="#">Show more</a></p>
+      <p class="note">Showing {{currentLimit}} of {{answersCount}} answers. <a href="#">Show more</a></p>
     </div>
   </div>
+  {{/if}}
 </template>
