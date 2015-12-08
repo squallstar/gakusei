@@ -103,6 +103,17 @@
         font-style: italic;
         font-size: 1.2rem;
         color: #AAA;
+
+        a {
+          color: #AAA;
+          text-decoration: none;
+          border-bottom: 1px dotted #AAA;
+
+          &:hover {
+            color: #555;
+            border-bottom-color: #555;
+          }
+        }
       }
     }
   }
