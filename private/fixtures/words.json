@@ -207,9 +207,15 @@
   },
   {
     "type": "place",
-    "english": "United Kingdom",
+    "english": "the United Kingdom",
     "romaji": "igirisu",
     "kana": "イギリス"
+  },
+  {
+    "type": "place",
+    "english": "Canada",
+    "romaji": "kanada",
+    "kana": "カナダ"
   },
   {
     "type": "verb-going",
