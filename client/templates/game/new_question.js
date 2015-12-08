@@ -31,6 +31,11 @@ Template.newQuestion.events({
       return;
     }
 
+    // Hide keyboard on mobile so the user can see the result
+    if (Meteor.isMobile) {
+      $input.blur();
+    }
+
     Meteor.call('submitAnswer', template.question.get(), answer, function () {
       template.nextQuestion(() => {
         $input.val('');

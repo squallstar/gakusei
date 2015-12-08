@@ -1,0 +1,1 @@
+Meteor.isMobile = navigator.userAgent.match(/iPhone|Android/i);
