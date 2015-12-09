@@ -39,7 +39,7 @@
   {
     "type": "container",
     "english": "fridge",
-    "romaji": "reizōko",
+    "romaji": "reizouko",
     "kana": "れいぞうこ",
     "kanji": "冷蔵庫"
   },
@@ -210,7 +210,7 @@
   {
     "type": "place",
     "english": "Tokyo",
-    "romaji": "Tōkyō",
+    "romaji": "Toukyou",
     "kana": "とうきょう",
     "kanji": "東京"
   },
@@ -274,14 +274,14 @@
   {
     "type": "time-past",
     "english": "yesterday",
-    "romaji": "kinō",
+    "romaji": "kinou",
     "kana": "きのう",
     "kanji": "昨日"
   },
   {
     "type": "time-future",
     "english": "today",
-    "romaji": "kyō",
+    "romaji": "kyou",
     "kana": "きょう",
     "kanji": "今日"
   },
@@ -295,28 +295,28 @@
   {
     "type": "weekend",
     "english": "weekend",
-    "romaji": "shūmatsu",
+    "romaji": "shuumatsu",
     "kana": "しゅうまつ",
     "kanji": "週末"
   },
   {
     "type": "weekday",
     "english": "Sunday",
-    "romaji": "nichiyōbi",
+    "romaji": "nichiyoubi",
     "kana": "にちようび",
     "kanji": "日曜日"
   },
   {
     "type": "weekday",
     "english": "Monday",
-    "romaji": "getsuyōbi",
+    "romaji": "getsuyoubi",
     "kana": "げつようび",
     "kanji": "月曜日"
   },
   {
     "type": "weekday",
     "english": "Saturday",
-    "romaji": "doyōbi",
+    "romaji": "doyoubi",
     "kana": "どようび",
     "kanji": "土曜日"
   },
@@ -335,7 +335,7 @@
   {
     "type": "sport",
     "english": "Soccer",
-    "romaji": "sakkā",
+    "romaji": "sakkaa",
     "kana": "サッカー"
   }
 ]

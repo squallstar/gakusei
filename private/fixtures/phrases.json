@@ -67,7 +67,7 @@
   },
   {
     "english": "please come in.",
-    "romaji": "dōzo ohairi kudasai.",
+    "romaji": "douzo ohairi kudasai.",
     "kana": "どうぞおはいりください。",
     "story": "at-home-1"
   },
@@ -79,13 +79,13 @@
   },
   {
     "english": "please come this way.",
-    "romaji": "dōzo kochira e.",
+    "romaji": "douzo kochira e.",
     "kana": "どうぞこちらへ。",
     "story": "at-home-3"
   },
   {
     "english": "thank you.",
-    "romaji": "arigatō gozaimasu",
+    "romaji": "arigatou gozaimasu",
     "kana": "ありがとうございます。",
     "story": "at-home-4"
   },

@@ -6,12 +6,6 @@ Meteor.methods({
     // Find out whether the user is submitting romaji
     if (question.answer_alternative && userAnswer.match(/([a-z]+)/)) {
       question.answer = question.answer_alternative;
-
-      // Let's also replace long wovels
-      // TODO: do it better and with all wovels
-      question.answer = question.answer
-        .replace('aa |aa\.', 'ā')
-        .replace('ou |ou\.', 'ō');
     }
 
     // Cleanup the answer before diffing
