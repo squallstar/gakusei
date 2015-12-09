@@ -130,5 +130,11 @@
     "romaji": "{{weekday}} ni {{name}}{{suffix}} to eiga o mimasu",
     "kana": "{{weekday}}に{{name}}{{suffix}}と映画を見ます。",
     "story": "weekend-plans-2"
+  },
+  {
+    "english": "{{what-time}} is it?",
+    "romaji": "{{time-now}} {{what-time}} desu ka",
+    "kana": "{{time-now}}{{what-time}}ですか。",
+    "story": "asking-the-time"
   }
 ]

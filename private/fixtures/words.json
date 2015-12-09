@@ -337,5 +337,19 @@
     "english": "Soccer",
     "romaji": "sakkaa",
     "kana": "サッカー"
+  },
+  {
+    "type": "time-now",
+    "english": "now",
+    "romaji": "ima",
+    "kana": "いま",
+    "kanji": "今"
+  },
+  {
+    "type": "what-time",
+    "english": "what time",
+    "romaji": "nanji",
+    "kana": "なんじ",
+    "kanji": "何時"
   }
 ]
