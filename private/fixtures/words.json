@@ -25,6 +25,19 @@
   },
   {
     "type": "object",
+    "english": "orange",
+    "romaji": "orenji",
+    "kana": "オレンジ"
+  },
+  {
+    "type": "object",
+    "english": "peach",
+    "romaji": "momo",
+    "kana": "もも",
+    "kanji" : "桃"
+  },
+  {
+    "type": "object",
     "english": "pineapple",
     "romaji": "painappuru",
     "kana": "パイナップル"
