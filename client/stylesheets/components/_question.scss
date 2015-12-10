@@ -24,13 +24,47 @@
       font-size: 2.5rem;
       font-weight: normal;
       line-height: 1.5;
+
+      rt {
+        display: none;
+      }
+
+      &.with-furigana {
+
+        rt {
+          display: block;
+        }
+      }
     }
 
-    h6 {
-      font-weight: normal;
-      font-size: 1.5rem;
+    footer {
+      display: flex;
+      align-items: center;
       margin-top: 1rem;
-      opacity: 0.5;
+
+      h6 {
+        flex: 1;
+        font-weight: normal;
+        font-size: 1.5rem;
+        opacity: 0.5;
+      }
+
+      .options {
+
+        label {
+          font-size: 1.3rem;
+          cursor: pointer;
+          opacity: 0.5;
+
+          &:hover {
+            opacity: 1;
+          }
+
+          input[type="checkbox"] {
+            display: none;
+          }
+        }
+      }
     }
   }
 

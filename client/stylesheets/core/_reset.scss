@@ -87,7 +87,7 @@ button, input[type="submit"] {
 input {
     border-radius: 0;
 }
-input, button, textarea {
+input[type="text"], button, textarea {
     @extend %reset-appareance;
 }
 *:focus {
