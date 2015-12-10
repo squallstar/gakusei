@@ -8,6 +8,7 @@
   z-index: 1;
 
   .question {
+    @include transition(background-color, 2s);
     padding: 5rem 2rem 2rem;
     background-color: $color-primary;
     color: #FFF;
@@ -55,5 +56,9 @@
       display: block;
       margin-top: 1rem;
     }
+  }
+
+  &.type-kanji-to-kana .question {
+    background-color: #7375a5;
   }
 }

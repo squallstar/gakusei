@@ -1,5 +1,5 @@
 <template name="newQuestion">
-  <div class="question-card">
+  <div class="question-card type-{{currentQuestion.type}}">
     {{> question currentQuestion}}
     <form>
       <input type="text" autocomplete="off" />
