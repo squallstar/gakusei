@@ -19,6 +19,12 @@
   },
   {
     "type": "object",
+    "english": "pen",
+    "romaji": "pen",
+    "kana": "ペン"
+  },
+  {
+    "type": "object",
     "english": "pineapple",
     "romaji": "painappuru",
     "kana": "パイナップル"
@@ -276,6 +282,19 @@
     "english": "Canada",
     "romaji": "kanada",
     "kana": "カナダ"
+  },
+  {
+    "type": "place",
+    "english": "China",
+    "romaji": "chuugoku",
+    "kana": "ちゅうごく",
+    "kana": "中国"
+  },
+  {
+    "type": "place",
+    "english": "India",
+    "romaji": "indo",
+    "kana": "インド"
   },
   {
     "type": "verb-direction",
