@@ -31,6 +31,26 @@
     "kanji": "花"
   },
   {
+    "type": "animal",
+    "english": "dog",
+    "romaji": "inu",
+    "kana": "いぬ",
+    "kanji": "犬"
+  },
+  {
+    "type": "animal",
+    "english": "dog",
+    "romaji": "neko",
+    "kana": "ねこ",
+    "kanji": "猫"
+  },
+  {
+    "type": "animal",
+    "english": "rabbit",
+    "romaji": "usagi",
+    "kana": "ウサギ"
+  },
+  {
     "type": "performance",
     "english": "movie",
     "romaji": "eiga",
