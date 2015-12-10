@@ -92,6 +92,9 @@ Meteor.methods({
       });
     });
 
+    // Fix wording that may be wrong when words are merged together
+    phrase.english = phrase.english.replace('the this').replace('this the');
+
     // The type could already have been set above when studying kanji
     if (!question.type) {
       question.type = _.sample([GAME.ENGLISH, GAME.KANA]);

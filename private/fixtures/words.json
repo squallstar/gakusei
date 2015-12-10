@@ -234,10 +234,23 @@
   },
   {
     "type": "place",
+    "english": "the taxi stand",
+    "romaji": "takushii noriba",
+    "kana": "タクシーのりば",
+    "kanji": "タクシー乗り場"
+  },
+  {
+    "type": "place",
     "english": "the station",
     "romaji": "eki",
     "kana": "えき",
     "kanji": "駅"
+  },
+  {
+    "type": "place",
+    "english": "the department store",
+    "romaji": "depaato",
+    "kana": "デパート"
   },
   {
     "type": "place",
