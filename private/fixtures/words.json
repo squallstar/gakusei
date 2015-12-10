@@ -31,6 +31,19 @@
     "kanji": "花"
   },
   {
+    "type": "performance",
+    "english": "movie",
+    "romaji": "eiga",
+    "kana": "えいが",
+    "kanji": "映画"
+  },
+  {
+    "type": "performance",
+    "english": "show",
+    "romaji": "shoo",
+    "kana": "ショー"
+  },
+  {
     "type": "container",
     "english": "table",
     "romaji": "teboru",
@@ -351,5 +364,19 @@
     "romaji": "nanji",
     "kana": "なんじ",
     "kanji": "何時"
+  },
+  {
+    "type": "hour-period",
+    "english": "pm",
+    "romaji": "gogo",
+    "kana": "ごご",
+    "kanji": "午後"
+  },
+  {
+    "type": "hour-period",
+    "english": "am",
+    "romaji": "gozen",
+    "kana": "ごぜん",
+    "kanji": "午前"
   }
 ]

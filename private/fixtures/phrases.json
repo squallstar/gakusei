@@ -126,15 +126,39 @@
     "story": "weekend-plans-1"
   },
   {
-    "english": "I'm going to see a movie with {{suffix}} {{name}} on {{weekday}}",
-    "romaji": "{{weekday}} ni {{name}}{{suffix}} to eiga o mimasu",
-    "kana": "{{weekday}}に{{name}}{{suffix}}と映画を見ます。",
+    "english": "I'm going to see a {{performance}} with {{suffix}} {{name}} on {{weekday}}",
+    "romaji": "{{weekday}} ni {{name}}{{suffix}} to {{performance}} o mimasu",
+    "kana": "{{weekday}}に{{name}}{{suffix}}と{{performance}}を見ます。",
     "story": "weekend-plans-2"
   },
   {
     "english": "{{what-time}} is it?",
     "romaji": "{{time-now}} {{what-time}} desu ka",
     "kana": "{{time-now}}{{what-time}}ですか。",
-    "story": "asking-the-time"
+    "story": "asking-the-time-1"
+  },
+  {
+    "english": "It's 4{{hour-period}}.",
+    "romaji": "{{hour-period}}4 desu",
+    "kana": "{{hour-period}}４です。",
+    "story": "asking-the-time-2"
+  },
+  {
+    "english": "It's 7{{hour-period}}.",
+    "romaji": "{{hour-period}}7 desu",
+    "kana": "{{hour-period}}７です。",
+    "story": "asking-the-time-2"
+  },
+  {
+    "english": "What time does the {{performance}} start?",
+    "romaji": "{{performance}} wa nanjikara nan desu ka?",
+    "kana": "{{performance}}は何時から何ですか。",
+    "story": "asking-the-time-3"
+  },
+  {
+    "english": "The {{performance}} starts at 5{{hour-period}}.",
+    "romaji": "{{performance}} wa {{hour-period}}5 kara desu",
+    "kana": "{{performance}}は{{hour-period}}５からです。",
+    "story": "asking-the-time-4"
   }
 ]
