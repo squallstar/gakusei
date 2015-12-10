@@ -42,6 +42,12 @@
     "story": "describing-things"
   },
   {
+    "english": "{{suffix}} {{name}} is {{nationality}}.",
+    "romaji": "{{name}}{{suffix}} wa {{nationality}} desu.",
+    "kana": "{{name}}{{suffix}}は{{nationality}}です",
+    "story": "describing-things"
+  },
+  {
     "english": "Good morning.",
     "romaji": "ohayou gozaimasu.",
     "kana": "おはようございます。",
