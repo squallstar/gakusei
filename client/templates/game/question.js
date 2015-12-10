@@ -3,7 +3,7 @@ Template.question.helpers({
     return Session.get(SHOW_FURIGANA);
   },
   showFurigana: function () {
-    return this.type === 'kana-to-english';
+    return this.type === GAME.ENGLISH;
   }
 });
 
