@@ -41,18 +41,17 @@
       display: flex;
       align-items: center;
       margin-top: 1rem;
+      font-size: 1.5rem;
 
       h6 {
         flex: 1;
         font-weight: normal;
-        font-size: 1.5rem;
         opacity: 0.5;
       }
 
       .options {
 
         label {
-          font-size: 1.3rem;
           cursor: pointer;
           opacity: 0.5;
 
