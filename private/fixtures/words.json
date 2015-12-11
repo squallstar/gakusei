@@ -507,14 +507,14 @@
   },
   {
     "type": "sex",
-    "english": "Man",
+    "english": "man",
     "romaji": "otoko",
     "kana": "おとこ",
     "kanji": "男"
   },
   {
     "type": "sex",
-    "english": "Woman",
+    "english": "woman",
     "romaji": "onna",
     "kana": "おんな",
     "kanji": "女"

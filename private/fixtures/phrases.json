@@ -66,6 +66,12 @@
     "story": "describing-things"
   },
   {
+    "english": "{{suffix}} {{name}} is a {{sex}}.",
+    "romaji": "{{name}}{{suffix}} wa {{sex}} desu.",
+    "kana": "{{name}}{{suffix}}は{{sex}}です。",
+    "story": "describing-things"
+  },
+  {
     "english": "Good morning.",
     "romaji": "ohayou gozaimasu.",
     "kana": "おはようございます。",
