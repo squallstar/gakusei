@@ -45,7 +45,7 @@ Meteor.methods({
     userAnswer = capitalizeFirstLetter(userAnswer);
     question.answer = capitalizeFirstLetter(question.answer);
 
-    return Answer.insert({
+    let answerData = {
       correct: accuracy >= accuracyForCorrect,
       accuracy: accuracy,
       parts: parts,
@@ -53,7 +53,11 @@ Meteor.methods({
       answer: userAnswer,
       time_spent: timeSpent,
       created_at: Date.now()
-    });
+    };
+
+    Answer.insert(answerData);
+
+    return answerData.correct;
   }
 });
 

@@ -1,6 +1,9 @@
 Template.newQuestion.helpers({
   currentQuestion: function () {
     return Template.instance().question.get();
+  },
+  canSkip: function () {
+    return Template.instance().canSkip.get();
   }
 });
 
@@ -10,6 +13,7 @@ Template.newQuestion.onDestroyed(function () {
 
 Template.newQuestion.onCreated(function () {
   this.question = new ReactiveVar({});
+  this.canSkip = new ReactiveVar(true);
   this.timeSpent = 0;
 
   // Timer fires every second, increasing seconds
@@ -23,6 +27,15 @@ Template.newQuestion.onCreated(function () {
     Meteor.call('getQuestion', this.question.get(), (err, question) => {
       this.question.set(question);
       this.timeSpent = 0;
+
+      let $input = this.$('input');
+
+      $input.val('').prop('disabled', false);
+
+      // Focus input on desktop
+      if (!Meteor.isMobile) {
+        $input.focus();
+      }
 
       if (typeof next === 'function') {
         next();
@@ -41,12 +54,16 @@ Template.newQuestion.onRendered(function () {
 });
 
 Template.newQuestion.events({
+  'click [data-skip]': function (event, template) {
+    event.preventDefault();
+    template.canSkip.set(false);
+    template.renderNextQuestion();
+  },
   'submit form': function (event, template) {
     event.preventDefault();
 
     var $input = template.$('form input'),
-        answer = $input.val().trim(),
-        params;
+        answer = $input.val().trim();
 
     if (!answer) {
       return;
@@ -60,21 +77,16 @@ Template.newQuestion.events({
     // Disable input while loading
     $input.prop('disabled', true);
 
-    params = {
+    Meteor.call('submitAnswer', {
       question:  template.question.get(),
       userAnswer: answer,
       timeSpent: template.timeSpent
-    };
+    }, function (correct) {
+      // We allow the user to skip the next sentence if the previous one was correct
+      template.canSkip.set(correct);
 
-    Meteor.call('submitAnswer', params, function () {
-      template.renderNextQuestion(() => {
-        $input.val('').prop('disabled', false);
-
-        // Focus input on desktop
-        if (!Meteor.isMobile) {
-          $input.focus();
-        }
-      });
+      // Proceed to the next qestion
+      template.renderNextQuestion();
     });
   }
 });

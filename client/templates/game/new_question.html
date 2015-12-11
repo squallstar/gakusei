@@ -2,8 +2,13 @@
   <div class="question-card type-{{currentQuestion.type}}">
     {{> question currentQuestion}}
     <form>
-      <input type="text" autocomplete="off" />
-      <label>Answer</label>
+      <input id="new_answer" type="text" autocomplete="off" />
+      <footer>
+        <label for="new_answer">Answer</label>
+        {{#if canSkip}}
+          <label data-skip><a href="#">Skip this question</a></label>
+        {{/if}}
+      </footer>
     </form>
   </div>
 </template>

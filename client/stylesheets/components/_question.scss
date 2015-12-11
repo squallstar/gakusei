@@ -89,13 +89,28 @@
       }
     }
 
-    label {
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 1rem;
-      color: #AAA;
-      display: block;
+    footer {
+      display: flex;
       margin-top: 1rem;
+
+      label {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1rem;
+        display: block;
+
+        &, a {
+          color: #AAA;
+        }
+
+        a:hover {
+          color: #555;
+        }
+
+        &:first-child {
+          flex: 1;
+        }
+      }
     }
   }
 
