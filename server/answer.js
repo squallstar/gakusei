@@ -20,10 +20,12 @@ Meteor.methods({
 
     // Parse differences
     diffs.forEach(function (part) {
-      if (part.removed || part.added) {
-        errors += part.count;
-      } else {
-        corrects += part.count;
+      if (part.value !== '') {
+        if (part.removed || part.added) {
+          errors += part.count;
+        } else {
+          corrects += part.count;
+        }
       }
 
       parts.push({
