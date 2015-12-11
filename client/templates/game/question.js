@@ -6,7 +6,7 @@ Template.question.helpers({
     return this.type === GAME.ENGLISH;
   },
   context: function () {
-    return this.contexts.join(', ');
+    return this.contexts ? this.contexts.join(', ') : null;
   }
 });
 
