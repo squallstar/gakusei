@@ -66,8 +66,6 @@ Template.newQuestion.events({
       timeSpent: template.timeSpent
     };
 
-    console.log(params);
-
     Meteor.call('submitAnswer', params, function () {
       template.renderNextQuestion(() => {
         $input.val('').prop('disabled', false);
