@@ -133,7 +133,9 @@ Meteor.methods({
           case 'to-english':
             question.title = 'Type the <u>english translation</u> of this kanji.';
             question.description = phrase.kanji;
-            question.answer = phrase.english;
+
+            // Prevents phrases like "the station"
+            question.answer = phrase.english.replace(/^the /, '');
             break;
         };
         break;
