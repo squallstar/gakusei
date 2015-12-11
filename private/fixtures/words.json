@@ -37,6 +37,18 @@
     "kana": "パイナップル"
   },
   {
+    "type": "object drink",
+    "english": "beer",
+    "romaji": "biiru",
+    "kana": "ビール"
+  },
+  {
+    "type": "object drink",
+    "english": "milk",
+    "romaji": "miruku",
+    "kana": "ミルク"
+  },
+  {
     "type": "object",
     "english": "pen",
     "romaji": "pen",
@@ -374,6 +386,13 @@
     "romaji": "tabemasu",
     "kana": "たべます",
     "kanji": "食べます"
+  },
+  {
+    "type": "verb-drink",
+    "english": "drink",
+    "romaji": "nomimasu",
+    "kana": "のみます",
+    "kanji": "飲みます"
   },
   {
     "type": "noun-rude",

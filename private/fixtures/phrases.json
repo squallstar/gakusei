@@ -114,6 +114,12 @@
     "story": "conversation"
   },
   {
+    "english": "I {{verb-drink}} a {{object drink}}",
+    "romaji": "{{object drink}} o {{verb-drink}}.",
+    "kana": "{{object drink}}を{{verb-drink}}。",
+    "story": "conversation"
+  },
+  {
     "english": "{{pointer-person}} is {{suffix}} {{name}}.",
     "romaji": "{{pointer-person}} wa {{name}}{{suffix}} desu.",
     "kana": "{{pointer-person}}は{{name}}{{suffix}}です.",
