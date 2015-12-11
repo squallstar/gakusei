@@ -407,6 +407,34 @@
   },
   {
     "type": "weekday",
+    "english": "Tuesday",
+    "romaji": "kayoubi",
+    "kana": "かようび",
+    "kanji": "火曜日"
+  },
+  {
+    "type": "weekday",
+    "english": "Wednesday",
+    "romaji": "suiyoubi",
+    "kana": "水ようび",
+    "kanji": "水曜日"
+  },
+  {
+    "type": "weekday",
+    "english": "Thursday",
+    "romaji": "moyoubi",
+    "kana": "もようび",
+    "kanji": "も曜日"
+  },
+  {
+    "type": "weekday",
+    "english": "Friday",
+    "romaji": "kinyoubi",
+    "kana": "きんようび",
+    "kanji": "金曜日"
+  },
+  {
+    "type": "weekday",
     "english": "Saturday",
     "romaji": "doyoubi",
     "kana": "どようび",
