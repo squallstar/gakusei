@@ -44,7 +44,25 @@
   {
     "english": "{{suffix}} {{name}} is {{nationality}}.",
     "romaji": "{{name}}{{suffix}} wa {{nationality}} desu.",
-    "kana": "{{name}}{{suffix}}は{{nationality}}です",
+    "kana": "{{name}}{{suffix}}は{{nationality}}です。",
+    "story": "describing-things"
+  },
+  {
+    "english": "Is {{suffix}} {{name}} {{nationality}}?",
+    "romaji": "{{name}}{{suffix}} wa {{nationality}} desu ka.",
+    "kana": "{{name}}{{suffix}}は{{nationality}}ですか。",
+    "story": "describing-things"
+  },
+  {
+    "english": "{{suffix}} {{name}} is {{profession}}.",
+    "romaji": "{{name}}{{suffix}} wa {{profession}} desu.",
+    "kana": "{{name}}{{suffix}}は{{profession}}です。",
+    "story": "describing-things"
+  },
+  {
+    "english": "Is {{suffix}} {{name}} a {{profession}}?",
+    "romaji": "{{name}}{{suffix}} wa {{profession}} desu ka.",
+    "kana": "{{name}}{{suffix}}は{{profession}}ですか。",
     "story": "describing-things"
   },
   {

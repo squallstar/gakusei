@@ -504,5 +504,46 @@
     "romaji": "nihonjin",
     "kana": "にほんじん",
     "kanji": "日本人"
+  },
+  {
+    "type": "sex",
+    "english": "Man",
+    "romaji": "otoko",
+    "kana": "おとこ",
+    "kanji": "男"
+  },
+  {
+    "type": "sex",
+    "english": "Woman",
+    "romaji": "onna",
+    "kana": "おんな",
+    "kanji": "女"
+  },
+  {
+    "type": "profession",
+    "english": "student",
+    "romaji": "gakusei",
+    "kana": "がくせい",
+    "kanji": "学生"
+  },
+  {
+    "type": "profession",
+    "english": "teacher",
+    "romaji": "sensei",
+    "kana": "せんせい",
+    "kanji": "先生"
+  },
+  {
+    "type": "profession",
+    "english": "lawyer",
+    "romaji": "bengoshi",
+    "kana": "べんごし",
+    "kanji": "弁護士"
+  },
+  {
+    "type": "profession",
+    "english": "engineer",
+    "romaji": "enjinia",
+    "kana": "エンジニア"
   }
 ]
