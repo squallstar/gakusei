@@ -1,5 +1,5 @@
 const REGEXP_STORY_SLUG = /\-([0-9]+)$/;
-const REGEXP_OBJ_PLACEHOLDER = /{{[a-z\-]+}}/g;
+const REGEXP_OBJ_PLACEHOLDER = /{{[a-z\- ]+}}/g;
 
 Meteor.methods({
   getQuestion: function (previousQuestion) {
@@ -73,9 +73,9 @@ Meteor.methods({
       if (previousQuestion && previousQuestion.story && previousQuestion.story.slug === 'kanji' && wordType === previousQuestion.words[0].type) {
         word = previousQuestion.words[0];
       } else {
-        let hasSubtype = wordType.indexOf('.') > 0,
-            primaryType = wordType.split('.')[0],
-            primaryTypeRegExp = new RegExp(primaryType + '\.(.+)', 'gi');
+        let hasSubtype = wordType.indexOf(' ') > 0,
+            primaryType = wordType.split(' ')[0],
+            primaryTypeRegExp = new RegExp('^' + primaryType.replace(/\-/g, '\\-') + ' ', 'gi');
 
         word = _.sample(_.filter(words, (w) => {
           // Extract the exact match when asking for types like "object.food"

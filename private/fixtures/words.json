@@ -1,46 +1,46 @@
 [
   {
-    "type": "object.food",
+    "type": "object food",
     "english": "apple",
     "romaji": "ringo",
     "kana": "りんご"
   },
   {
-    "type": "object.food",
+    "type": "object food",
     "english": "banana",
     "romaji": "banana",
     "kana": "バナナ"
   },
   {
-    "type": "object.food",
+    "type": "object food",
     "english": "melon",
     "romaji": "meron",
     "kana": "メロン"
   },
   {
-    "type": "object",
-    "english": "pen",
-    "romaji": "pen",
-    "kana": "ペン"
-  },
-  {
-    "type": "object.food",
+    "type": "object food",
     "english": "orange",
     "romaji": "orenji",
     "kana": "オレンジ"
   },
   {
-    "type": "object.food",
+    "type": "object food",
     "english": "peach",
     "romaji": "momo",
     "kana": "もも",
     "kanji" : "桃"
   },
   {
-    "type": "object.food",
+    "type": "object food",
     "english": "pineapple",
     "romaji": "painappuru",
     "kana": "パイナップル"
+  },
+  {
+    "type": "object",
+    "english": "pen",
+    "romaji": "pen",
+    "kana": "ペン"
   },
   {
     "type": "object",
@@ -286,67 +286,67 @@
   },
   {
     "type": "place",
+    "english": "Mt. Fuji",
+    "romaji": "fujisan",
+    "kana": "ふじさん",
+    "kanji": "富士山"
+  },
+  {
+    "type": "place city",
     "english": "Osaka",
     "romaji": "Ōsaka",
     "kana": "おおさか",
     "kanji": "大阪"
   },
   {
-    "type": "place",
+    "type": "place city",
     "english": "Tokyo",
     "romaji": "Toukyou",
     "kana": "とうきょう",
     "kanji": "東京"
   },
   {
-    "type": "place",
+    "type": "place city",
     "english": "London",
     "romaji": "London",
     "kana": "ロンドン"
   },
   {
-    "type": "place",
+    "type": "place country",
     "english": "Italy",
     "romaji": "itaria",
     "kana": "イタリア"
   },
   {
-    "type": "place",
+    "type": "place country",
     "english": "the United Kingdom",
     "romaji": "igirisu",
     "kana": "イギリス"
   },
   {
-    "type": "place",
+    "type": "place country",
     "english": "the USA",
     "romaji": "amerika",
     "kana": "アメリカ"
   },
   {
-    "type": "place",
+    "type": "place country",
     "english": "Canada",
     "romaji": "kanada",
     "kana": "カナダ"
   },
   {
-    "type": "place",
+    "type": "place country",
     "english": "China",
     "romaji": "chuugoku",
     "kana": "ちゅうごく",
     "kana": "中国"
   },
   {
-    "type": "place",
+    "type": "place country",
     "english": "India",
     "romaji": "indo",
     "kana": "インド"
-  },
-  {
-    "type": "place",
-    "english": "Mt. Fuji",
-    "romaji": "fujisan",
-    "kana": "ふじさん",
-    "kanji": "富士山"
   },
   {
     "type": "verb-direction",
@@ -380,7 +380,8 @@
     "english": "excuse me",
     "romaji": "shitsurei",
     "kana": "しつれい",
-    "kanji": "失礼"
+    "kanji": "失礼",
+    "context": "entering someone's home"
   },
   {
     "type": "time-past",
