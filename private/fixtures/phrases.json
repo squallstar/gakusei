@@ -108,6 +108,12 @@
     "story": "conversation"
   },
   {
+    "english": "I {{verb-eat}} a {{object.food}}",
+    "romaji": "{{object.food}} o {{verb-eat}}.",
+    "kana": "{{object.food}}を{{verb-eat}}。",
+    "story": "conversation"
+  },
+  {
     "english": "{{pointer-person}} is {{suffix}} {{name}}.",
     "romaji": "{{pointer-person}} wa {{name}}{{suffix}} desu.",
     "kana": "{{pointer-person}}は{{name}}{{suffix}}です.",

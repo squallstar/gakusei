@@ -73,8 +73,18 @@ Meteor.methods({
       if (previousQuestion && previousQuestion.story && previousQuestion.story.slug === 'kanji' && wordType === previousQuestion.words[0].type) {
         word = previousQuestion.words[0];
       } else {
-        // Get a random word of this type
-        word = _.sample(_.filter(words, (w) => { return w.type === wordType; }));
+        let hasSubtype = wordType.indexOf('.') > 0,
+            primaryType = wordType.split('.')[0],
+            primaryTypeRegExp = new RegExp(primaryType + '\.(.+)', 'gi');
+
+        word = _.sample(_.filter(words, (w) => {
+          // Extract the exact match when asking for types like "object.food"
+          if (hasSubtype) {
+            return w.type === wordType;
+          }
+
+          return w.type === wordType || w.type.match(primaryTypeRegExp);
+        }));
       }
 
       // Push this word to our collection

@@ -1,18 +1,18 @@
 [
   {
-    "type": "object",
+    "type": "object.food",
     "english": "apple",
     "romaji": "ringo",
     "kana": "りんご"
   },
   {
-    "type": "object",
+    "type": "object.food",
     "english": "banana",
     "romaji": "banana",
     "kana": "バナナ"
   },
   {
-    "type": "object",
+    "type": "object.food",
     "english": "melon",
     "romaji": "meron",
     "kana": "メロン"
@@ -24,20 +24,20 @@
     "kana": "ペン"
   },
   {
-    "type": "object",
+    "type": "object.food",
     "english": "orange",
     "romaji": "orenji",
     "kana": "オレンジ"
   },
   {
-    "type": "object",
+    "type": "object.food",
     "english": "peach",
     "romaji": "momo",
     "kana": "もも",
     "kanji" : "桃"
   },
   {
-    "type": "object",
+    "type": "object.food",
     "english": "pineapple",
     "romaji": "painappuru",
     "kana": "パイナップル"
@@ -367,6 +367,13 @@
     "english": "returning",
     "romaji": "kaerimasu",
     "kana": "かえります"
+  },
+  {
+    "type": "verb-eat",
+    "english": "eat",
+    "romaji": "tabemasu",
+    "kana": "たべます",
+    "kanji": "食べます"
   },
   {
     "type": "noun-rude",
