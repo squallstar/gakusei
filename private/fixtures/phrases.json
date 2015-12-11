@@ -180,6 +180,18 @@
     "story": "travelling"
   },
   {
+    "english": "{{time-past}} I {{verb-direction-past}} to {{place}} by {{transport}}.",
+    "romaji": "{{time-past}} ni {{transport}} de {{place}} ni {{verb-direction-past}}.",
+    "kana": "{{time-past}}に{{transport}}で{{place}}に{{verb-direction-past}}。",
+    "story": "travelling"
+  },
+  {
+    "english": "{{time-past}} I {{verb-direction-past}} to {{place}} with {{suffix}} {{name}}.",
+    "romaji": "{{time-past}} ni {{name}}{{suffix}} to {{place}} ni {{verb-direction-past}}.",
+    "kana": "{{time-past}}に{{name}}{{suffix}}と{{place}}に{{verb-direction-past}}。",
+    "story": "travelling"
+  },
+  {
     "english": "What are you going to do during the {{weekend}}?",
     "romaji": "{{weekend}} ni nani o shimasu ka.",
     "kana": "{{weekend}}に何をしますか。",

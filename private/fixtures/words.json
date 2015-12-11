@@ -365,20 +365,30 @@
     "english": "going",
     "romaji": "ikimasu",
     "kana": "いきます",
-    "kanji": "行きます"
+    "kanji": "行きます",
+    "context": "present continuous"
   },
   {
     "type": "verb-direction",
     "english": "coming",
     "romaji": "kimasu",
     "kana": "きます",
-    "kanji": "来ます"
+    "kanji": "来ます",
+    "context": "present continuous"
   },
   {
     "type": "verb-direction",
     "english": "returning",
     "romaji": "kaerimasu",
-    "kana": "かえります"
+    "kana": "かえります",
+    "context": "present continuous"
+  },
+  {
+    "type": "verb-direction-past",
+    "english": "went",
+    "romaji": "ikimashita",
+    "kana": "いきました",
+    "kanji": "行きました"
   },
   {
     "type": "verb-eat",
@@ -403,11 +413,32 @@
     "context": "entering someone's home"
   },
   {
+    "type": "year",
+    "english": "year",
+    "romaji": "toshi",
+    "kana": "とし",
+    "kanji": "年"
+  },
+  {
     "type": "time-past",
     "english": "yesterday",
     "romaji": "kinou",
     "kana": "きのう",
     "kanji": "昨日"
+  },
+  {
+    "type": "time-past",
+    "english": "last week",
+    "romaji": "senshuu",
+    "kana": "せんしゅう",
+    "kanji": "先週"
+  },
+  {
+    "type": "time-past",
+    "english": "last year",
+    "romaji": "sakunen",
+    "kana": "さくねん",
+    "kanji": "昨年"
   },
   {
     "type": "time-future",
@@ -418,10 +449,38 @@
   },
   {
     "type": "time-future",
+    "english": "this week",
+    "romaji": "konshuu",
+    "kana": "こんしゅう",
+    "kanji": "今週"
+  },
+  {
+    "type": "time-future",
+    "english": "this year",
+    "romaji": "kotoshi",
+    "kana": "ことし",
+    "kanji": "今年"
+  },
+  {
+    "type": "time-future",
     "english": "tomorrow",
     "romaji": "ashita",
     "kana": "あした",
     "kanji": "明日"
+  },
+  {
+    "type": "time-future",
+    "english": "next week",
+    "romaji": "raishuu",
+    "kana": "らいしゅう",
+    "kanji": "来週"
+  },
+  {
+    "type": "time-future",
+    "english": "next year",
+    "romaji": "rainen",
+    "kana": "らいねん",
+    "kanji": "来年"
   },
   {
     "type": "weekend",
