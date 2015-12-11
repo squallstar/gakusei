@@ -93,7 +93,7 @@ Meteor.methods({
     });
 
     // Fix wording that may be wrong when words are merged together
-    phrase.english = phrase.english.replace('the this').replace('this the');
+    phrase.english = phrase.english.replace(/the (this|that)/gi, 'the');
 
     // The type could already have been set above when studying kanji
     if (!question.type) {
