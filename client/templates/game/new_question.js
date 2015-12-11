@@ -4,12 +4,25 @@ Template.newQuestion.helpers({
   }
 });
 
+Template.newQuestion.onDestroyed(function () {
+  clearInterval(this.timer);
+});
+
 Template.newQuestion.onCreated(function () {
   this.question = new ReactiveVar({});
+  this.timeSpent = 0;
 
-  this.nextQuestion = (next) => {
+  // Timer fires every second, increasing seconds
+  // spent answering this question
+  this.timer = setInterval(() => {
+    this.timeSpent++;
+  }, 1000);
+
+  // Helper function to load the next question
+  this.renderNextQuestion = (next) => {
     Meteor.call('getQuestion', this.question.get(), (err, question) => {
       this.question.set(question);
+      this.timeSpent = 0;
 
       if (typeof next === 'function') {
         next();
@@ -17,7 +30,8 @@ Template.newQuestion.onCreated(function () {
     });
   };
 
-  this.nextQuestion();
+  // Loads the first question when the template loads
+  this.renderNextQuestion();
 });
 
 Template.newQuestion.onRendered(function () {
@@ -31,7 +45,8 @@ Template.newQuestion.events({
     event.preventDefault();
 
     var $input = template.$('form input'),
-        answer = $input.val().trim();
+        answer = $input.val().trim(),
+        params;
 
     if (!answer) {
       return;
@@ -45,8 +60,16 @@ Template.newQuestion.events({
     // Disable input while loading
     $input.prop('disabled', true);
 
-    Meteor.call('submitAnswer', template.question.get(), answer, function () {
-      template.nextQuestion(() => {
+    params = {
+      question:  template.question.get(),
+      userAnswer: answer,
+      timeSpent: template.timeSpent
+    };
+
+    console.log(params);
+
+    Meteor.call('submitAnswer', params, function () {
+      template.renderNextQuestion(() => {
         $input.val('').prop('disabled', false);
 
         // Focus input on desktop

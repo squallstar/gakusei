@@ -2,7 +2,9 @@
 const diff = Meteor.npmRequire('diff');
 
 Meteor.methods({
-  submitAnswer: function (question, userAnswer) {
+  submitAnswer: function (options) {
+    let { question, userAnswer, timeSpent } = options;
+
     // Find out whether the user is submitting romaji
     if (question.answer_alternative && userAnswer.match(/([a-z]+)/)) {
       question.answer = question.answer_alternative;
@@ -49,6 +51,7 @@ Meteor.methods({
       parts: parts,
       question: question,
       answer: userAnswer,
+      time_spent: timeSpent,
       created_at: Date.now()
     });
   }

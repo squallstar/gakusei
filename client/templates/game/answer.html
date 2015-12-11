@@ -13,7 +13,10 @@
           <span class={{type}}>{{{value}}}</span>
         {{/each}}
       </div>
-      <span class="accuracy">{{accuracy}}% accuracy</span>
+      <span class="accuracy">
+        {{accuracy}}% accuracy
+        {{#if timeSpent}} - Answered in <strong>{{timeSpent}}</strong>{{/if}}
+      </span>
       {{#if hasWords}}
         <a href="#" data-toggle-words class="words-toggle">
           {{#if isShowingWords}}

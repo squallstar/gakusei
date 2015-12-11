@@ -139,8 +139,6 @@ Meteor.methods({
         break;
     }
 
-    console.log(question);
-
     question.description = capitalizeFirstLetter(question.description);
 
     return question;

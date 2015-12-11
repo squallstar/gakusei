@@ -24,6 +24,9 @@ Template.answer.helpers({
     } else {
       return 'times';
     }
+  },
+  timeSpent: function () {
+    return Meteor.SecondsToTime(this.time_spent);
   }
 });
 
