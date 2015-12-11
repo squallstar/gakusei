@@ -29,6 +29,7 @@
     }
 
     p {
+      @extend %not-selectable;
       font-size: 2.5rem;
       font-weight: normal;
       line-height: 1.5;
