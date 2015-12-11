@@ -4,6 +4,9 @@ Template.question.helpers({
   },
   showFurigana: function () {
     return this.type === GAME.ENGLISH;
+  },
+  context: function () {
+    return this.contexts.join(', ');
   }
 });
 

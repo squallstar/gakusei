@@ -20,6 +20,12 @@ Template.newQuestion.onCreated(function () {
   this.nextQuestion();
 });
 
+Template.newQuestion.onRendered(function () {
+  if (!Meteor.isMobile) {
+    this.$('input').focus();
+  }
+});
+
 Template.newQuestion.events({
   'submit form': function (event, template) {
     event.preventDefault();

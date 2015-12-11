@@ -4,7 +4,7 @@ const REGEXP_OBJ_PLACEHOLDER = /{{[a-z\-]+}}/g;
 Meteor.methods({
   getQuestion: function (previousQuestion) {
     let words = Word.find().fetch(),
-        question = { words: [] },
+        question = { words: [], contexts: [] },
         phrase,
         placeholders,
         story;
@@ -80,6 +80,10 @@ Meteor.methods({
       // Push this word to our collection
       question.words.push(word);
 
+      if (word.context) {
+        question.contexts.push(word.context);
+      }
+
       _.each(['english', 'romaji', 'kana'], function (locale) {
         let replaceWith = word[locale];
 
@@ -113,17 +117,29 @@ Meteor.methods({
         question.answer_alternative = phrase.romaji;
         break;
       case GAME.KANJI:
-        question.title = 'Type the reading of the following kanji in hiragana.';
-        question.description = phrase.kanji;
-        question.answer = phrase.kana;
-        question.answer_alternative = phrase.romaji;
+        switch (_.sample(['to-kanji', 'to-kana', 'to-english'])) {
+          case 'to-kanji':
+            question.title = 'Translate the following word to its <u>kanji</u>.';
+            question.description = phrase.english;
+            question.answer = phrase.kanji;
+            question.answer_alternative = phrase.romaji;
+            break;
+          case 'to-kana':
+            question.title = 'Type the reading of the following kanji in <u>hiragana</u>.';
+            question.description = phrase.kanji;
+            question.answer = phrase.kana;
+            question.answer_alternative = phrase.romaji;
+            break;
+          case 'to-english':
+            question.title = 'Type the <u>english translation</u> of this kanji.';
+            question.description = phrase.kanji;
+            question.answer = phrase.english;
+            break;
+        };
         break;
-      // case 'kana-to-romaji':
-      //   question.title = 'Translate the following Japanese text to Romaji.';
-      //   question.description = phrase.kana;
-      //   question.answer = phrase.romaji;
-      //   break;
     }
+
+    console.log(question);
 
     question.description = capitalizeFirstLetter(question.description);
 

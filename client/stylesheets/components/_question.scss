@@ -17,7 +17,14 @@
     h5 {
       font-weight: normal;
       font-size: 1.5rem;
+      line-height: 1.5;
       margin-bottom: 3rem;
+
+      u {
+        text-decoration: none;
+        background-color: rgba(255,255,255,0.2);
+        padding: 0.3rem;
+      }
     }
 
     p {

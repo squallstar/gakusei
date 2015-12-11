@@ -133,13 +133,15 @@
     "type": "pointer",
     "english": "that",
     "romaji": "sore",
-    "kana": "それ"
+    "kana": "それ",
+    "context": "near listener"
   },
   {
     "type": "pointer",
     "english": "that",
     "romaji": "are",
-    "kana": "あれ"
+    "kana": "あれ",
+    "context": "far from listener"
   },
   {
     "type": "pointer-object",
@@ -151,13 +153,15 @@
     "type": "pointer-object",
     "english": "that",
     "romaji": "sono",
-    "kana": "その"
+    "kana": "その",
+    "context": "near listener"
   },
   {
     "type": "pointer-object",
     "english": "that",
     "romaji": "ano",
-    "kana": "あの"
+    "kana": "あの",
+    "context": "far from listener"
   },
   {
     "type": "pointer-person",
@@ -217,7 +221,15 @@
     "type": "suffix",
     "english": "Mr.",
     "romaji": "san",
-    "kana": "さん"
+    "kana": "さん",
+    "context": "man"
+  },
+  {
+    "type": "suffix",
+    "english": "Mrs.",
+    "romaji": "san",
+    "kana": "さん",
+    "context": "woman"
   },
   {
     "type": "transport",

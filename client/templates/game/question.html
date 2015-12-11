@@ -1,9 +1,11 @@
 <template name="question">
   <div class="question">
-    <h5>{{title}}</h5>
+    <h5>{{{title}}} {{#if context}} <u><i class="fa fa-info-circle"></i> {{context}})</u>{{/if}}</h5>
     <p class="{{#if showingFurigana}}with-furigana{{/if}}">{{{description}}}</p>
     <footer>
-      {{#if story}}<h6>({{story.title}})</h6>{{/if}}
+      {{#if story}}
+        <h6>({{story.title}})</h6>
+      {{/if}}
       {{#if showFurigana}}
         <div class="options">
           <label for="furigana">
