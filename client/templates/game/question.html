@@ -1,6 +1,6 @@
 <template name="question">
   <div class="question">
-    <h5>{{{title}}} {{#if context}} <u><i class="fa fa-info-circle"></i> {{context}}</u>{{/if}}</h5>
+    <h5>{{{title}}} {{#if context}} <u><i class="fa fa-info-circle"></i> context: {{context}}</u>{{/if}}</h5>
     <p class="{{#if showingFurigana}}with-furigana{{/if}}">{{{description}}}</p>
     <footer>
       {{#if story}}
