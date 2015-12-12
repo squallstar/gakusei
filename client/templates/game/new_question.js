@@ -81,11 +81,10 @@ Template.newQuestion.events({
       question:  template.question.get(),
       userAnswer: answer,
       timeSpent: template.timeSpent
-    }, function (correct) {
+    }, function (err, correct) {
       // We allow the user to skip the next sentence if the previous one was correct
       // or he already had a credit to skip
       template.canSkip.set(correct || template.canSkip.get());
-
       // Proceed to the next qestion
       template.renderNextQuestion();
     });
