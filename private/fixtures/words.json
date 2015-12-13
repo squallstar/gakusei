@@ -554,21 +554,34 @@
   },
   {
     "type": "sport",
-    "english": "Badminton",
+    "english": "badminton",
     "romaji": "badominton",
     "kana": "バドミントン"
   },
   {
     "type": "sport",
-    "english": "Tennis",
+    "english": "tennis",
     "romaji": "tenisu",
     "kana": "テニス"
   },
   {
     "type": "sport",
-    "english": "Soccer",
+    "english": "soccer",
     "romaji": "sakkaa",
     "kana": "サッカー"
+  },
+  {
+    "type": "sport",
+    "english": "golf",
+    "romaji": "gorofu",
+    "kana": "ゴルフ"
+  },
+  {
+    "type": "sport",
+    "english": "sumo",
+    "romaji": "sumou",
+    "kana": "すもう",
+    "kanji": "相撲"
   },
   {
     "type": "time-now",
