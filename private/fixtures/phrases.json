@@ -72,6 +72,12 @@
     "story": "describing-things"
   },
   {
+    "english": "{{pointer-object}} {{object mountain}} is {{place mountain}}.",
+    "romaji": "{{pointer-object}}{{object mountain}} wa {{place mountain}} desu.",
+    "kana": "{{pointer-object}}{{object mountain}}は{{place mountain}}です。",
+    "story": "describing-things"
+  },
+  {
     "english": "Good morning.",
     "romaji": "ohayou gozaimasu.",
     "kana": "おはようございます。",

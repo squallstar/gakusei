@@ -62,6 +62,13 @@
     "kanji": "花"
   },
   {
+    "type": "object mountain",
+    "english": "mountain",
+    "romaji": "yama",
+    "kana": "やま",
+    "kanji": "山"
+  },
+  {
     "type": "animal",
     "english": "dog",
     "romaji": "inu",
@@ -297,11 +304,18 @@
     "kana": "デパート"
   },
   {
-    "type": "place",
+    "type": "place mountain",
     "english": "Mt. Fuji",
     "romaji": "fujisan",
     "kana": "ふじさん",
     "kanji": "富士山"
+  },
+  {
+    "type": "place mountain",
+    "english": "Mt. Tsukuba",
+    "romaji": "tsukubasan",
+    "kana": "つくばさん",
+    "kanji": "筑波山"
   },
   {
     "type": "place city",
