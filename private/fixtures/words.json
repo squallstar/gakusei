@@ -102,13 +102,13 @@
     "kana": "ショー"
   },
   {
-    "type": "container",
+    "type": "object",
     "english": "table",
     "romaji": "teboru",
     "kana": "テーブル"
   },
   {
-    "type": "container",
+    "type": "object",
     "english": "fridge",
     "romaji": "reizouko",
     "kana": "れいぞうこ",
