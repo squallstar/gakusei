@@ -35,7 +35,7 @@ Template.newQuestion.onCreated(function () {
         this.question.set(question);
         this.timeSpent = 0;
 
-        let $input = this.$('input');
+        let $input = this.$('#new_answer');
 
         // Clear the input
         $input.val('').prop('disabled', false);
