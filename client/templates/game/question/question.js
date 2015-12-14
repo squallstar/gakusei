@@ -12,6 +12,6 @@ Template.question.helpers({
 
 Template.question.events({
   'change #furigana': function (event) {
-    Session.set(SHOW_FURIGANA, $(event.target).is(':checked'));
+    Session.setPersistent(SHOW_FURIGANA, $(event.target).is(':checked'));
   }
 });

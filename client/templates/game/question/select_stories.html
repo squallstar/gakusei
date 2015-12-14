@@ -1,0 +1,18 @@
+<template name="selectStories">
+  {{#if Template.subscriptionsReady}}
+    <header class="stories {{#if isOpen}}open{{/if}}">
+      <a href="#" class="toggle" data-toggle>
+        {{#if isOpen}}
+        <i class="fa fa-caret-down"></i> Close and save changes
+        {{else}}
+        <i class="fa fa-caret-right"></i> {{selectedText}}
+        {{/if}}
+      </a>
+      <ul>
+        {{#each stories}}
+          {{> selectStory}}
+        {{/each}}
+      </ul>
+    </header>
+  {{/if}}
+</template>

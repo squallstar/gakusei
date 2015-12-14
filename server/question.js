@@ -1,9 +1,11 @@
 const REGEXP_STORY_SLUG = /\-([0-9]+)$/;
 const REGEXP_OBJ_PLACEHOLDER = /{{[a-z\- ]+}}/g;
+const SUBTYPE_SEPARATOR = ' '; // a space
 
 Meteor.methods({
-  getQuestion: function (previousQuestion) {
-    let words = Word.find().fetch(),
+  getQuestion: function (options) {
+    let { previousQuestion, selectedStories } = options,
+        words = Word.find().fetch(),
         question = { words: [], contexts: [] },
         phrase,
         placeholders,
@@ -21,20 +23,33 @@ Meteor.methods({
     if (story) {
       check(story.slug, String);
 
-      if (story.slug === 'kanji' && previousQuestion.words) {
+      if (story.slug === 'kanji' && previousQuestion.words && !selectedStories.length) {
         // Try to find a phrase where this kanji can be used
         let wordType = '{{' + previousQuestion.words[0].type + '}}';
         phrase = Phrase.findOne({ $text: { $search: wordType } });
-        phrase.story = 'kanji-use';
-        question.type = GAME.KANA;
+        if (phrase) {
+          phrase.story = 'kanji-use';
+          question.type = GAME.KANA;
+        }
       } else {
         // Extract a follow up phrase from the same story
         let number = story.slug.match(REGEXP_STORY_SLUG);
         if (number && number.length === 2) {
           number = story.slug.replace(REGEXP_STORY_SLUG, '-' + (parseInt(number[1])+1));
-          phrase = Phrase.findOne({ story: number });
+          phrase = _.sample(Phrase.find({ story: number }).fetch());
         }
       }
+    }
+
+    // When the user has filtered the stories he wants to play with,
+    // we limit our phrases selection
+    if (!phrase && selectedStories.length) {
+      let stories = Story.find({ _id: { $in: selectedStories } }).fetch(),
+          expressions = _.map(stories, (s) => {
+            return new RegExp('^' + s.slug.replace(/\-/g, '\-') + '.+', 'g');
+          });
+
+      phrase = _.sample(Phrase.find({ story: { $in: expressions } }).fetch());
     }
 
     // Extract a random phrase or word
@@ -73,12 +88,12 @@ Meteor.methods({
       if (previousQuestion && previousQuestion.story && previousQuestion.story.slug === 'kanji' && wordType === previousQuestion.words[0].type) {
         word = previousQuestion.words[0];
       } else {
-        let hasSubtype = wordType.indexOf(' ') > 0,
-            primaryType = wordType.split(' ')[0],
-            primaryTypeRegExp = new RegExp('^' + primaryType.replace(/\-/g, '\\-') + ' ', 'gi');
+        let hasSubtype = wordType.indexOf(SUBTYPE_SEPARATOR) > 0,
+            primaryType = wordType.split(SUBTYPE_SEPARATOR)[0],
+            primaryTypeRegExp = new RegExp('^' + primaryType.replace(/\-/g, '\\-') + SUBTYPE_SEPARATOR, 'gi');
 
         word = _.sample(_.filter(words, (w) => {
-          // Extract the exact match when asking for types like "object.food"
+          // Extract the exact match when asking for types like "object food"
           if (hasSubtype) {
             return w.type === wordType;
           }
@@ -95,11 +110,14 @@ Meteor.methods({
       }
 
       _.each(['english', 'romaji', 'kana'], function (locale) {
-        let replaceWith = word[locale];
+        let replaceWith;
 
         if (locale === 'kana' && word.kanji) {
           // Furigana
           replaceWith = '<ruby><rb>' + word.kanji + '</rb><rp>(</rp><rt>' + word.kana + '</rt><rp>)</rp></ruby>';
+        } else {
+          // Normal replacement
+          replaceWith = word[locale];
         }
 
         phrase[locale] = phrase[locale].replace(placeholder, replaceWith);
@@ -109,50 +127,56 @@ Meteor.methods({
     // Fix wording that may be wrong when words are merged together
     phrase.english = phrase.english.replace(/the (this|that)/gi, 'the');
 
-    // The type could already have been set above when studying kanji
-    if (!question.type) {
-      question.type = _.sample([GAME.ENGLISH, GAME.KANA]);
-    }
-
-    switch (question.type) {
-      case GAME.ENGLISH:
-        question.title = 'Translate the following text to English.';
-        question.description = phrase.kana;
-        question.answer = phrase.english;
-        break;
-      case GAME.KANA:
-        question.title = 'Translate the following text to Japanese.';
-        question.description = phrase.english;
-        question.answer = phrase.kana;
-        question.answer_alternative = phrase.romaji;
-        break;
-      case GAME.KANJI:
-        switch (_.sample(['to-kanji', 'to-kana', 'to-english'])) {
-          case 'to-kanji':
-            question.title = 'Translate the following word to its <u>kanji</u>.';
-            question.description = phrase.english;
-            question.answer = phrase.kanji;
-            question.answer_alternative = phrase.romaji;
-            break;
-          case 'to-kana':
-            question.title = 'Type the reading of the following kanji in <u>hiragana</u>.';
-            question.description = phrase.kanji;
-            question.answer = phrase.kana;
-            question.answer_alternative = phrase.romaji;
-            break;
-          case 'to-english':
-            question.title = 'Type the <u>english translation</u> of this kanji.';
-            question.description = phrase.kanji;
-
-            // Prevents phrases like "the station"
-            question.answer = phrase.english.replace(/^the /, '');
-            break;
-        };
-        break;
-    }
-
-    question.description = capitalizeFirstLetter(question.description);
-
-    return question;
+    return generateQuizForPhrase(phrase, question);
   }
 });
+
+/* ------------------------------------------------------------------- */
+
+function generateQuizForPhrase (phrase, question) {
+  // The type could already have been set above when studying kanji
+  if (!question.type) {
+    question.type = _.sample([GAME.ENGLISH, GAME.KANA]);
+  }
+
+  switch (question.type) {
+    case GAME.ENGLISH:
+      question.title = 'Translate the following text to English.';
+      question.description = phrase.kana;
+      question.answer = phrase.english;
+      break;
+    case GAME.KANA:
+      question.title = 'Translate the following text to Japanese.';
+      question.description = phrase.english;
+      question.answer = phrase.kana;
+      question.answer_alternative = phrase.romaji;
+      break;
+    case GAME.KANJI:
+      switch (_.sample(['to-kanji', 'to-kana', 'to-english'])) {
+        case 'to-kanji':
+          question.title = 'Translate the following word to its <u>kanji</u>.';
+          question.description = phrase.english;
+          question.answer = phrase.kanji;
+          question.answer_alternative = phrase.romaji;
+          break;
+        case 'to-kana':
+          question.title = 'Type the reading of the following kanji in <u>hiragana</u>.';
+          question.description = phrase.kanji;
+          question.answer = phrase.kana;
+          question.answer_alternative = phrase.romaji;
+          break;
+        case 'to-english':
+          question.title = 'Type the <u>english translation</u> of this kanji.';
+          question.description = phrase.kanji;
+
+          // Prevents phrases like "the station"
+          question.answer = phrase.english.replace(/^the /, '');
+          break;
+      };
+      break;
+  }
+
+  question.description = capitalizeFirstLetter(question.description);
+
+  return question;
+}

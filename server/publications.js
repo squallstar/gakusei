@@ -11,3 +11,7 @@ Meteor.publish('answers', function (options) {
     limit: options.limit > MAX_ENTRIES_LIMIT ? MAX_ENTRIES_LIMIT : options.limit
   });
 });
+
+Meteor.publish.static('stories', function() {
+  return Story.find();
+});

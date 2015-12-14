@@ -3,6 +3,8 @@
     {{#each answers}}
       {{> answer}}
     {{/each}}
-    {{> showMore}}
+    {{#if Template.subscriptionsReady}}
+      {{> showMore}}
+    {{/if}}
   </div>
 </template>

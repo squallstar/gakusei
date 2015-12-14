@@ -24,22 +24,34 @@ Template.newQuestion.onCreated(function () {
 
   // Helper function to load the next question
   this.renderNextQuestion = (next) => {
-    Meteor.call('getQuestion', this.question.get(), (err, question) => {
-      this.question.set(question);
-      this.timeSpent = 0;
+    let previousQuestion = this.question.get();
 
-      let $input = this.$('input');
+    // Runs with the tracker to reload when the selected stories array changes
+    this.autorun(() => {
+      Meteor.call('getQuestion', {
+        previousQuestion: previousQuestion,
+        selectedStories: Session.get(SELECTED_STORIES)
+      }, (err, question) => {
+        this.question.set(question);
+        this.timeSpent = 0;
 
-      $input.val('').prop('disabled', false);
+        let $input = this.$('#new_answer');
 
-      // Focus input on desktop
-      if (!Meteor.isMobile) {
-        $input.focus();
-      }
+        // Clear the input
+        $input.val('').prop('disabled', false);
 
-      if (typeof next === 'function') {
-        next();
-      }
+        // Scroll to the top of the viewport
+        Meteor.ScrollToTop();
+
+        // Focus input on desktop
+        if (!Meteor.isMobile) {
+          $input.focus();
+        }
+
+        if (typeof next === 'function') {
+          next();
+        }
+      });
     });
   };
 
@@ -65,6 +77,7 @@ Template.newQuestion.events({
     var $input = template.$('form input'),
         answer = $input.val().trim();
 
+    // The user can't send empty answers
     if (!answer) {
       return;
     }

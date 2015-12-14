@@ -1,9 +1,19 @@
+%custom-font {
+  font-family: 'Gotham', sans-serif;
+}
+
 %clear {
   &:after {
     content: "";
     display: table;
     clear: both;
   }
+}
+
+%ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 %reset-appareance {
