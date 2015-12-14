@@ -7,8 +7,8 @@ Template.answers.helpers({
 });
 
 Template.answers.onCreated(function () {
-  this.autorun(function () {
-    Meteor.subscribe('answers', {
+  this.autorun(() => {
+    this.subscribe('answers', {
       limit: Session.get(ENTRIES_LIMIT) || ENTRIES_PER_PAGE
     });
   });

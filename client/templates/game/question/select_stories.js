@@ -32,7 +32,7 @@ Template.selectStories.helpers({
 
 Template.selectStories.onCreated(function () {
   this.isOpen = new ReactiveVar(false);
-  Meteor.subscribe('stories');
+  this.subscribe('stories');
 });
 
 Template.selectStories.events({
@@ -56,7 +56,7 @@ Template.selectStories.events({
         });
       }
 
-      Session.set(SELECTED_STORIES, ids);
+      Session.setPersistent(SELECTED_STORIES, ids);
     }
   }
 });

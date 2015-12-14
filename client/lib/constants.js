@@ -5,6 +5,6 @@ ENTRIES_PER_PAGE = 10;
 
 /* -------------------------------------------*/
 
-Session.set(SHOW_FURIGANA, true);
-Session.set(SELECTED_STORIES, []);
-Session.set(ENTRIES_LIMIT, ENTRIES_PER_PAGE);
+Session.setDefaultPersistent(SHOW_FURIGANA, true);
+Session.setDefaultPersistent(SELECTED_STORIES, []);
+Session.setDefault(ENTRIES_LIMIT, ENTRIES_PER_PAGE);
