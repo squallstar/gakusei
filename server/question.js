@@ -121,50 +121,56 @@ Meteor.methods({
     // Fix wording that may be wrong when words are merged together
     phrase.english = phrase.english.replace(/the (this|that)/gi, 'the');
 
-    // The type could already have been set above when studying kanji
-    if (!question.type) {
-      question.type = _.sample([GAME.ENGLISH, GAME.KANA]);
-    }
-
-    switch (question.type) {
-      case GAME.ENGLISH:
-        question.title = 'Translate the following text to English.';
-        question.description = phrase.kana;
-        question.answer = phrase.english;
-        break;
-      case GAME.KANA:
-        question.title = 'Translate the following text to Japanese.';
-        question.description = phrase.english;
-        question.answer = phrase.kana;
-        question.answer_alternative = phrase.romaji;
-        break;
-      case GAME.KANJI:
-        switch (_.sample(['to-kanji', 'to-kana', 'to-english'])) {
-          case 'to-kanji':
-            question.title = 'Translate the following word to its <u>kanji</u>.';
-            question.description = phrase.english;
-            question.answer = phrase.kanji;
-            question.answer_alternative = phrase.romaji;
-            break;
-          case 'to-kana':
-            question.title = 'Type the reading of the following kanji in <u>hiragana</u>.';
-            question.description = phrase.kanji;
-            question.answer = phrase.kana;
-            question.answer_alternative = phrase.romaji;
-            break;
-          case 'to-english':
-            question.title = 'Type the <u>english translation</u> of this kanji.';
-            question.description = phrase.kanji;
-
-            // Prevents phrases like "the station"
-            question.answer = phrase.english.replace(/^the /, '');
-            break;
-        };
-        break;
-    }
-
-    question.description = capitalizeFirstLetter(question.description);
-
-    return question;
+    return generateQuizForPhrase(phrase, question);
   }
 });
+
+/* ------------------------------------------------------------------- */
+
+function generateQuizForPhrase (phrase, question) {
+  // The type could already have been set above when studying kanji
+  if (!question.type) {
+    question.type = _.sample([GAME.ENGLISH, GAME.KANA]);
+  }
+
+  switch (question.type) {
+    case GAME.ENGLISH:
+      question.title = 'Translate the following text to English.';
+      question.description = phrase.kana;
+      question.answer = phrase.english;
+      break;
+    case GAME.KANA:
+      question.title = 'Translate the following text to Japanese.';
+      question.description = phrase.english;
+      question.answer = phrase.kana;
+      question.answer_alternative = phrase.romaji;
+      break;
+    case GAME.KANJI:
+      switch (_.sample(['to-kanji', 'to-kana', 'to-english'])) {
+        case 'to-kanji':
+          question.title = 'Translate the following word to its <u>kanji</u>.';
+          question.description = phrase.english;
+          question.answer = phrase.kanji;
+          question.answer_alternative = phrase.romaji;
+          break;
+        case 'to-kana':
+          question.title = 'Type the reading of the following kanji in <u>hiragana</u>.';
+          question.description = phrase.kanji;
+          question.answer = phrase.kana;
+          question.answer_alternative = phrase.romaji;
+          break;
+        case 'to-english':
+          question.title = 'Type the <u>english translation</u> of this kanji.';
+          question.description = phrase.kanji;
+
+          // Prevents phrases like "the station"
+          question.answer = phrase.english.replace(/^the /, '');
+          break;
+      };
+      break;
+  }
+
+  question.description = capitalizeFirstLetter(question.description);
+
+  return question;
+}
