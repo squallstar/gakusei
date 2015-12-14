@@ -10,6 +10,12 @@
   }
 }
 
+%ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 %reset-appareance {
   -moz-appareance: none;
   -o-appareance: none;

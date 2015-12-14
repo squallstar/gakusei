@@ -3,11 +3,27 @@ Template.selectStories.helpers({
     return Story.find({}, { sort: { title: 1 } });
   },
   selectedText: function () {
-    return 'All topics selected';
+    let selected = Session.get(SELECTED_STORIES),
+        stories;
+
+    if (!selected.length) {
+      return 'All topics selected';
+    }
+
+    stories = Story.find({ _id: { $in: selected } }).fetch();
+
+    switch (stories.length) {
+      case 1:
+        return _.first(stories).title;
+      case 2:
+        return _.map(stories, (s) => { return s.title; }).join(', ');
+      default:
+        return stories.length + ' stories selected';
+    }
   },
   isSelected: function (id) {
-    let selected = Template.instance().selected;
-    return !selected.length || selected.indexOf(id) !== -1;
+    let selected = Session.get(SELECTED_STORIES);
+    return !selected.length || selected.indexOf(id) > -1;
   },
   isOpen: function () {
     return Template.instance().isOpen.get();
@@ -15,15 +31,32 @@ Template.selectStories.helpers({
 });
 
 Template.selectStories.onCreated(function () {
-  this.selected = [];
   this.isOpen = new ReactiveVar(false);
-
   Meteor.subscribe('stories');
 });
 
 Template.selectStories.events({
   'click [data-toggle]': function (event, template) {
+    let isOpen = template.isOpen.get();
+
     event.preventDefault();
-    template.isOpen.set(!template.isOpen.get());
+
+    template.isOpen.set(!isOpen);
+
+    if (isOpen) {
+      let ids = [],
+          stories = template.$('input'),
+          checked = stories.filter(':checked');
+
+      // If the user didn't select any story, we treat it
+      // like he selected all stories
+      if (stories.length !== checked.length) {
+        checked.each(function() {
+          ids.push($(this).val());
+        });
+      }
+
+      Session.set(SELECTED_STORIES, ids);
+    }
   }
 });

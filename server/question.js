@@ -2,8 +2,9 @@ const REGEXP_STORY_SLUG = /\-([0-9]+)$/;
 const REGEXP_OBJ_PLACEHOLDER = /{{[a-z\- ]+}}/g;
 
 Meteor.methods({
-  getQuestion: function (previousQuestion) {
-    let words = Word.find().fetch(),
+  getQuestion: function (options) {
+    let { previousQuestion, selectedStories } = options,
+        words = Word.find().fetch(),
         question = { words: [], contexts: [] },
         phrase,
         placeholders,
@@ -21,20 +22,31 @@ Meteor.methods({
     if (story) {
       check(story.slug, String);
 
-      if (story.slug === 'kanji' && previousQuestion.words) {
+      if (story.slug === 'kanji' && previousQuestion.words && !selectedStories.length) {
         // Try to find a phrase where this kanji can be used
         let wordType = '{{' + previousQuestion.words[0].type + '}}';
         phrase = Phrase.findOne({ $text: { $search: wordType } });
-        phrase.story = 'kanji-use';
-        question.type = GAME.KANA;
+        if (phrase) {
+          phrase.story = 'kanji-use';
+          question.type = GAME.KANA;
+        }
       } else {
         // Extract a follow up phrase from the same story
         let number = story.slug.match(REGEXP_STORY_SLUG);
         if (number && number.length === 2) {
           number = story.slug.replace(REGEXP_STORY_SLUG, '-' + (parseInt(number[1])+1));
-          phrase = Phrase.findOne({ story: number });
+          phrase = _.sample(Phrase.find({ story: number }).fetch());
         }
       }
+    }
+
+    if (!phrase && selectedStories.length) {
+      let stories = Story.find({ _id: { $in: selectedStories } }).fetch(),
+          expressions = _.map(stories, (s) => {
+            return new RegExp('^' + s.slug.replace(/\-/g, '\-') + '.', 'g');
+          });
+
+      phrase = _.sample(Phrase.find({ story: { $in: expressions } }).fetch());
     }
 
     // Extract a random phrase or word

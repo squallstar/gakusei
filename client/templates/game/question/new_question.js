@@ -24,22 +24,29 @@ Template.newQuestion.onCreated(function () {
 
   // Helper function to load the next question
   this.renderNextQuestion = (next) => {
-    Meteor.call('getQuestion', this.question.get(), (err, question) => {
-      this.question.set(question);
-      this.timeSpent = 0;
+    let previousQuestion = this.question.get();
 
-      let $input = this.$('input');
+    this.autorun(() => {
+      Meteor.call('getQuestion', {
+        previousQuestion: previousQuestion,
+        selectedStories: Session.get(SELECTED_STORIES)
+      }, (err, question) => {
+        this.question.set(question);
+        this.timeSpent = 0;
 
-      $input.val('').prop('disabled', false);
+        let $input = this.$('input');
 
-      // Focus input on desktop
-      if (!Meteor.isMobile) {
-        $input.focus();
-      }
+        $input.val('').prop('disabled', false);
 
-      if (typeof next === 'function') {
-        next();
-      }
+        // Focus input on desktop
+        if (!Meteor.isMobile) {
+          $input.focus();
+        }
+
+        if (typeof next === 'function') {
+          next();
+        }
+      });
     });
   };
 
