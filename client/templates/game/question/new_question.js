@@ -26,6 +26,7 @@ Template.newQuestion.onCreated(function () {
   this.renderNextQuestion = (next) => {
     let previousQuestion = this.question.get();
 
+    // Runs with the tracker to reload when the selected stories array changes
     this.autorun(() => {
       Meteor.call('getQuestion', {
         previousQuestion: previousQuestion,
@@ -36,7 +37,11 @@ Template.newQuestion.onCreated(function () {
 
         let $input = this.$('input');
 
+        // Clear the input
         $input.val('').prop('disabled', false);
+
+        // Scroll to the top of the viewport
+        Meteor.ScrollToTop();
 
         // Focus input on desktop
         if (!Meteor.isMobile) {
@@ -72,6 +77,7 @@ Template.newQuestion.events({
     var $input = template.$('form input'),
         answer = $input.val().trim();
 
+    // The user can't send empty answers
     if (!answer) {
       return;
     }
