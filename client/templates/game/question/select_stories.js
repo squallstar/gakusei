@@ -10,11 +10,13 @@ Template.selectStories.helpers({
       return 'All topics selected';
     }
 
-    stories = Story.find({ _id: { $in: selected } }).fetch();
+    stories = Story
+      .find({ _id: { $in: selected } }, { sort: { title: 1 } })
+      .fetch();
 
     switch (stories.length) {
       case 1:
-        return _.first(stories).title;
+        return 'Topic: ' + _.first(stories).title;
       case 2:
         return _.map(stories, (s) => { return s.title; }).join(', ');
       default:
