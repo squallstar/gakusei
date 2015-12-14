@@ -10,12 +10,7 @@
       </a>
       <ul>
         {{#each stories}}
-          <li>
-            <input id="story-{{_id}}" type="checkbox" value={{_id}} checked={{isSelected _id}} />
-            <label for="story-{{_id}}">
-              <i class="fa fa-check"></i> <span>{{title}}</span>
-            </label>
-          </li>
+          {{> selectStory}}
         {{/each}}
       </ul>
     </header>

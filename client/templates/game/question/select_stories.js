@@ -40,7 +40,6 @@ Template.selectStories.onCreated(function () {
 Template.selectStories.events({
   'click [data-toggle]': function (event, template) {
     let isOpen = template.isOpen.get();
-
     event.preventDefault();
 
     template.isOpen.set(!isOpen);
