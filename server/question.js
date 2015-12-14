@@ -1,5 +1,6 @@
 const REGEXP_STORY_SLUG = /\-([0-9]+)$/;
 const REGEXP_OBJ_PLACEHOLDER = /{{[a-z\- ]+}}/g;
+const SUBTYPE_SEPARATOR = ' '; // a space
 
 Meteor.methods({
   getQuestion: function (options) {
@@ -40,10 +41,12 @@ Meteor.methods({
       }
     }
 
+    // When the user has filtered the stories he wants to play with,
+    // we limit our phrases selection
     if (!phrase && selectedStories.length) {
       let stories = Story.find({ _id: { $in: selectedStories } }).fetch(),
           expressions = _.map(stories, (s) => {
-            return new RegExp('^' + s.slug.replace(/\-/g, '\-') + '.', 'g');
+            return new RegExp('^' + s.slug.replace(/\-/g, '\-') + '.+', 'g');
           });
 
       phrase = _.sample(Phrase.find({ story: { $in: expressions } }).fetch());
@@ -85,12 +88,12 @@ Meteor.methods({
       if (previousQuestion && previousQuestion.story && previousQuestion.story.slug === 'kanji' && wordType === previousQuestion.words[0].type) {
         word = previousQuestion.words[0];
       } else {
-        let hasSubtype = wordType.indexOf(' ') > 0,
-            primaryType = wordType.split(' ')[0],
-            primaryTypeRegExp = new RegExp('^' + primaryType.replace(/\-/g, '\\-') + ' ', 'gi');
+        let hasSubtype = wordType.indexOf(SUBTYPE_SEPARATOR) > 0,
+            primaryType = wordType.split(SUBTYPE_SEPARATOR)[0],
+            primaryTypeRegExp = new RegExp('^' + primaryType.replace(/\-/g, '\\-') + SUBTYPE_SEPARATOR, 'gi');
 
         word = _.sample(_.filter(words, (w) => {
-          // Extract the exact match when asking for types like "object.food"
+          // Extract the exact match when asking for types like "object food"
           if (hasSubtype) {
             return w.type === wordType;
           }
@@ -107,11 +110,14 @@ Meteor.methods({
       }
 
       _.each(['english', 'romaji', 'kana'], function (locale) {
-        let replaceWith = word[locale];
+        let replaceWith;
 
         if (locale === 'kana' && word.kanji) {
           // Furigana
           replaceWith = '<ruby><rb>' + word.kanji + '</rb><rp>(</rp><rt>' + word.kana + '</rt><rp>)</rp></ruby>';
+        } else {
+          // Normal replacement
+          replaceWith = word[locale];
         }
 
         phrase[locale] = phrase[locale].replace(placeholder, replaceWith);
