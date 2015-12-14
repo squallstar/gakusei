@@ -18,7 +18,9 @@
   }
 
   ul {
-    display: none;
+    @include transition(all, 0.5s);
+    overflow-y: hidden;
+    max-height: 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 
     li {
@@ -64,7 +66,8 @@
     }
 
     ul {
-      display: block;
+      visibility: visible;
+      max-height: 800px;
     }
   }
 }
