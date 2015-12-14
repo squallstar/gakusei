@@ -18,7 +18,7 @@ Template.selectStories.helpers({
       case 2:
         return _.map(stories, (s) => { return s.title; }).join(', ');
       default:
-        return stories.length + ' stories selected';
+        return stories.length + ' topics selected';
     }
   },
   isSelected: function (id) {
