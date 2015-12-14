@@ -1,23 +1,26 @@
 <template name="question">
   <div class="question">
-    <h5>{{{title}}} {{#if context}} <u><i class="fa fa-info-circle"></i> context: {{context}}</u>{{/if}}</h5>
-    <p class="{{#if showingFurigana}}with-furigana{{/if}}">{{{description}}}</p>
-    <footer>
-      {{#if story}}
-        <h6>({{story.title}})</h6>
-      {{/if}}
-      {{#if showFurigana}}
-        <div class="options">
-          <label for="furigana">
-            {{#if showingFurigana}}
-              <i class="fa fa-eye"></i> Furigana
-            {{else}}
-              <i class="fa fa-eye-slash"></i> Furigana
-            {{/if}}
-            <input id="furigana" type="checkbox" checked={{showingFurigana}}>
-          </label>
-        </div>
-      {{/if}}
-    </footer>
+    {{> selectStories}}
+    <div class="content">
+      <h5>{{{title}}} {{#if context}} <u><i class="fa fa-info-circle"></i> context: {{context}}</u>{{/if}}</h5>
+      <p class="{{#if showingFurigana}}with-furigana{{/if}}">{{{description}}}</p>
+      <footer>
+        {{#if story}}
+          <h6>({{story.title}})</h6>
+        {{/if}}
+        {{#if showFurigana}}
+          <div class="options">
+            <label for="furigana">
+              {{#if showingFurigana}}
+                <i class="fa fa-eye"></i> Furigana
+              {{else}}
+                <i class="fa fa-eye-slash"></i> Furigana
+              {{/if}}
+              <input id="furigana" type="checkbox" checked={{showingFurigana}}>
+            </label>
+          </div>
+        {{/if}}
+      </footer>
+    </div>
   </div>
 </template>

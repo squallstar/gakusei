@@ -1,0 +1,69 @@
+.question-card .question .stories {
+  background-color: rgba(255,255,255,0.2);
+
+  .toggle {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 1.4rem;
+    opacity: 0.5;
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    padding-left: 2rem;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  ul {
+    display: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+    li {
+      display: block;
+
+      input {
+        display: none;
+      }
+
+      label {
+        display: block;
+        padding: 1.1rem 2rem;
+        background-color: rgba(255,255,255,0.1);
+        font-size: 1.2rem;
+        cursor: pointer;
+        opacity: 0.5;
+
+        i {
+          opacity: 0;
+        }
+
+        &:hover {
+          background-color: rgba(255,255,255,0.2);
+        }
+      }
+
+      input:checked + label {
+        font-weight: bold;
+        opacity: 1;
+
+        i {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &.open {
+
+    .toggle {
+      background-color: rgba(255,255,255,0.4);
+      opacity: 1;
+    }
+
+    ul {
+      display: block;
+    }
+  }
+}

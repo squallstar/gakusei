@@ -9,10 +9,13 @@
 
   .question {
     @include transition(background-color, 2s);
-    padding: 5rem 2rem 2rem;
     background-color: $color-primary;
     color: #FFF;
-    align-content: flex-end;
+
+    .content {
+      padding: 5rem 2rem 2rem;
+      align-content: flex-end;
+    }
 
     h5 {
       font-weight: normal;
@@ -92,6 +95,7 @@
     }
 
     footer {
+      @extend %custom-font;
       display: flex;
       margin-top: 1rem;
 

@@ -1,4 +1,5 @@
 @import "core/reset";
+@import "core/fonts";
 @import "core/mixins";
 @import "core/placeholders";
 @import "core/colors";
@@ -6,4 +7,5 @@
 @import "core/footer";
 
 @import "components/question";
+@import "components/select_stories";
 @import "components/answers";

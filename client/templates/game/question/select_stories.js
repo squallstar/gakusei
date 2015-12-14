@@ -1,22 +1,22 @@
 Template.selectStories.helpers({
   stories: function () {
-    return Story.find();
+    return Story.find({}, { sort: { title: 1 } });
   },
   selectedText: function () {
-    return 'All stories selected';
+    return 'All topics selected';
   },
   isSelected: function (id) {
     let selected = Template.instance().selected;
     return !selected.length || selected.indexOf(id) !== -1;
   },
-  listIsOpen: function () {
-    Template.instance().listIsOpen.get();
+  isOpen: function () {
+    return Template.instance().isOpen.get();
   }
 });
 
 Template.selectStories.onCreated(function () {
   this.selected = [];
-  this.listIsOpen = new ReactiveVar(false);
+  this.isOpen = new ReactiveVar(false);
 
   Meteor.subscribe('stories');
 });
@@ -24,6 +24,6 @@ Template.selectStories.onCreated(function () {
 Template.selectStories.events({
   'click [data-toggle]': function (event, template) {
     event.preventDefault();
-    template.listIsOpen.set(!template.listIsOpen.get());
+    template.isOpen.set(!template.isOpen.get());
   }
 });

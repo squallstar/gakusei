@@ -1,18 +1,18 @@
 <template name="selectStories">
-  <header class="stories {{#if listIsOpen}}open{{/if}}">
+  <header class="stories {{#if isOpen}}open{{/if}}">
     <a href="#" class="toggle" data-toggle>
-      {{#if listIsOpen}}
-      <i class="fa fa-caret-up"></i> Close and save changes
+      {{#if isOpen}}
+      <i class="fa fa-caret-down"></i> Close and save changes
       {{else}}
-      <i class="fa fa-caret-down"></i> {{selectedText}}
+      <i class="fa fa-caret-right"></i> {{selectedText}}
       {{/if}}
     </a>
     <ul>
       {{#each stories}}
         <li>
+          <input id="story-{{_id}}" type="checkbox" value={{_id}} checked={{isSelected _id}} />
           <label for="story-{{_id}}">
-            <input id="story-{{_id}}" type="checkbox" value={{_id}} checked={{isSelected _id}} />
-            <span>{{title}}</span>
+            <i class="fa fa-check"></i> <span>{{title}}</span>
           </label>
         </li>
       {{/each}}
