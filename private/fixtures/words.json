@@ -834,5 +834,18 @@
     "romaji": "okaasan",
     "kana": "おかあさん",
     "kanji": "お母さん"
+  },
+  {
+    "type": "currency",
+    "english": "yen",
+    "romaji": "en",
+    "kana": "えん",
+    "kanji": "円"
+  },
+  {
+    "type": "currency",
+    "english": "£",
+    "romaji": "pondo",
+    "kana": "ポンド"
   }
 ]
