@@ -78,6 +78,18 @@
     "story": "describing-things"
   },
   {
+    "english": "{{pointer}} is {{suffix}} {{name}}'s {{object}}.",
+    "romaji": "{{pointer}} wa {{name}}{{suffix}} no {{object}} desu.",
+    "kana": "{{pointer}}は{{name}}{{suffix}}の{{object}}です。",
+    "story": "describing-things"
+  },
+  {
+    "english": "Is {{pointer}} {{suffix}} {{name}}'s {{object}}?",
+    "romaji": "{{pointer}} wa {{name}}{{suffix}} no {{object}} desu ka.",
+    "kana": "{{pointer}}は{{name}}{{suffix}}の{{object}}ですか。",
+    "story": "describing-things"
+  },
+  {
     "english": "Good morning.",
     "romaji": "ohayou gozaimasu.",
     "kana": "おはようございます。",

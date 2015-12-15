@@ -223,6 +223,12 @@
   },
   {
     "type": "name",
+    "english": "Green",
+    "romaji": "guriin",
+    "kana": "グリーン"
+  },
+  {
+    "type": "name",
     "english": "Nakamura",
     "romaji": "nakamura",
     "kana": "なかむら",
@@ -317,6 +323,12 @@
     "kana": "デパート"
   },
   {
+    "type": "place",
+    "english": "the river",
+    "romaji": "kawa",
+    "kana": "川"
+  },
+  {
     "type": "place mountain",
     "english": "Mt. Fuji",
     "romaji": "fujisan",
@@ -336,6 +348,13 @@
     "romaji": "Ōsaka",
     "kana": "おおさか",
     "kanji": "大阪"
+  },
+  {
+    "type": "place city",
+    "english": "Kyoto",
+    "romaji": "Kyouto",
+    "kana": "きょうと",
+    "kanji": "京都"
   },
   {
     "type": "place city",
