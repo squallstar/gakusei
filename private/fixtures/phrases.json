@@ -216,6 +216,12 @@
     "story": "at-home-6"
   },
   {
+    "english": "{{suffix}} {{name}}'s {{parent}} is a {{profession}}.",
+    "romaji": "{{suffix}}{{name}} no {{parent}} wa {{profession}} desu.",
+    "kana": "{{suffix}}{{name}}の{{parent}}は{{profession}}です。",
+    "story": "at-home-7"
+  },
+  {
     "english": "{{suffix}} {{name}} is {{verb-direction}} to {{place}} by {{transport}}.",
     "romaji": "{{name}}{{suffix}} wa {{transport}} de {{place}} ni {{verb-direction}}.",
     "kana": "{{name}}{{suffix}}は{{transport}}で{{place}}に{{verb-direction}}。",

@@ -820,5 +820,19 @@
     "romaji": "ji",
     "kana": "じ",
     "kanji": "時"
+  },
+  {
+    "type": "parent",
+    "english": "father",
+    "romaji": "otoosan",
+    "kana": "おとおさん",
+    "kanji": "お父さん"
+  },
+  {
+    "type": "parent",
+    "english": "mother",
+    "romaji": "okaasan",
+    "kana": "おかあさん",
+    "kanji": "お母さん"
   }
 ]
