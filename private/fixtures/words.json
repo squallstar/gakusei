@@ -763,10 +763,27 @@
   },
   {
     "type": "minutes",
+    "english": "05",
+    "romaji": "gofun",
+    "kana": "ごふん",
+    "kanji": "五分",
+    "context": "minutes"
+  },
+  {
+    "type": "minutes",
+    "english": "06",
+    "romaji": "roppun",
+    "kana": "ろっぷん",
+    "kanji": "六分",
+    "context": "minutes"
+  },
+  {
+    "type": "minutes",
     "english": "30",
     "romaji": "han",
     "kana": "はん",
-    "kanji": "半"
+    "kanji": "半",
+    "context": "hour"
   },
   {
     "type": "hour",
