@@ -56,6 +56,12 @@
   },
   {
     "type": "object",
+    "english": "notebook",
+    "romaji": "nooto",
+    "kana": "ノート"
+  },
+  {
+    "type": "object",
     "english": "flower",
     "romaji": "hana",
     "kana": "はな",
@@ -94,6 +100,13 @@
     "romaji": "eiga",
     "kana": "えいが",
     "kanji": "映画"
+  },
+  {
+    "type": "performance",
+    "english": "exhibition",
+    "romaji": "ten",
+    "kana": "てん",
+    "kanji": "展"
   },
   {
     "type": "performance",
