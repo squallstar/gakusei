@@ -84,6 +84,18 @@
     "story": "conversation-1"
   },
   {
+    "english": "How do you do?",
+    "romaji": "hajimemashite.",
+    "kana": "はじめまして。",
+    "story": "conversation-1"
+  },
+  {
+    "english": "Nice to meet you",
+    "romaji": "douzo yoroshiku",
+    "kana": "どうぞよろしく。",
+    "story": "conversation-2"
+  },
+  {
     "english": "Good afternoon.",
     "romaji": "konnichiwa.",
     "kana": "こんにちは。",
@@ -94,6 +106,12 @@
     "romaji": "konbanwa.",
     "kana": "こんばんは。",
     "story": "conversation-3"
+  },
+  {
+    "english": "Good evening.",
+    "romaji": "oyasuminasai.",
+    "kana": "おやすみなさい。",
+    "story": "conversation-4"
   },
   {
     "english": "I play {{sport}}.",
