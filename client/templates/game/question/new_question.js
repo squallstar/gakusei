@@ -4,6 +4,9 @@ Template.newQuestion.helpers({
   },
   canSkip: function () {
     return Template.instance().canSkip.get();
+  },
+  isTypeOrder: function () {
+    return this.type === GAME.ORDER;
   }
 });
 
@@ -22,8 +25,30 @@ Template.newQuestion.onCreated(function () {
     this.timeSpent++;
   }, 1000);
 
+  this.renderQuestion = (question) => {
+    this.question.set(question);
+    this.timeSpent = 0;
+
+    let $input = this.$('#new_answer');
+
+    // Clear the input
+    $input.val('').prop('disabled', false);
+
+    // Scroll to the top of the viewport
+    Meteor.ScrollToTop();
+
+    // Focus input on desktop
+    if (!Meteor.isMobile) {
+      $input.focus();
+    }
+
+    if (typeof next === 'function') {
+      next();
+    }
+  };
+
   // Helper function to load the next question
-  this.renderNextQuestion = (next) => {
+  this.fetchNextQuestion = (next) => {
     let previousQuestion = this.question.get();
 
     // Runs with the tracker to reload when the selected stories array changes
@@ -32,36 +57,21 @@ Template.newQuestion.onCreated(function () {
         previousQuestion: previousQuestion,
         selectedStories: Session.get(SELECTED_STORIES)
       }, (err, question) => {
-        this.question.set(question);
-        this.timeSpent = 0;
-
-        let $input = this.$('#new_answer');
-
-        // Clear the input
-        $input.val('').prop('disabled', false);
-
-        // Scroll to the top of the viewport
-        Meteor.ScrollToTop();
-
-        // Focus input on desktop
-        if (!Meteor.isMobile) {
-          $input.focus();
-        }
-
-        if (typeof next === 'function') {
-          next();
-        }
+        Session.setPersistent(CURRENT_QUESTION, question);
+        this.renderQuestion(question);
       });
     });
   };
-
-  // Loads the first question when the template loads
-  this.renderNextQuestion();
 });
 
 Template.newQuestion.onRendered(function () {
-  if (!Meteor.isMobile) {
-    this.$('input').focus();
+  let lastQuestion = Session.get(CURRENT_QUESTION);
+  if (lastQuestion) {
+    // Reload the last question
+    this.renderQuestion(lastQuestion);
+  } else {
+    // Loads a new question when the user first come in
+    this.fetchNextQuestion();
   }
 });
 
@@ -69,7 +79,7 @@ Template.newQuestion.events({
   'click [data-skip]': function (event, template) {
     event.preventDefault();
     template.canSkip.set(false);
-    template.renderNextQuestion();
+    template.fetchNextQuestion();
   },
   'submit form': function (event, template) {
     event.preventDefault();
@@ -99,7 +109,7 @@ Template.newQuestion.events({
       // or he already had a credit to skip
       template.canSkip.set(correct || template.canSkip.get());
       // Proceed to the next qestion
-      template.renderNextQuestion();
+      template.fetchNextQuestion();
     });
   }
 });
