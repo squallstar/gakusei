@@ -671,5 +671,33 @@
     "english": "engineer",
     "romaji": "enjinia",
     "kana": "エンジニア"
+  },
+  {
+    "type": "number",
+    "english": "1",
+    "romaji": "ichi",
+    "kana": "いち",
+    "kanji": "一"
+  },
+  {
+    "type": "number",
+    "english": "2",
+    "romaji": "ni",
+    "kana": "に",
+    "kanji": "ニ"
+  },
+  {
+    "type": "number",
+    "english": "4",
+    "romaji": "yon",
+    "kana": "よん",
+    "kanji": "四"
+  },
+  {
+    "type": "number",
+    "english": "7",
+    "romaji": "nana",
+    "kana": "なな",
+    "kanji": "七"
   }
 ]

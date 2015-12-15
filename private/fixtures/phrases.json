@@ -234,15 +234,9 @@
     "story": "asking-the-time-1"
   },
   {
-    "english": "It's 4{{hour-period}}.",
-    "romaji": "{{hour-period}}4 desu",
-    "kana": "{{hour-period}}４です。",
-    "story": "asking-the-time-2"
-  },
-  {
-    "english": "It's 7{{hour-period}}.",
-    "romaji": "{{hour-period}}7 desu",
-    "kana": "{{hour-period}}７です。",
+    "english": "It's {{number}}{{hour-period}}.",
+    "romaji": "{{hour-period}} {{number}} desu",
+    "kana": "{{hour-period}}{{number}}です。",
     "story": "asking-the-time-2"
   },
   {
