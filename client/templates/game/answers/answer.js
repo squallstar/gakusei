@@ -27,6 +27,9 @@ Template.answer.helpers({
   },
   timeSpent: function () {
     return Meteor.SecondsToTime(this.time_spent);
+  },
+  compiledDescription: function () {
+    return (this.question.description || '').replace(/\[\]/g, '<span class="placeholder"><i class="fa fa-ellipsis-h"></i></span>');
   }
 });
 
