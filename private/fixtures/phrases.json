@@ -1,9 +1,21 @@
 [
   {
+    "english": "Excuse me, how much is {{pointer}}?",
+    "romaji": "sumimasen, {{pointer}} wa ikura desu ka.",
+    "kana": "すみません、{{pointer}}はいくらですか。",
+    "story": "at-the-shop-1"
+  },
+  {
+    "english": "Excuse me, how much is {{pointer-object}} {{object}}?",
+    "romaji": "sumimasen, {{pointer-object}} {{object}} wa ikura desu ka.",
+    "kana": "すみません、{{pointer-object}}{{object}}はいくらですか。",
+    "story": "at-the-shop-1"
+  },
+  {
     "english": "{{pointer-object}} {{object}}, please.",
     "romaji": "{{pointer-object}} {{object}} o kudasai.",
     "kana": "{{pointer-object}}{{object}}をください。",
-    "story": "at-the-shop"
+    "story": "at-the-shop-2"
   },
   {
     "english": "{{pointer}} is a {{object}}.",
