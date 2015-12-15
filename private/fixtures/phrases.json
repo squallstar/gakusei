@@ -66,9 +66,15 @@
     "story": "describing-things"
   },
   {
-    "english": "{{suffix}} {{name}} is a {{sex}}.",
-    "romaji": "{{name}}{{suffix}} wa {{sex}} desu.",
-    "kana": "{{name}}{{suffix}}は{{sex}}です。",
+    "english": "{{suffix male}} {{name}} is a {{sex male}}.",
+    "romaji": "{{name}}{{suffix male}} wa {{sex male}} desu.",
+    "kana": "{{name}}{{suffix male}}は{{sex male}}です。",
+    "story": "describing-things"
+  },
+  {
+    "english": "{{suffix female}} {{name}} is a {{sex female}}.",
+    "romaji": "{{name}}{{suffix female}} wa {{sex female}} desu.",
+    "kana": "{{name}}{{suffix female}}は{{sex female}}です。",
     "story": "describing-things"
   },
   {

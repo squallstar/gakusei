@@ -256,14 +256,14 @@
     "kanji": "田中"
   },
   {
-    "type": "suffix",
+    "type": "suffix male",
     "english": "Mr.",
     "romaji": "san",
     "kana": "さん",
     "context": "man"
   },
   {
-    "type": "suffix",
+    "type": "suffix female",
     "english": "Mrs.",
     "romaji": "san",
     "kana": "さん",
@@ -651,14 +651,14 @@
     "kanji": "日本人"
   },
   {
-    "type": "sex",
+    "type": "sex male",
     "english": "man",
     "romaji": "otoko",
     "kana": "おとこ",
     "kanji": "男"
   },
   {
-    "type": "sex",
+    "type": "sex female",
     "english": "woman",
     "romaji": "onna",
     "kana": "おんな",
