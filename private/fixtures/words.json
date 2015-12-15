@@ -427,6 +427,7 @@
     "english": "returning",
     "romaji": "kaerimasu",
     "kana": "かえります",
+    "kanji": "帰ります",
     "context": "present continuous"
   },
   {
@@ -435,6 +436,20 @@
     "romaji": "ikimashita",
     "kana": "いきました",
     "kanji": "行きました"
+  },
+  {
+    "type": "verb-direction-past",
+    "english": "came",
+    "romaji": "kimashita",
+    "kana": "きました",
+    "kanji": "来ました"
+  },
+  {
+    "type": "verb-direction-past",
+    "english": "returned",
+    "romaji": "kaerimashita",
+    "kana": "かえりました",
+    "kanji": "帰りました"
   },
   {
     "type": "verb-eat",
