@@ -20,7 +20,9 @@ Template.newQuestion.onDestroyed(function () {
 Template.newQuestion.onCreated(function () {
   this.question = new ReactiveVar({});
   this.canSkip = new ReactiveVar(true);
+
   this.timeSpent = 0;
+  this.selectedWords = [];
 
   // Timer fires every second, increasing seconds
   // spent answering this question
@@ -34,8 +36,9 @@ Template.newQuestion.onCreated(function () {
 
     let $input = this.$('#new_answer');
 
-    // Clear the input
+    // Clear the data
     $input.val('').prop('disabled', false);
+    this.selectedWords = [];
 
     // Scroll to the top of the viewport
     Meteor.ScrollToTop();
@@ -63,6 +66,20 @@ Template.newQuestion.onCreated(function () {
         Session.setPersistent(CURRENT_QUESTION, question);
         this.renderQuestion(question);
       });
+    });
+  };
+
+  this.submitAnswer = (answer) => {
+    Meteor.call('submitAnswer', {
+      question:  this.question.get(),
+      userAnswer: answer,
+      timeSpent: this.timeSpent
+    }, (err, correct) => {
+      // We allow the user to skip the next sentence if the previous one was correct
+      // or he already had a credit to skip
+      this.canSkip.set(correct || this.canSkip.get());
+      // Proceed to the next qestion
+      this.fetchNextQuestion();
     });
   };
 });
@@ -103,16 +120,22 @@ Template.newQuestion.events({
     // Disable input while loading
     $input.prop('disabled', true);
 
-    Meteor.call('submitAnswer', {
-      question:  template.question.get(),
-      userAnswer: answer,
-      timeSpent: template.timeSpent
-    }, function (err, correct) {
-      // We allow the user to skip the next sentence if the previous one was correct
-      // or he already had a credit to skip
-      template.canSkip.set(correct || template.canSkip.get());
-      // Proceed to the next qestion
-      template.fetchNextQuestion();
-    });
+    template.submitAnswer(answer);
+  },
+  'selected:word .words': function (event, template, word) {
+    template.selectedWords.push(word);
+
+    var $question = template.$('#question-description');
+
+    $question
+      .find('.placeholder')
+      .not('.chosen')
+      .first()
+      .addClass('chosen')
+      .html(word);
+
+    if (template.selectedWords.length === template.question.get().words.length) {
+      template.submitAnswer($question.text());
+    }
   }
 });

@@ -3,7 +3,7 @@
     {{> selectStories}}
     <div class="content">
       <h5>{{{title}}} {{#if context}} <u><i class="fa fa-info-circle"></i> context: {{context}}</u>{{/if}}</h5>
-      <p class="{{#if showingFurigana}}with-furigana{{/if}}">{{{compiledDescription}}}</p>
+      <p id="question-description" class="{{#if showingFurigana}}with-furigana{{/if}}">{{{compiledDescription}}}</p>
       <footer>
         {{#if story}}
           <h6>({{story.title}})</h6>

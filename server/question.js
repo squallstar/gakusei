@@ -81,7 +81,7 @@ Meteor.methods({
 
     // 25% chance to play a "tap words in order" game when the phrase
     // has three or more placeholders
-    if (placeholders && placeholders.length >= 3 && _.sample([1]) === 1) {
+    if (placeholders && placeholders.length >= 3 && _.sample([1,2,3,4]) === 1) {
       question.type = GAME.ORDER;
       phrase.kana_template = phrase.kana;
     }

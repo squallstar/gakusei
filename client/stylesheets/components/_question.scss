@@ -51,10 +51,9 @@
 
       .placeholder {
         background-color: rgba(255,255,255,0.2);
-        content: " ";
-        padding: 0px 25px;
-        margin: 0 10px;
+        padding: 0px 10px;
         border-radius: 4px;
+        margin-right: 4px;
 
         i {
           opacity: 0.5;
@@ -126,9 +125,17 @@
           padding: 1rem 1.5rem;
           border: 2px solid #EEE;
           color: #AAA;
-          font-size: 2rem;
+          font-size: 2.3rem;
           border-radius: 4px;
           text-decoration: none;
+        }
+
+        &.selected {
+
+          a {
+            border-color: transparent;
+            color: #EEE;
+          }
         }
       }
     }
