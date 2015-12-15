@@ -7,6 +7,9 @@ Template.question.helpers({
   },
   context: function () {
     return this.contexts ? this.contexts.join(', ') : null;
+  },
+  compiledDescription: function () {
+    return (this.description || '').replace(/\[\]/g, '<span class="placeholder"><i class="fa fa-question"></i></span>');
   }
 });
 

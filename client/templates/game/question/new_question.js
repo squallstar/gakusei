@@ -6,7 +6,10 @@ Template.newQuestion.helpers({
     return Template.instance().canSkip.get();
   },
   isTypeOrder: function () {
-    return this.type === GAME.ORDER;
+    return Template.instance().question.get().type === GAME.ORDER;
+  },
+  words: function () {
+    return _.shuffle(Template.instance().question.get().words);
   }
 });
 

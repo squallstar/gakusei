@@ -79,6 +79,13 @@ Meteor.methods({
     // Find placeholders
     placeholders = phrase.kana.match(REGEXP_OBJ_PLACEHOLDER);
 
+    // 25% chance to play a "tap words in order" game when the phrase
+    // has three or more placeholders
+    if (placeholders && placeholders.length >= 3 && _.sample([1]) === 1) {
+      question.type = GAME.ORDER;
+      phrase.kana_template = phrase.kana;
+    }
+
     // Replace placeholders
     _.each(placeholders, function (placeholder) {
       let wordType = placeholder.replace(/{{|}}/g, ''),
@@ -120,6 +127,10 @@ Meteor.methods({
           replaceWith = word[locale];
         }
 
+        if (question.type === GAME.ORDER) {
+          phrase.kana_template = phrase.kana_template.replace(placeholder, '[]');
+        }
+
         phrase[locale] = phrase[locale].replace(placeholder, replaceWith);
       });
     });
@@ -150,6 +161,11 @@ function generateQuizForPhrase (phrase, question) {
       question.description = phrase.english;
       question.answer = phrase.kana;
       question.answer_alternative = phrase.romaji;
+      break;
+    case GAME.ORDER:
+      question.title = 'Tap the words below in the correct order';
+      question.description = phrase.kana_template;
+      question.answer = phrase.kana;
       break;
     case GAME.KANJI:
       switch (_.sample(['to-kanji', 'to-kana', 'to-english'])) {

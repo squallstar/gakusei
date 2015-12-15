@@ -2,7 +2,15 @@
   <div class="question-card type-{{currentQuestion.type}}">
     {{> question currentQuestion}}
     <form>
-      <input id="new_answer" type="text" autocomplete="off" />
+      {{#if isTypeOrder}}
+        <ul class="words">
+          {{#each words}}
+            {{> questionWord}}
+          {{/each}}
+        </ul>
+      {{else}}
+        <input id="new_answer" type="text" autocomplete="off" />
+      {{/if}}
       <footer>
         <label for="new_answer">Answer</label>
         {{#if canSkip}}

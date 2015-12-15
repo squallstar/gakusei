@@ -48,6 +48,26 @@
           display: block;
         }
       }
+
+      .placeholder {
+        background-color: rgba(255,255,255,0.2);
+        content: " ";
+        padding: 0px 25px;
+        margin: 0 10px;
+        border-radius: 4px;
+
+        i {
+          opacity: 0.5;
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
     }
 
     footer {
@@ -91,6 +111,25 @@
       &:disabled {
         background-color: #FFF;
         color: #CCC;
+      }
+    }
+
+    .words {
+      @extend %clear;
+
+      li {
+        float: left;
+        margin: 0 1rem 1rem 0;
+
+        a {
+          display: block;
+          padding: 1rem 1.5rem;
+          border: 2px solid #EEE;
+          color: #AAA;
+          font-size: 2rem;
+          border-radius: 4px;
+          text-decoration: none;
+        }
       }
     }
 
