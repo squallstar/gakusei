@@ -24,15 +24,15 @@
     "story": "describing-things"
   },
   {
-    "english": "there is a {{object}} {{position}} {{pointer-object}} {{object}}.",
-    "romaji": "{{pointer-object}} {{object}} no {{position}} ni {{object}} ga arimasu.",
-    "kana": "{{pointer-object}}{{object}}の{{position}}に{{object}}があります。",
+    "english": "there is a {{object}} {{position}} {{pointer-object}} {{container}}.",
+    "romaji": "{{pointer-object}} {{container}} no {{position}} ni {{object}} ga arimasu.",
+    "kana": "{{pointer-object}}{{container}}の{{position}}に{{object}}があります。",
     "story": "describing-things"
   },
   {
-    "english": "there isn't a {{object}} {{position}} {{pointer-object}} {{object}}.",
-    "romaji": "{{pointer-object}} {{object}} no {{position}} ni {{object}} ga arimasen.",
-    "kana": "{{pointer-object}}{{object}}の{{position}}に{{object}}がありません。",
+    "english": "there isn't a {{object}} {{position}} {{pointer-object}} {{container}}.",
+    "romaji": "{{pointer-object}} {{container}} no {{position}} ni {{object}} ga arimasen.",
+    "kana": "{{pointer-object}}{{container}}の{{position}}に{{object}}がありません。",
     "story": "describing-things"
   },
   {
