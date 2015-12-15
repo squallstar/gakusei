@@ -665,6 +665,20 @@
     "kanji": "女"
   },
   {
+    "type": "article male",
+    "english": "he",
+    "romaji": "kare",
+    "kana": "かれ",
+    "kanji": "彼"
+  },
+  {
+    "type": "article female",
+    "english": "she",
+    "romaji": "kanojo",
+    "kana": "かのじょ",
+    "kanji": "彼女"
+  },
+  {
     "type": "profession",
     "english": "student",
     "romaji": "gakusei",

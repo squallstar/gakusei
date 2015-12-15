@@ -144,6 +144,18 @@
     "story": "conversation"
   },
   {
+    "english": "{{article male}} is {{suffix male}} {{name}}.",
+    "romaji": "{{article male}} wa {{name}}{{suffix male}} desu.",
+    "kana": "{{article male}}は{{name}}{{suffix male}}です。",
+    "story": "conversation"
+  },
+  {
+    "english": "{{article female}} is {{suffix female}} {{name}}.",
+    "romaji": "{{article female}} wa {{name}}{{suffix female}} desu.",
+    "kana": "{{article female}}は{{name}}{{suffix female}}です。",
+    "story": "conversation"
+  },
+  {
     "english": "Does {{suffix}} {{name}} play {{sport}}?",
     "romaji": "{{name}}{{suffix}} wa {{sport}} o shimasu ka.",
     "kana": "{{name}}{{suffix}}は{{sport}}をしますか。",
