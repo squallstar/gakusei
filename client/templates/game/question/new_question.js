@@ -3,7 +3,7 @@ Template.newQuestion.helpers({
     return Template.instance().question.get();
   },
   canSkip: function () {
-    return Template.instance().canSkip.get();
+    return Session.get(CAN_SKIP_QUESTION);
   },
   isTypeOrder: function () {
     return Template.instance().question.get().type === GAME.ORDER;
@@ -19,7 +19,6 @@ Template.newQuestion.onDestroyed(function () {
 
 Template.newQuestion.onCreated(function () {
   this.question = new ReactiveVar({});
-  this.canSkip = new ReactiveVar(true);
 
   this.timeSpent = 0;
   this.selectedWords = [];
@@ -77,7 +76,8 @@ Template.newQuestion.onCreated(function () {
     }, (err, correct) => {
       // We allow the user to skip the next sentence if the previous one was correct
       // or he already had a credit to skip
-      this.canSkip.set(correct || this.canSkip.get());
+      Session.setPersistent(CAN_SKIP_QUESTION, correct || Session.get(CAN_SKIP_QUESTION));
+
       // Proceed to the next qestion
       this.fetchNextQuestion();
     });
@@ -98,7 +98,7 @@ Template.newQuestion.onRendered(function () {
 Template.newQuestion.events({
   'click [data-skip]': function (event, template) {
     event.preventDefault();
-    template.canSkip.set(false);
+    Session.setPersistent(CAN_SKIP_QUESTION, false);
     template.fetchNextQuestion();
   },
   'submit form': function (event, template) {
