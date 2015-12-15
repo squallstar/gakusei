@@ -699,5 +699,19 @@
     "romaji": "nana",
     "kana": "なな",
     "kanji": "七"
+  },
+  {
+    "type": "minutes",
+    "english": "30",
+    "romaji": "han",
+    "kana": "はん",
+    "kanji": "半"
+  },
+  {
+    "type": "hour",
+    "english": "hour",
+    "romaji": "ji",
+    "kana": "じ",
+    "kanji": "時"
   }
 ]

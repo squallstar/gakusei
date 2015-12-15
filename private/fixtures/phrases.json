@@ -235,8 +235,14 @@
   },
   {
     "english": "It's {{number}}{{hour-period}}.",
-    "romaji": "{{hour-period}} {{number}} desu",
-    "kana": "{{hour-period}}{{number}}です。",
+    "romaji": "{{hour-period}} {{number}}{{hour}} desu",
+    "kana": "{{hour-period}}{{number}}{{hour}}です。",
+    "story": "asking-the-time-2"
+  },
+  {
+    "english": "It's {{number}}.{{minutes}}{{hour-period}}.",
+    "romaji": "{{hour-period}} {{number}}{{hour}}{{minutes}} desu",
+    "kana": "{{hour-period}}{{number}}{{hour}}{{minutes}}です。",
     "story": "asking-the-time-2"
   },
   {
