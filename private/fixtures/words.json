@@ -707,6 +707,13 @@
   },
   {
     "type": "number",
+    "english": "3",
+    "romaji": "san",
+    "kana": "さん",
+    "kanji": "三"
+  },
+  {
+    "type": "number",
     "english": "4",
     "romaji": "yon",
     "kana": "よん",
@@ -714,10 +721,45 @@
   },
   {
     "type": "number",
+    "english": "5",
+    "romaji": "go",
+    "kana": "ご",
+    "kanji": "五"
+  },
+  {
+    "type": "number",
+    "english": "6",
+    "romaji": "roku",
+    "kana": "ろく",
+    "kanji": "六"
+  },
+  {
+    "type": "number",
     "english": "7",
     "romaji": "nana",
     "kana": "なな",
     "kanji": "七"
+  },
+  {
+    "type": "number",
+    "english": "8",
+    "romaji": "hachi",
+    "kana": "はち",
+    "kanji": "八"
+  },
+  {
+    "type": "number",
+    "english": "9",
+    "romaji": "kyuu",
+    "kana": "きゅう",
+    "kanji": "九"
+  },
+  {
+    "type": "number",
+    "english": "10",
+    "romaji": "juu",
+    "kana": "じゅう",
+    "kanji": "十"
   },
   {
     "type": "minutes",
