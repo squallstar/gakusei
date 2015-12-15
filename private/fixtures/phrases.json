@@ -252,6 +252,12 @@
     "story": "asking-the-time-1"
   },
   {
+    "english": "{{what-time}} is in {{place city}}?",
+    "romaji": "{{place city}} wa {{time-now}} {{what-time}} desu ka",
+    "kana": "{{place city}}wa{{time-now}}{{what-time}}ですか。",
+    "story": "asking-the-time-1"
+  },
+  {
     "english": "It's {{number}}{{hour-period}}.",
     "romaji": "{{hour-period}} {{number}}{{hour}} desu",
     "kana": "{{hour-period}}{{number}}{{hour}}です。",
