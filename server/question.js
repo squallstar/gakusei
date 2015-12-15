@@ -80,10 +80,12 @@ Meteor.methods({
     placeholders = phrase.kana.match(REGEXP_OBJ_PLACEHOLDER);
 
     // 25% chance to play a "tap words in order" game when the phrase
-    // has three or more placeholders
+    // has three or more placeholders and previous game was not order
     if (placeholders && placeholders.length >= 3 && _.sample([1,2,3,4]) === 1) {
-      question.type = GAME.ORDER;
-      phrase.kana_template = phrase.kana;
+      if (!previousQuestion || !previousQuestion.type !== GAME.ORDER) {
+        question.type = GAME.ORDER;
+        phrase.kana_template = phrase.kana;
+      }
     }
 
     // Replace placeholders
