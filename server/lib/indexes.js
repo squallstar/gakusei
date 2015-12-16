@@ -10,4 +10,6 @@ Meteor.startup(function () {
 
   Story._ensureIndex({ slug: 1 });
 
+  Answer._ensureIndex({ created_at: -1 });
+
 });
