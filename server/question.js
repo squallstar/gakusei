@@ -11,6 +11,8 @@ Meteor.methods({
         placeholders,
         story;
 
+    selectedStories = selectedStories || [];
+
     // When there is a story, we have 80% chance to keep on with the story
     if (previousQuestion && previousQuestion.story) {
       // 80% chance or following up from studying a kanji
