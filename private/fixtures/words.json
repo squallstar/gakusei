@@ -56,6 +56,34 @@
   },
   {
     "type": "object",
+    "english": "newspaper",
+    "romaji": "shinbun",
+    "kana": "しんぶん",
+    "kanji": "新聞"
+  },
+  {
+    "type": "object",
+    "english": "umbrella",
+    "romaji": "kasa",
+    "kana": "かさ",
+    "kanji": "傘"
+  },
+  {
+    "type": "object",
+    "english": "shoes",
+    "romaji": "kutsu",
+    "kana": "くつ",
+    "kanji": "靴"
+  },
+  {
+    "type": "object",
+    "english": "watch",
+    "romaji": "tokei",
+    "kana": "とけい",
+    "kanji": "時計"
+  },
+  {
+    "type": "object",
     "english": "notebook",
     "romaji": "nooto",
     "kana": "ノート"
@@ -126,6 +154,12 @@
     "romaji": "reizouko",
     "kana": "れいぞうこ",
     "kanji": "冷蔵庫"
+  },
+  {
+    "type": "container",
+    "english": "bag",
+    "romaji": "kaban",
+    "kana": "かばん"
   },
   {
     "type": "position",
