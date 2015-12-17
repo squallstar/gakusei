@@ -144,6 +144,18 @@
     "story": "conversation-4"
   },
   {
+    "english": "{{how-old}} are you?",
+    "romaji": "{{how-old}} desu ka.",
+    "kana": "{{how-old}}ですか。",
+    "story": "conversation-5"
+  },
+  {
+    "english": "I'm {{number}}.",
+    "romaji": "{{number}}{{years-old}} desu.",
+    "kana": "{{number}}{{years-old}}です。",
+    "story": "conversation-6"
+  },
+  {
     "english": "I play {{sport}}.",
     "romaji": "{{sport}} o shimasu.",
     "kana": "{{sport}}をします。",

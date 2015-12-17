@@ -888,5 +888,18 @@
     "english": "£",
     "romaji": "pondo",
     "kana": "ポンド"
+  },
+  {
+    "type": "years-old",
+    "english": "years old",
+    "romaji": "sai",
+    "kana": "さい",
+    "kanji": "歳"
+  },
+  {
+    "type": "how-old",
+    "english": "how old",
+    "romaji": "nansai",
+    "kana": "何歳"
   }
 ]
