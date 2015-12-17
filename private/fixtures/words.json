@@ -870,6 +870,13 @@
     "kanji": "お母さん"
   },
   {
+    "type": "parent",
+    "english": "younger sister",
+    "romaji": "imooto",
+    "kana": "いもおと",
+    "kanji": "妹"
+  },
+  {
     "type": "currency",
     "english": "yen",
     "romaji": "en",
