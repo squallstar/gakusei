@@ -4,8 +4,9 @@
 @import "core/placeholders";
 @import "core/colors";
 @import "core/base";
-@import "core/footer";
 
+@import "components/header";
+@import "components/footer";
 @import "components/question";
 @import "components/select_stories";
 @import "components/answers";
