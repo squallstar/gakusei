@@ -241,8 +241,8 @@
   },
   {
     "english": "{{suffix}} {{name}}'s {{parent}} is a {{profession}}.",
-    "romaji": "{{suffix}}{{name}} no {{parent}} wa {{profession}} desu.",
-    "kana": "{{suffix}}{{name}}の{{parent}}は{{profession}}です。",
+    "romaji": "{{name}}{{suffix}} no {{parent}} wa {{profession}} desu.",
+    "kana": "{{name}}{{suffix}}の{{parent}}は{{profession}}です。",
     "story": "at-home-7"
   },
   {
