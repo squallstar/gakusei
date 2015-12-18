@@ -19,7 +19,6 @@ check                       # Data helper for checks
 reactive-var                # Reactive variables
 meteorhacks:npm             # NPM support
 fortawesome:fontawesome     # Icons
-tmeasday:publish-counts     # Counters as publications
 npm-container               # NPM libraries support
 meteorhacks:kadira          # Performances analysis
 u2622:persistent-session    # Persistent session
