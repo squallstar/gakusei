@@ -14,6 +14,10 @@ Template.selectStories.helpers({
       .find({ _id: { $in: selected } }, { sort: { title: 1 } })
       .fetch();
 
+    if (!Story.find().count()) {
+      return 'Loading topics...';
+    }
+
     switch (stories.length) {
       case 1:
         return 'Topic: ' + _.first(stories).title;
