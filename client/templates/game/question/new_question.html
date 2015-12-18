@@ -1,22 +1,39 @@
 <template name="newQuestion">
   <div class="question-card type-{{currentQuestion.type}}">
     {{> question currentQuestion}}
-    <form>
-      {{#if isTypeOrder}}
-        <ul class="words">
-          {{#each words}}
-            {{> questionWord}}
-          {{/each}}
-        </ul>
+    <form class="{{#if showAnswer}}with-answer{{/if}}">
+      {{#if showAnswer}}
+        <footer>
+          <label>The answer is</label>
+        </footer>
+        <p class="answer">
+          {{currentQuestion.answer}}
+          {{#if currentQuestion.answer_alternative}}
+            <span>({{currentQuestion.answer_alternative}})</span>
+          {{/if}}
+        </p>
+        <a href="#" data-skip class="button"><i class="fa fa-check"></i> Ok, got it</a>
       {{else}}
-        <input id="new_answer" type="text" autocomplete="off" />
-      {{/if}}
-      <footer>
-        <label for="new_answer">Answer</label>
-        {{#if canSkip}}
-          <label data-skip><a href="#">Skip this question</a></label>
+        {{#if isTypeOrder}}
+          <ul class="words">
+            {{#each words}}
+              {{> questionWord}}
+            {{/each}}
+          </ul>
+        {{else}}
+          <input id="new_answer" type="text" autocomplete="off" />
         {{/if}}
-      </footer>
+        <footer>
+          <label for="new_answer">Answer</label>
+          {{#if isTypeKanji}}
+            <label><a href="#" data-show-answer>Reveal answer</a></label>
+          {{else}}
+            {{#if canSkip}}
+              <label><a href="#" data-skip>Skip this question</a></label>
+            {{/if}}
+          {{/if}}
+        </footer>
+      {{/if}}
     </form>
   </div>
 </template>

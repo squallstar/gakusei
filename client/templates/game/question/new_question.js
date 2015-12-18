@@ -8,6 +8,12 @@ Template.newQuestion.helpers({
   isTypeOrder: function () {
     return Template.instance().question.get().type === GAME.ORDER;
   },
+  isTypeKanji: function () {
+    return Template.instance().question.get().type === GAME.KANJI;
+  },
+  showAnswer: function () {
+    return Template.instance().showAnswer.get();
+  },
   words: function () {
     return _.shuffle(Template.instance().question.get().words);
   }
@@ -19,6 +25,7 @@ Template.newQuestion.onDestroyed(function () {
 
 Template.newQuestion.onCreated(function () {
   this.question = new ReactiveVar({});
+  this.showAnswer = new ReactiveVar(false);
 
   this.timeSpent = 0;
   this.selectedWords = [];
@@ -30,6 +37,7 @@ Template.newQuestion.onCreated(function () {
   }, 1000);
 
   this.renderQuestion = (question) => {
+    this.showAnswer.set(false);
     this.question.set(question);
     this.timeSpent = 0;
 
@@ -38,6 +46,7 @@ Template.newQuestion.onCreated(function () {
     // Clear the data
     $input.val('').prop('disabled', false);
     this.selectedWords = [];
+    this.$('.words li.selected').removeClass('selected');
 
     // Scroll to the top of the viewport
     Meteor.ScrollToTop();
@@ -100,6 +109,10 @@ Template.newQuestion.events({
     event.preventDefault();
     Session.setPersistent(CAN_SKIP_QUESTION, false);
     template.fetchNextQuestion();
+  },
+  'click [data-show-answer]': function (event, template) {
+    event.preventDefault();
+    template.showAnswer.set(true);
   },
   'submit form': function (event, template) {
     event.preventDefault();

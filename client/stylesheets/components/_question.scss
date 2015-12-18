@@ -99,7 +99,8 @@
     }
   }
 
-  > form {
+  form {
+    position: relative;
     padding: 2rem;
 
     input {
@@ -110,6 +111,31 @@
       &:disabled {
         background-color: #FFF;
         color: #CCC;
+      }
+    }
+
+    .answer {
+      font-size: 3rem;
+
+      span {
+        font-weight: 300;
+        color: #CCC;
+      }
+    }
+
+    .button {
+      display: inline-block;
+      border: 2px solid $color-secondary;
+      border-radius: 4px;
+      text-decoration: none;
+      color: $color-secondary;
+      font-size: 1.5rem;
+      margin: 3rem 0 0;
+      padding: 1rem;
+
+      &:hover {
+        background-color: $color-secondary;
+        color: #FFF;
       }
     }
 
@@ -145,6 +171,11 @@
       display: flex;
       margin-top: 1rem;
 
+      &:first-child {
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+
       label {
         text-transform: uppercase;
         font-weight: bold;
@@ -167,6 +198,6 @@
   }
 
   &.type-kanji-to-kana .question {
-    background-color: #7375a5;
+    background-color: $color-secondary;
   }
 }
