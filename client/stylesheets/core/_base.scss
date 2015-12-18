@@ -12,6 +12,10 @@ html, body {
   background-color: #FAFAFA;
 }
 
+body {
+  padding-top: $header-height;
+}
+
 input {
   font-family: 'Gotham', sans-serif;
 }
