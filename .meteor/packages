@@ -25,3 +25,5 @@ u2622:persistent-session    # Persistent session
 seba:minifiers-autoprefixer # Browser/vendor autoprefixer
 sanjo:jasmine               # Jasmine test framework
 velocity:console-reporter   # Console reporter for testing
+meteorhacks:flow-router     # Router
+meteorhacks:flow-layout     # Layout for router
