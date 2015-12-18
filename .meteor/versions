@@ -13,6 +13,7 @@ caching-html-compiler@1.0.2
 callback-hook@1.0.4
 check@1.1.0
 coffeescript@1.0.11
+cosmos:browserify@0.5.1
 ddp@1.2.2
 ddp-client@1.2.1
 ddp-common@1.2.2
@@ -41,6 +42,8 @@ logging@1.0.8
 meteor@1.1.10
 meteor-base@1.0.1
 meteorhacks:async@1.0.0
+meteorhacks:flow-layout@1.4.2
+meteorhacks:flow-router@1.19.0
 meteorhacks:kadira@2.26.3
 meteorhacks:meteorx@1.4.1
 meteorhacks:npm@1.5.0
