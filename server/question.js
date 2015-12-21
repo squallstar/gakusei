@@ -140,7 +140,7 @@ Meteor.methods({
     });
 
     // Fix wording that may be wrong when words are merged together
-    phrase.english = phrase.english.replace(/the (this|that)/gi, 'the');
+    phrase.english = phrase.english.replace(/the (this|that)/gi, '$1');
 
     return generateQuizForPhrase(phrase, question);
   }
