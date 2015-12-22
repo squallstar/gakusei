@@ -609,7 +609,7 @@
     "type": "weekday",
     "english": "Wednesday",
     "romaji": "suiyoubi",
-    "kana": "水ようび",
+    "kana": "すいようび",
     "kanji": "水曜日"
   },
   {
@@ -900,6 +900,21 @@
     "type": "how-old",
     "english": "how old",
     "romaji": "nansai",
-    "kana": "何歳"
+    "kana": "なんさい",
+    "kanji": "何歳"
+  },
+  {
+    "type": "who",
+    "english": "who",
+    "romaji": "dare",
+    "kana": "だれ",
+    "kanji": "誰"
+  },
+  {
+    "type": "status",
+    "english": "busy",
+    "romaji": "isogashii",
+    "kana": "いそがしい",
+    "kanji": "忙しい"
   }
 ]

@@ -108,6 +108,12 @@
     "story": "describing-things"
   },
   {
+    "english": "{{pointer-person}} is {{suffix}} {{name}}.",
+    "romaji": "{{pointer-person}} wa {{name}}{{suffix}} desu.",
+    "kana": "{{pointer-person}}は{{name}}{{suffix}}です.",
+    "story": "describing-things"
+  },
+  {
     "english": "Good morning.",
     "romaji": "ohayou gozaimasu.",
     "kana": "おはようございます。",
@@ -168,6 +174,12 @@
     "story": "conversation"
   },
   {
+    "english": "{{who}} is {{article male}}?",
+    "romaji": "{{article male}} wa {{who}} desu ka.",
+    "kana": "{{article male}}は{{who}}ですか。",
+    "story": "conversation"
+  },
+  {
     "english": "{{article male}} is {{suffix male}} {{name}}.",
     "romaji": "{{article male}} wa {{name}}{{suffix male}} desu.",
     "kana": "{{article male}}は{{name}}{{suffix male}}です。",
@@ -198,10 +210,10 @@
     "story": "conversation"
   },
   {
-    "english": "{{pointer-person}} is {{suffix}} {{name}}.",
-    "romaji": "{{pointer-person}} wa {{name}}{{suffix}} desu.",
-    "kana": "{{pointer-person}}は{{name}}{{suffix}}です.",
-    "story": "describing-things"
+    "english": "{{who}} are you?",
+    "romaji": "anata wa {{who}} desu ka.",
+    "kana": "あなたは{{who}}ですか。",
+    "story": "conversation"
   },
   {
     "english": "please come in.",
@@ -244,6 +256,24 @@
     "romaji": "{{name}}{{suffix}} no {{parent}} wa {{profession}} desu.",
     "kana": "{{name}}{{suffix}}の{{parent}}は{{profession}}です。",
     "story": "at-home-7"
+  },
+  {
+    "english": "Where is {{suffix}} {{name}}?",
+    "romaji": "{{name}}{{suffix}} wa doko desu ka.",
+    "kana": "{{name}}{{suffix}}はどこですか。",
+    "story": "at-home-8"
+  },
+  {
+    "english": "{{suffix}} {{name}} is {{status}}.",
+    "romaji": "{{name}}{{suffix}} wa {{status}} desu.",
+    "kana": "{{name}}{{suffix}}は{{status}}です。",
+    "story": "at-home-9"
+  },
+  {
+    "english": "{{suffix}} {{name}} is also {{status}}.",
+    "romaji": "{{name}}{{suffix}} mo {{status}} desu.",
+    "kana": "{{name}}{{suffix}}も{{status}}です。",
+    "story": "at-home-10"
   },
   {
     "english": "{{suffix}} {{name}} is {{verb-direction}} to {{place}} by {{transport}}.",
