@@ -911,10 +911,23 @@
     "kanji": "誰"
   },
   {
+    "type": "where",
+    "english": "where",
+    "romaji": "doko",
+    "kana": "どこ"
+  },
+  {
     "type": "status",
     "english": "busy",
     "romaji": "isogashii",
     "kana": "いそがしい",
     "kanji": "忙しい"
+  },
+  {
+    "type": "{{self}}",
+    "english": "private",
+    "romaji": "watashi",
+    "kana": "わたし",
+    "kanji": "私"
   }
 ]

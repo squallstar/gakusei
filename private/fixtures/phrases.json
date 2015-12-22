@@ -114,6 +114,12 @@
     "story": "describing-things"
   },
   {
+    "english": "{{where}} is my {{object}}?",
+    "romaji": "{{self}} no {{object}} wa {{where}} ni arimasu ka.",
+    "kana": "{{self}}の{{object}}は{{where}}にありますか。",
+    "story": "describing-things"
+  },
+  {
     "english": "Good morning.",
     "romaji": "ohayou gozaimasu.",
     "kana": "おはようございます。",
@@ -258,9 +264,9 @@
     "story": "at-home-7"
   },
   {
-    "english": "Where is {{suffix}} {{name}}?",
-    "romaji": "{{name}}{{suffix}} wa doko desu ka.",
-    "kana": "{{name}}{{suffix}}はどこですか。",
+    "english": "{{where}} is {{suffix}} {{name}}?",
+    "romaji": "{{name}}{{suffix}} wa {{where}} desu ka.",
+    "kana": "{{name}}{{suffix}}は{{where}}ですか。",
     "story": "at-home-8"
   },
   {
