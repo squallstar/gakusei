@@ -332,7 +332,7 @@
   {
     "english": "{{what-time}} is in {{place city}}?",
     "romaji": "{{place city}} wa {{time-now}} {{what-time}} desu ka",
-    "kana": "{{place city}}wa{{time-now}}{{what-time}}ですか。",
+    "kana": "{{place city}}は{{time-now}}{{what-time}}ですか。",
     "story": "asking-the-time-1"
   },
   {
