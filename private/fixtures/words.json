@@ -358,6 +358,20 @@
   },
   {
     "type": "place",
+    "english": "the forest",
+    "romaji": "mori",
+    "kana": "もり",
+    "kanji": "森"
+  },
+  {
+    "type": "place",
+    "english": "the village",
+    "romaji": "mura",
+    "kana": "むら",
+    "kanji": "村"
+  },
+  {
+    "type": "place",
     "english": "the river",
     "romaji": "kawa",
     "kana": "川"
@@ -697,7 +711,16 @@
     "english": "Japanese",
     "romaji": "nihonjin",
     "kana": "にほんじん",
-    "kanji": "日本人"
+    "kanji": "日本人",
+    "context": "nationality"
+  },
+  {
+    "type": "nationality",
+    "english": "Italian",
+    "romaji": "itariajin",
+    "kana": "イタリアじん",
+    "kanji": "イタリア人",
+    "context": "nationality"
   },
   {
     "type": "sex male",
@@ -929,5 +952,12 @@
     "romaji": "watashi",
     "kana": "わたし",
     "kanji": "私"
+  },
+  {
+    "type": "{{weather}}",
+    "english": "rain",
+    "romaji": "ame",
+    "kana": "あめ",
+    "kanji": "雨"
   }
 ]
