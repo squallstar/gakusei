@@ -11,10 +11,10 @@ Template.selectStories.helpers({
     }
 
     stories = Story
-      .find({ _id: { $in: selected } }, { sort: { title: 1 } })
+      .find({ slug: { $in: selected } }, { sort: { title: 1 } })
       .fetch();
 
-    if (!Story.find().count()) {
+    if (!stories.length && !Story.find().count()) {
       return 'Loading topics...';
     }
 
@@ -49,7 +49,7 @@ Template.selectStories.events({
     template.isOpen.set(!isOpen);
 
     if (isOpen) {
-      let ids = [],
+      let slugs = [],
           stories = template.$('input'),
           checked = stories.filter(':checked');
 
@@ -57,11 +57,11 @@ Template.selectStories.events({
       // like he selected all stories
       if (stories.length !== checked.length) {
         checked.each(function() {
-          ids.push($(this).val());
+          slugs.push($(this).val());
         });
       }
 
-      Session.setPersistent(SELECTED_STORIES, ids);
+      Session.setPersistent(SELECTED_STORIES, slugs);
     }
   }
 });
