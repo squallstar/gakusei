@@ -113,9 +113,6 @@ Meteor.methods({
         }));
       }
 
-      // Push this word to our collection
-      question.words.push(word);
-
       if (word.context) {
         question.contexts.push(word.context);
       }
@@ -137,10 +134,17 @@ Meteor.methods({
 
         phrase[locale] = phrase[locale].replace(placeholder, replaceWith);
       });
+
+      // Avoid writing "the forest" on single words
+      word.english = word.english.replace(/^the /, '');
+
+      // Push this word to this question collection of words
+      question.words.push(word);
     });
 
     // Fix wording that may be wrong when words are merged together
     phrase.english = phrase.english.replace(/the (this|that)/gi, '$1');
+    phrase.english = phrase.english.replace(/ (a) [a|e|i||o|u]/, 'an');
 
     return generateQuizForPhrase(phrase, question);
   }
@@ -175,7 +179,7 @@ function generateQuizForPhrase (phrase, question) {
       switch (_.sample(['to-kanji', 'to-kana', 'to-english'])) {
         case 'to-kanji':
           question.title = 'Translate the following word to its <u>kanji</u>.';
-          question.description = phrase.english;
+          question.description = phrase.english.replace(/^the /, '');
           question.answer = phrase.kanji;
           question.answer_alternative = phrase.romaji;
           break;

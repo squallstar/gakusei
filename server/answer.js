@@ -5,6 +5,10 @@ Meteor.methods({
   submitAnswer: function (options) {
     let { question, userAnswer, timeSpent } = options;
 
+    if (!question) {
+      return false;
+    }
+
     // Find out whether the user is submitting romaji
     if (question.answer_alternative && userAnswer.match(/([a-z]+)/)) {
       question.answer = question.answer_alternative;
@@ -36,7 +40,7 @@ Meteor.methods({
       });
     });
 
-    accuracy = Math.round(100 * corrects / (corrects + errors));
+    accuracy = Math.round(100 * (corrects - (errors*0.1)) / (corrects + errors));
     if (accuracy < 0) {
       accuracy = 0;
     }

@@ -354,9 +354,9 @@
     "story": "asking-the-time-3"
   },
   {
-    "english": "The {{performance}} starts at 5{{hour-period}}.",
-    "romaji": "{{performance}} wa {{hour-period}}5 kara desu",
-    "kana": "{{performance}}は{{hour-period}}５からです。",
+    "english": "The {{performance}} starts at {{number}}{{hour-period}}.",
+    "romaji": "{{performance}} wa {{hour-period}}{{number}} kara desu",
+    "kana": "{{performance}}は{{hour-period}}{{number}}からです。",
     "story": "asking-the-time-4"
   }
 ]
