@@ -1,19 +1,27 @@
 .question-card {
-  margin: 0 auto;
-  max-width: 500px;
-  min-height: 100%;
-  background-color: #FFF;
+  $max-width: 500px;
+
+  @include transition(background-color 2s);
+  background-color: $color-primary;
   box-shadow: 0 1px 4px rgba(0,0,0,0.3);
   position: relative;
   z-index: 1;
+  padding-bottom: 3rem;
+
+  @include below($max-width) {
+    padding-bottom: 0;
+  }
+
+  .row {
+    max-width: $max-width;
+    margin: 0 auto;
+  }
 
   .question {
-    @include transition(background-color, 2s);
-    background-color: $color-primary;
     color: #FFF;
 
     .content {
-      padding: 3rem 2rem 2rem;
+      padding: 3rem 2rem;
       align-content: flex-end;
     }
 
@@ -102,6 +110,8 @@
   form {
     position: relative;
     padding: 2rem;
+    background-color: #FFF;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 
     input {
       width: 100%;
@@ -197,7 +207,7 @@
     }
   }
 
-  &.type-kanji-to-kana .question {
+  &.type-kanji-to-kana {
     background-color: $color-secondary;
   }
 }

@@ -1,13 +1,13 @@
 <template name="selectStories">
   <header class="stories {{#if isOpen}}open{{/if}}">
-    <a href="#" class="toggle" data-toggle>
+    <a href="#" class="row toggle" data-toggle>
       {{#if isOpen}}
       <i class="fa fa-caret-down"></i> Close and save changes
       {{else}}
       <i class="fa fa-caret-right"></i> {{selectedText}}
       {{/if}}
     </a>
-    <ul>
+    <ul class="row">
       {{#each stories}}
         {{> selectStory}}
       {{/each}}

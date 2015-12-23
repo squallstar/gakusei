@@ -1,7 +1,7 @@
 <template name="question">
   <div class="question">
     {{> selectStories}}
-    <div class="content">
+    <div class="content row">
       <h5>{{{title}}} {{#if context}} <u><i class="fa fa-info-circle"></i> context: {{context}}</u>{{/if}}</h5>
       <p id="question-description" class="{{#if showingFurigana}}with-furigana{{/if}}">{{{compiledDescription}}}</p>
       <footer>

@@ -1,7 +1,7 @@
 <template name="newQuestion">
   <div class="question-card type-{{currentQuestion.type}}">
     {{> question currentQuestion}}
-    <form class="{{#if showAnswer}}with-answer{{/if}}">
+    <form class="row {{#if showAnswer}}with-answer{{/if}}">
       {{#if showAnswer}}
         <footer>
           <label>The answer is</label>
