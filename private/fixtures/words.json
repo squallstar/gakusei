@@ -947,14 +947,14 @@
     "kanji": "忙しい"
   },
   {
-    "type": "{{self}}",
+    "type": "self",
     "english": "private",
     "romaji": "watashi",
     "kana": "わたし",
     "kanji": "私"
   },
   {
-    "type": "{{weather}}",
+    "type": "weather",
     "english": "rain",
     "romaji": "ame",
     "kana": "あめ",
