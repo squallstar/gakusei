@@ -61,21 +61,27 @@ Template.newQuestion.onCreated(function () {
     }
   };
 
-  // Helper function to load the next question
-  this.fetchNextQuestion = (next) => {
-    let previousQuestion = this.question.get();
-
-    // Runs with the tracker to reload when the selected stories array changes
-    this.autorun(() => {
-      Meteor.call('getQuestion', {
-        previousQuestion: previousQuestion,
-        selectedStories: Session.get(SELECTED_STORIES)
-      }, (err, question) => {
-        Session.setPersistent(CURRENT_QUESTION, question);
-        this.renderQuestion(question);
-      });
+  this.fetchNextQuestion = () => {
+    Meteor.call('getQuestion', {
+      previousQuestion: this.question.get(),
+      selectedStories: Session.get(SELECTED_STORIES)
+    }, (err, question) => {
+      Session.setPersistent(CURRENT_QUESTION, question);
+      this.renderQuestion(question);
     });
   };
+
+  this.autorun(() => {
+    // Tracked variables
+    Session.get(SELECTED_STORIES);
+
+    Tracker.nonreactive(() => {
+      // Wait for the UI animations to settle
+      Meteor.setTimeout(() => {
+        this.fetchNextQuestion();
+      }, 450);
+    });
+  });
 
   this.submitAnswer = (answer) => {
     Meteor.call('submitAnswer', {

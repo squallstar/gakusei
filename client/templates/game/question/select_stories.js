@@ -27,9 +27,9 @@ Template.selectStories.helpers({
         return stories.length + ' topics selected';
     }
   },
-  isSelected: function (id) {
+  isSelected: function (slug) {
     let selected = Session.get(SELECTED_STORIES);
-    return !selected.length || selected.indexOf(id) > -1;
+    return !selected.length || selected.indexOf(slug) > -1;
   },
   isOpen: function () {
     return Template.instance().isOpen.get();
