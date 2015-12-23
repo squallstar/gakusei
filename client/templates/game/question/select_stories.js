@@ -62,6 +62,7 @@ Template.selectStories.events({
       }
 
       Session.setPersistent(SELECTED_STORIES, slugs);
+      Session.set(SELECTED_STORIES_CHANGED, Date.now());
     }
   }
 });

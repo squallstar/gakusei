@@ -73,14 +73,11 @@ Template.newQuestion.onCreated(function () {
 
   this.autorun(() => {
     // Tracked variables
-    Session.get(SELECTED_STORIES);
-
-    Tracker.nonreactive(() => {
-      // Wait for the UI animations to settle
-      Meteor.setTimeout(() => {
+    if (Session.get(SELECTED_STORIES_CHANGED)) {
+      Tracker.nonreactive(() => {
         this.fetchNextQuestion();
-      }, 450);
-    });
+      });
+    }
   });
 
   this.submitAnswer = (answer) => {
