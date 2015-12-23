@@ -46,7 +46,7 @@ Meteor.methods({
     // When the user has filtered the stories he wants to play with,
     // we limit our phrases selection
     if (!phrase && selectedStories.length) {
-      let stories = Story.find({ _id: { $in: selectedStories } }).fetch(),
+      let stories = Story.find({ slug: { $in: selectedStories } }).fetch(),
           expressions = _.map(stories, (s) => {
             return new RegExp('^' + s.slug.replace(/\-/g, '\-') + '.+', 'g');
           });
