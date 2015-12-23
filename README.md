@@ -5,7 +5,7 @@ It can generate thousands of different sentences by rearranging words and senten
 
 ## Try it online
 
-http://learn.fragments.me
+On your browser: [learn.fragments.me](http://learn.fragments.me)
 
 or download the [Android app](https://play.google.com/store/apps/details?id=it.squallstar.gakusei).
 
