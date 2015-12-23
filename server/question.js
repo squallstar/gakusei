@@ -25,7 +25,14 @@ Meteor.methods({
     if (story) {
       check(story.slug, String);
 
-      if (story.slug === 'kanji' && previousQuestion.words && !selectedStories.length) {
+      if (story.slug === 'kanji'
+          && previousQuestion.words
+          && (
+            !selectedStories.length || (
+              selectedStories.indexOf('kanji-use') !== -1
+            )
+          )
+        ) {
         // Try to find a phrase where this kanji can be used
         let wordType = '{{' + previousQuestion.words[0].type + '}}';
         phrase = Phrase.findOne({ $text: { $search: wordType } });
@@ -46,10 +53,9 @@ Meteor.methods({
     // When the user has filtered the stories he wants to play with,
     // we limit our phrases selection
     if (!phrase && selectedStories.length) {
-      let stories = Story.find({ slug: { $in: selectedStories } }).fetch(),
-          expressions = _.map(stories, (s) => {
-            return new RegExp('^' + s.slug.replace(/\-/g, '\-') + '.+', 'g');
-          });
+      let expressions = _.map(selectedStories, (slug) => {
+        return new RegExp('^' + slug.replace(/\-/g, '\-') + '.+', 'g');
+      });
 
       phrase = _.sample(Phrase.find({ story: { $in: expressions } }).fetch());
     }
@@ -57,7 +63,7 @@ Meteor.methods({
     // Extract a random phrase or word
     if (!phrase) {
       // 20% chance to get a kanji to translate
-      if (_.sample([1,2,3,4]) === 1) {
+      if (_.sample([1,2,3,4]) === 1 || selectedStories[0] === 'kanji') {
         // Find a random kanji
         phrase = _.sample(_.filter(words, (w) => { return w.kanji }));
 
