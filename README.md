@@ -7,7 +7,7 @@ It can generate thousands of different sentences by rearranging words and senten
 
 On your browser: [learn.fragments.me](http://learn.fragments.me)
 
-or download the [Android app](https://play.google.com/store/apps/details?id=it.squallstar.gakusei).
+There's also an [android app](https://play.google.com/store/apps/details?id=it.squallstar.gakusei) wrapper for your pleasure.
 
 ## Or run it locally
 
