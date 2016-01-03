@@ -24,6 +24,12 @@
     "story": "describing-things"
   },
   {
+    "english": "{{pointer}} is the {{sign}}.",
+    "romaji": "{{pointer}} wa {{sign}} desu.",
+    "kana": "{{pointer}}は{{sign}}です。",
+    "story": "describing-things"
+  },
+  {
     "english": "There is a {{animal}}.",
     "romaji": "{{animal}} ga imasu.",
     "kana": "{{animal}}がいます。",
@@ -45,6 +51,12 @@
     "english": "there isn't a {{object}} {{position}} {{pointer-object}} {{container}}.",
     "romaji": "{{pointer-object}} {{container}} no {{position}} ni {{object}} ga arimasen.",
     "kana": "{{pointer-object}}{{container}}の{{position}}に{{object}}がありません。",
+    "story": "describing-things"
+  },
+  {
+    "english": "there is a {{size}} {{object}} {{position}} {{pointer-object}} {{transport}}.",
+    "romaji": "{{pointer-object}} {{transport}} no {{position}} ni {{size}} {{object}} ga arimasu.",
+    "kana": "{{pointer-object}}{{transport}}の{{position}}に{{size}}{{object}}があります。",
     "story": "describing-things"
   },
   {
@@ -91,7 +103,7 @@
   },
   {
     "english": "{{pointer-object}} {{object mountain}} is {{place mountain}}.",
-    "romaji": "{{pointer-object}}{{object mountain}} wa {{place mountain}} desu.",
+    "romaji": "{{pointer-object}} {{object mountain}} wa {{place mountain}} desu.",
     "kana": "{{pointer-object}}{{object mountain}}は{{place mountain}}です。",
     "story": "describing-things"
   },
@@ -117,6 +129,12 @@
     "english": "{{where}} is my {{object}}?",
     "romaji": "{{self}} no {{object}} wa {{where}} ni arimasu ka.",
     "kana": "{{self}}の{{object}}は{{where}}にありますか。",
+    "story": "describing-things"
+  },
+  {
+    "english": "{{suffix}}{{name}} {{verb-divide-past}} a {{size}} {{object}} in {{fraction}}.",
+    "romaji": "{{name}}{{suffix}} wa {{size}} {{object}} o {{fraction}} ni {{verb-divide-past}}.",
+    "kana": "{{name}}{{suffix}}は{{size}}{{object}}を{{fraction}}に{{verb-divide-past}}。",
     "story": "describing-things"
   },
   {

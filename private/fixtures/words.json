@@ -56,6 +56,13 @@
   },
   {
     "type": "object",
+    "english": "money",
+    "romaji": "okane",
+    "kana": "おかね",
+    "kanji": "お金"
+  },
+  {
+    "type": "object",
     "english": "newspaper",
     "romaji": "shinbun",
     "kana": "しんぶん",
@@ -121,6 +128,20 @@
     "english": "rabbit",
     "romaji": "usagi",
     "kana": "ウサギ"
+  },
+  {
+    "type": "size",
+    "english": "big",
+    "romaji": "ooki",
+    "kana": "おおき",
+    "kanji": "大き"
+  },
+  {
+    "type": "size",
+    "english": "small",
+    "romaji": "chiisai",
+    "kana": "ちいさい",
+    "kanji": "小さい"
   },
   {
     "type": "performance",
@@ -512,6 +533,13 @@
     "romaji": "nomimasu",
     "kana": "のみます",
     "kanji": "飲みます"
+  },
+  {
+    "type": "verb-divide-past",
+    "english": "divided",
+    "romaji": "wakemashita",
+    "kana": "わけました",
+    "kanji": "分けました"
   },
   {
     "type": "noun-rude",
@@ -959,5 +987,26 @@
     "romaji": "ame",
     "kana": "あめ",
     "kanji": "雨"
+  },
+  {
+    "type": "fraction",
+    "english": "half",
+    "romaji": "hanpun",
+    "kana": "はんぷん",
+    "kanji": "半分"
+  },
+  {
+    "type": "sign",
+    "english": "entrance",
+    "romaji": "iriguchi",
+    "kana": "いりぐち",
+    "kanji": "入口"
+  },
+  {
+    "type": "sign",
+    "english": "exit",
+    "romaji": "deguchi",
+    "kana": "でぐち",
+    "kanji": "出口"
   }
 ]
