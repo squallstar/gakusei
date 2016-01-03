@@ -1008,5 +1008,33 @@
     "romaji": "deguchi",
     "kana": "でぐち",
     "kanji": "出口"
+  },
+  {
+    "type": "sign",
+    "english": "east gate",
+    "romaji": "higashiguchi",
+    "kana": "ひがしぐち",
+    "kanji": "東口"
+  },
+  {
+    "type": "sign",
+    "english": "north gate",
+    "romaji": "kitaguchi",
+    "kana": "きたぐち",
+    "kanji": "北口"
+  },
+  {
+    "type": "sign",
+    "english": "west gate",
+    "romaji": "nishiguchi",
+    "kana": "にしぐち",
+    "kanji": "西口"
+  },
+  {
+    "type": "sign",
+    "english": "south gate",
+    "romaji": "minamiguchi",
+    "kana": "みなみぐち",
+    "kanji": "南口"
   }
 ]
