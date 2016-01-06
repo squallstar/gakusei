@@ -305,6 +305,20 @@
   },
   {
     "type": "name",
+    "english": "Kobayashi",
+    "romaji": "kobayashi",
+    "kana": "こばやし",
+    "kanji": "小林"
+  },
+  {
+    "type": "name",
+    "english": "Iwata",
+    "romaji": "iwata",
+    "kana": "いわた",
+    "kanji": "岩田"
+  },
+  {
+    "type": "name",
     "english": "Tanaka",
     "romaji": "tanaka",
     "kana": "たなか",
