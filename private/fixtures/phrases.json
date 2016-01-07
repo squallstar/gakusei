@@ -348,6 +348,12 @@
     "story": "weekend-plans-2"
   },
   {
+    "english": "I'm {{verb-direction}} to {{place}} on {{weekday}}.",
+    "romaji": "{{weekday}} wa {{place}} ni {{verb-direction}}.",
+    "kana": "{{weekday}}は{{place}}に{{verb-direction}}。",
+    "story": "weekend-plans-2"
+  },
+  {
     "english": "{{what-time}} is it?",
     "romaji": "{{time-now}} {{what-time}} desu ka",
     "kana": "{{time-now}}{{what-time}}ですか。",
