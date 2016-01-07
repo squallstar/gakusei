@@ -18,6 +18,12 @@
     "story": "at-the-shop-2"
   },
   {
+    "english": "{{pointer}} {{counter}}, please.",
+    "romaji": "{{pointer}} o {{counter}} kudasai.",
+    "kana": "{{pointer}}を{{counter}}ください。",
+    "story": "at-the-shop-2"
+  },
+  {
     "english": "{{pointer}} is a {{object}}.",
     "romaji": "{{pointer}} wa {{object}} desu.",
     "kana": "{{pointer}}は{{object}}です。",
@@ -63,6 +69,12 @@
     "english": "there is a {{animal}} {{position}} {{pointer-object}} {{object}}.",
     "romaji": "{{pointer-object}} {{object}} no {{position}} ni {{animal}} ga imasu.",
     "kana": "{{pointer-object}}{{object}}の{{position}}に{{animal}}がいます。",
+    "story": "describing-things"
+  },
+  {
+    "english": "Is {{pointer}} your {{object}}?",
+    "romaji": "{{pointer}} wa anata no {{object}} desu ka.",
+    "kana": "{{pointer}}はあなたの{{object}}ですか。",
     "story": "describing-things"
   },
   {
@@ -195,61 +207,73 @@
     "english": "I play {{sport}}.",
     "romaji": "{{sport}} o shimasu.",
     "kana": "{{sport}}をします。",
-    "story": "conversation"
+    "story": "conversation-7"
   },
   {
     "english": "Do you play {{sport}}?",
     "romaji": "{{sport}} o shimasu ka.",
     "kana": "{{sport}}をしますか。",
-    "story": "conversation"
-  },
-  {
-    "english": "{{who}} is {{article male}}?",
-    "romaji": "{{article male}} wa {{who}} desu ka.",
-    "kana": "{{article male}}は{{who}}ですか。",
-    "story": "conversation"
-  },
-  {
-    "english": "{{article male}} is {{suffix male}} {{name}}.",
-    "romaji": "{{article male}} wa {{name}}{{suffix male}} desu.",
-    "kana": "{{article male}}は{{name}}{{suffix male}}です。",
-    "story": "conversation"
-  },
-  {
-    "english": "{{article female}} is {{suffix female}} {{name}}.",
-    "romaji": "{{article female}} wa {{name}}{{suffix female}} desu.",
-    "kana": "{{article female}}は{{name}}{{suffix female}}です。",
-    "story": "conversation"
+    "story": "conversation-8"
   },
   {
     "english": "Does {{suffix}} {{name}} play {{sport}}?",
     "romaji": "{{name}}{{suffix}} wa {{sport}} o shimasu ka.",
     "kana": "{{name}}{{suffix}}は{{sport}}をしますか。",
-    "story": "conversation"
-  },
-  {
-    "english": "I {{verb-eat}} a {{object food}}",
-    "romaji": "{{object food}} o {{verb-eat}}.",
-    "kana": "{{object food}}を{{verb-eat}}。",
-    "story": "conversation"
-  },
-  {
-    "english": "I {{verb-drink}} a {{object drink}}",
-    "romaji": "{{object drink}} o {{verb-drink}}.",
-    "kana": "{{object drink}}を{{verb-drink}}。",
-    "story": "conversation"
+    "story": "conversation-9"
   },
   {
     "english": "{{who}} are you?",
     "romaji": "anata wa {{who}} desu ka.",
     "kana": "あなたは{{who}}ですか。",
-    "story": "conversation"
+    "story": "conversation-10"
+  },
+  {
+    "english": "{{who}} is {{article male}}?",
+    "romaji": "{{article male}} wa {{who}} desu ka.",
+    "kana": "{{article male}}は{{who}}ですか。",
+    "story": "conversation-10"
+  },
+  {
+    "english": "{{article male}} is {{suffix male}} {{name}}.",
+    "romaji": "{{article male}} wa {{name}}{{suffix male}} desu.",
+    "kana": "{{article male}}は{{name}}{{suffix male}}です。",
+    "story": "conversation-11"
+  },
+  {
+    "english": "{{article female}} is {{suffix female}} {{name}}.",
+    "romaji": "{{article female}} wa {{name}}{{suffix female}} desu.",
+    "kana": "{{article female}}は{{name}}{{suffix female}}です。",
+    "story": "conversation-12"
+  },
+  {
+    "english": "I {{verb-eat}} a {{object food}}",
+    "romaji": "{{object food}} o {{verb-eat}}.",
+    "kana": "{{object food}}を{{verb-eat}}。",
+    "story": "conversation-13"
+  },
+  {
+    "english": "I {{verb-drink}} a {{object drink}}",
+    "romaji": "{{object drink}} o {{verb-drink}}.",
+    "kana": "{{object drink}}を{{verb-drink}}。",
+    "story": "conversation-14"
+  },
+  {
+    "english": "I {{verb-drink}} a {{object drink}}.",
+    "romaji": "{{object drink}} o {{verb-drink}}.",
+    "kana": "{{object drink}}を{{verb-drink}}。",
+    "story": "conversation-15"
+  },
+  {
+    "english": "I {{verb-drink}} {{object drink}} {{frequency}}.",
+    "romaji": "{{self}} wa {{frequency}} {{object drink}} o {{verb-drink}}.",
+    "kana": "{{self}}は{{frequency}}{{object drink}}を{{verb-drink}}。",
+    "story": "conversation-16"
   },
   {
     "english": "I {{verb-see-past}} a {{performance}} after {{event}}.",
     "romaji": "{{weekday}} no ato, {{performance}} o {{verb-see-past}}.",
     "kana": "{{weekday}}のあと、{{performance}}を{{verb-see-past}}.",
-    "story": "conversation"
+    "story": "conversation-17"
   },
   {
     "english": "please come in.",

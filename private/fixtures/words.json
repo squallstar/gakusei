@@ -1031,7 +1031,7 @@
   },
   {
     "type": "self",
-    "english": "private",
+    "english": "I",
     "romaji": "watashi",
     "kana": "わたし",
     "kanji": "私"
@@ -1127,5 +1127,19 @@
     "romaji": "sangatsu",
     "kana": "さんがつ",
     "kanji": "三月"
+  },
+  {
+    "type": "counter",
+    "english": "one",
+    "romaji": "hitotsu",
+    "kana": "ひとつ",
+    "kanji": "一つ"
+  },
+  {
+    "type": "frequency",
+    "english": "every morning",
+    "romaji": "maiasa",
+    "kana": "まいあさ",
+    "kanji": "毎朝"
   }
 ]
