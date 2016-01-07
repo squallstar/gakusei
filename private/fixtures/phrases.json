@@ -138,6 +138,12 @@
     "story": "describing-things"
   },
   {
+    "english": "There are {{quantity}} {{building plural}} in {{place city}}.",
+    "romaji": "{{place city}} ni wa {{building plural}} ga {{quantity}}.",
+    "kana": "{{place city}}には{{building plural}}が{{quantity}}。",
+    "story": "describing-things"
+  },
+  {
     "english": "Good morning.",
     "romaji": "ohayou gozaimasu.",
     "kana": "おはようございます。",
