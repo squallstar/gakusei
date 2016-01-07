@@ -61,6 +61,9 @@ Meteor.methods({
 
     Answer.insert(answerData);
 
-    return answerData.correct;
+    return {
+      correct: answerData.correct,
+      accuracy: accuracy
+    };
   }
 });
