@@ -7,6 +7,7 @@ Meteor.methods({
     let { previousQuestion, selectedStories } = options,
         words = Word.find().fetch(),
         question = { words: [], contexts: [] },
+        nextWordIsPlural,
         phrase,
         placeholders,
         story;
@@ -132,6 +133,14 @@ Meteor.methods({
         } else {
           // Normal replacement
           replaceWith = word[locale];
+
+          if (locale === 'english' && nextWordIsPlural) {
+            if (str.slice(-1) === 'y') {
+              replaceWith = str.slice(0, replaceWith.length-1) + 'ies';
+            } else {
+              replaceWith += 's';
+            }
+          }
         }
 
         if (question.type === GAME.ORDER) {
@@ -146,6 +155,9 @@ Meteor.methods({
 
       // Push this word to this question collection of words
       question.words.push(word);
+
+      // Update flags for next placeholder
+      nextWordIsPlural = !!word.next_plural;
     });
 
     // Fix wording that may be wrong when words are merged together

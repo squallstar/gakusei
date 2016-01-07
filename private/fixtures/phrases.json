@@ -138,9 +138,9 @@
     "story": "describing-things"
   },
   {
-    "english": "There are {{quantity}} {{building plural}} in {{place city}}.",
-    "romaji": "{{place city}} ni wa {{building plural}} ga {{quantity}}.",
-    "kana": "{{place city}}には{{building plural}}が{{quantity}}。",
+    "english": "There are {{quantity}} {{building}} in {{place city}}.",
+    "romaji": "{{place city}} ni wa {{building}} ga {{quantity}}.",
+    "kana": "{{place city}}には{{building}}が{{quantity}}。",
     "story": "describing-things"
   },
   {

@@ -84,6 +84,13 @@
   },
   {
     "type": "object",
+    "english": "picture",
+    "romaji": "ewo",
+    "kana": "えを",
+    "kanji": "絵を"
+  },
+  {
+    "type": "object",
     "english": "watch",
     "romaji": "tokei",
     "kana": "とけい",
@@ -404,7 +411,7 @@
     "romaji": "otera",
     "kana": "おてら",
     "kanji": "お寺"
-  }
+  },
   {
     "type": "place",
     "english": "the village",
@@ -495,6 +502,13 @@
     "english": "India",
     "romaji": "indo",
     "kana": "インド"
+  },
+  {
+    "type": "verb-like",
+    "english": "like",
+    "romaji": "sukidesu",
+    "kana": "すきです",
+    "kanji": "好きです"
   },
   {
     "type": "verb-direction",
@@ -1084,13 +1098,21 @@
     "english": "a lot of",
     "romaji": "ooi",
     "kana": "おおい",
-    "kanji": "多い"
+    "kanji": "多い",
+    "next_plural": true
   },
   {
-    "type": "building plural",
-    "english": "temples",
+    "type": "building",
+    "english": "temple",
     "romaji": "otera",
     "kana": "おてら",
     "kanji": "お寺"
+  },
+  {
+    "type": "home",
+    "english": "home",
+    "romaji": "uchi",
+    "kana": "うち",
+    "kanji": "家"
   }
 ]
