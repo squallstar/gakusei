@@ -1017,6 +1017,12 @@
     "kana": "どこ"
   },
   {
+    "type": "when",
+    "english": "when",
+    "romaji": "itsu",
+    "kana": "いつ"
+  },
+  {
     "type": "status",
     "english": "busy",
     "romaji": "isogashii",
@@ -1114,5 +1120,12 @@
     "romaji": "uchi",
     "kana": "うち",
     "kanji": "家"
+  },
+  {
+    "type": "month",
+    "english": "March",
+    "romaji": "sangatsu",
+    "kana": "さんがつ",
+    "kanji": "三月"
   }
 ]

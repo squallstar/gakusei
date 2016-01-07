@@ -303,13 +303,25 @@
     "english": "{{suffix}} {{name}} is {{status}}.",
     "romaji": "{{name}}{{suffix}} wa {{status}} desu.",
     "kana": "{{name}}{{suffix}}は{{status}}です。",
-    "story": "at-home-9"
+    "story": "at-work-1"
   },
   {
     "english": "{{suffix}} {{name}} is also {{status}}.",
     "romaji": "{{name}}{{suffix}} mo {{status}} desu.",
     "kana": "{{name}}{{suffix}}も{{status}}です。",
-    "story": "at-home-10"
+    "story": "at-work-2"
+  },
+  {
+    "english": "I am {{status}} at {{event}} on {{month}}.",
+    "romaji": "{{month}} wa {{event}} ga {{status}}.",
+    "kana": "{{month}}は{{event}}が{{status}}。",
+    "story": "at-work-3"
+  },
+  {
+    "english": "{{when}} is {{article}} {{verb-direction}}?",
+    "romaji": "{{article}} wa {{when}} {{verb-direction}} ka.",
+    "kana": "{{article}}は{{when}}{{verb-direction}}か。",
+    "story": "at-work-4"
   },
   {
     "english": "{{suffix}} {{name}} is {{verb-direction}} to {{place}} by {{transport}}.",
