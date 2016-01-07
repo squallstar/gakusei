@@ -1,4 +1,8 @@
 {
+  "voiceRssApiKey": "your_voicerss.org_api_key"
   "kadiraAppId" : "your_kadira_app_id",
-  "kadiraAppSecret": "your_kadira_app_secret"
+  "kadiraAppSecret": "your_kadira_app_secret",
+  "public": {
+    "voiceRssApiKey": "your_voicerss.org_api_key"
+  }
 }

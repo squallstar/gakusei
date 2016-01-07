@@ -15,8 +15,8 @@ Meteor.methods({
     }
 
     // Cleanup the answer before diffing
-    let cleanAnswer = cleanupAnswer(question.answer),
-        cleanUserAnswer = cleanupAnswer(userAnswer),
+    let cleanAnswer = cleanupSentence(question.answer),
+        cleanUserAnswer = cleanupSentence(userAnswer),
         diffs = diff.diffChars(cleanAnswer, cleanUserAnswer),
         parts = [],
         errors = 0,
@@ -64,9 +64,3 @@ Meteor.methods({
     return answerData.correct;
   }
 });
-
-// Removes html tags, parenthesis and their content (e.g. furigana)
-// and returns all to lowercase
-function cleanupAnswer (str) {
-  return str.replace(/(\([^(]+\))|(<([^>]+)>)|[\.,。]/ig, '').toLowerCase();
-}

@@ -59,6 +59,8 @@ Template.newQuestion.onCreated(function () {
     if (typeof next === 'function') {
       next();
     }
+
+    this.speak();
   };
 
   this.fetchNextQuestion = () => {
@@ -93,6 +95,17 @@ Template.newQuestion.onCreated(function () {
       // Proceed to the next qestion
       this.fetchNextQuestion();
     });
+  };
+
+  this.speak = () => {
+    var question = this.question.get(),
+        src;
+
+    if ([GAME.ENGLISH].indexOf(question.type) === -1) {
+      return;
+    }
+
+    Tts.speak(cleanupSentence(question.description));
   };
 });
 
