@@ -132,7 +132,7 @@
     "story": "describing-things"
   },
   {
-    "english": "{{suffix}}{{name}} {{verb-divide-past}} a {{size}} {{object}} in {{fraction}}.",
+    "english": "{{suffix}} {{name}} {{verb-divide-past}} a {{size}} {{object}} in {{fraction}}.",
     "romaji": "{{name}}{{suffix}} wa {{size}} {{object}} o {{fraction}} ni {{verb-divide-past}}.",
     "kana": "{{name}}{{suffix}}は{{size}}{{object}}を{{fraction}}に{{verb-divide-past}}。",
     "story": "describing-things"
