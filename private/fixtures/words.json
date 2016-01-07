@@ -535,6 +535,20 @@
     "kanji": "帰りました"
   },
   {
+    "type": "verb-see",
+    "english": "see",
+    "romaji": "mimasu",
+    "kana": "みます",
+    "kanji": "見ます"
+  },
+  {
+    "type": "verb-see-past",
+    "english": "saw",
+    "romaji": "mita",
+    "kana": "みた",
+    "kanji": "見た"
+  },
+  {
     "type": "verb-eat",
     "english": "eat",
     "romaji": "tabemasu",
@@ -1008,6 +1022,13 @@
     "romaji": "hanpun",
     "kana": "はんぷん",
     "kanji": "半分"
+  },
+  {
+    "type": "event",
+    "english": "work",
+    "romaji": "shigoto",
+    "kana": "しごと",
+    "kanji": "仕事"
   },
   {
     "type": "sign",

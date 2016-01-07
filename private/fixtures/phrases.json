@@ -240,6 +240,12 @@
     "story": "conversation"
   },
   {
+    "english": "I {{verb-see-past}} a {{performance}} after {{event}}.",
+    "romaji": "{{weekday}} no ato, {{performance}} o {{verb-see-past}}.",
+    "kana": "{{weekday}}のあと、{{performance}}を{{verb-see-past}}.",
+    "story": "conversation"
+  },
+  {
     "english": "please come in.",
     "romaji": "douzo ohairi kudasai.",
     "kana": "どうぞおはいりください。",
@@ -336,9 +342,9 @@
     "story": "weekend-plans-1"
   },
   {
-    "english": "I'm going to see a {{performance}} with {{suffix}} {{name}} on {{weekday}}",
-    "romaji": "{{weekday}} ni {{name}}{{suffix}} to {{performance}} o mimasu",
-    "kana": "{{weekday}}に{{name}}{{suffix}}と{{performance}}を見ます。",
+    "english": "I'm going to {{verb-see}} a {{performance}} with {{suffix}} {{name}} on {{weekday}}.",
+    "romaji": "{{weekday}} ni {{name}}{{suffix}} to {{performance}} o {{verb-see}}.",
+    "kana": "{{weekday}}に{{name}}{{suffix}}と{{performance}}を{{verb-see}}。",
     "story": "weekend-plans-2"
   },
   {
