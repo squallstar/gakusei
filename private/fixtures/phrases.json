@@ -270,12 +270,6 @@
     "story": "conversation-16"
   },
   {
-    "english": "I {{verb-see-past}} a {{performance}} after the {{performance}}.",
-    "romaji": "{{weekday}} no ato, {{performance}} o {{verb-see-past}}.",
-    "kana": "{{weekday}}のあと、{{performance}}を{{verb-see-past}}.",
-    "story": "conversation-17"
-  },
-  {
     "english": "please come in.",
     "romaji": "douzo ohairi kudasai.",
     "kana": "どうぞおはいりください。",
