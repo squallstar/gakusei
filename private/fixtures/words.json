@@ -85,9 +85,16 @@
   {
     "type": "object",
     "english": "picture",
-    "romaji": "ewo",
-    "kana": "えを",
-    "kanji": "絵を"
+    "romaji": "e",
+    "kana": "え",
+    "kanji": "絵"
+  },
+  {
+    "type": "object",
+    "english": "painting",
+    "romaji": "kaiga",
+    "kana": "かいが",
+    "kanji": "絵画"
   },
   {
     "type": "object",
@@ -706,9 +713,9 @@
   {
     "type": "weekday",
     "english": "Thursday",
-    "romaji": "moyoubi",
-    "kana": "もようび",
-    "kanji": "も曜日"
+    "romaji": "mokuyoubi",
+    "kana": "もくようび",
+    "kanji": "木曜日"
   },
   {
     "type": "weekday",
@@ -1046,8 +1053,8 @@
   {
     "type": "fraction",
     "english": "half",
-    "romaji": "hanpun",
-    "kana": "はんぷん",
+    "romaji": "hanbun",
+    "kana": "はんぶん",
     "kanji": "半分"
   },
   {
