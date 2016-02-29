@@ -60,9 +60,9 @@
     "story": "describing-things"
   },
   {
-    "english": "there is a {{size}} {{object}} {{position}} {{pointer-object}} {{transport}}.",
-    "romaji": "{{pointer-object}} {{transport}} no {{position}} ni {{size}} {{object}} ga arimasu.",
-    "kana": "{{pointer-object}}{{transport}}の{{position}}に{{size}}{{object}}があります。",
+    "english": "there is a {{adjective}} {{object}} {{position}} {{pointer-object}} {{transport}}.",
+    "romaji": "{{pointer-object}} {{transport}} no {{position}} ni {{adjective}} {{object}} ga arimasu.",
+    "kana": "{{pointer-object}}{{transport}}の{{position}}に{{adjective}}{{object}}があります。",
     "story": "describing-things"
   },
   {
@@ -144,9 +144,9 @@
     "story": "describing-things"
   },
   {
-    "english": "{{suffix}} {{name}} {{verb-divide-past}} a {{size}} {{object}} in {{fraction}}.",
-    "romaji": "{{name}}{{suffix}} wa {{size}} {{object}} o {{fraction}} ni {{verb-divide-past}}.",
-    "kana": "{{name}}{{suffix}}は{{size}}{{object}}を{{fraction}}に{{verb-divide-past}}。",
+    "english": "{{suffix}} {{name}} {{verb-divide-past}} a {{adjective}} {{object}} in {{fraction}}.",
+    "romaji": "{{name}}{{suffix}} wa {{adjective}} {{object}} o {{fraction}} ni {{verb-divide-past}}.",
+    "kana": "{{name}}{{suffix}}は{{adjective}}{{object}}を{{fraction}}に{{verb-divide-past}}。",
     "story": "describing-things"
   },
   {

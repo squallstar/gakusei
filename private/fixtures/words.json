@@ -144,14 +144,14 @@
     "kana": "ウサギ"
   },
   {
-    "type": "size",
+    "type": "adjective size",
     "english": "big",
     "romaji": "ooki",
     "kana": "おおき",
     "kanji": "大き"
   },
   {
-    "type": "size",
+    "type": "adjective size",
     "english": "small",
     "romaji": "chiisai",
     "kana": "ちいさい",
@@ -1148,5 +1148,26 @@
     "romaji": "maiasa",
     "kana": "まいあさ",
     "kanji": "毎朝"
+  },
+  {
+    "type": "adjective color",
+    "english": "white",
+    "romaji": "akarui",
+    "kana": "あかるい",
+    "kanji": "明るい"
+  },
+  {
+    "type": "adjective color",
+    "english": "black",
+    "romaji": "kuroi",
+    "kana": "くろい",
+    "kanji": "黒い"
+  },
+  {
+    "type": "adjective color",
+    "english": "yellow",
+    "romaji": "kiiroi",
+    "kana": "きいろい",
+    "kanji": "黄色い"
   }
 ]
