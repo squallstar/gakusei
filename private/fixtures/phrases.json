@@ -18,10 +18,22 @@
     "story": "at-the-shop-2"
   },
   {
+    "english": "{{pointer-object}} {{object}} is {{adjective value}}.",
+    "romaji": "{{pointer-object}} {{object}} wa {{adjective value}} desu.",
+    "kana": "{{pointer-object}}{{object}}は{{adjective value}}です。",
+    "story": "at-the-shop-2"
+  },
+  {
     "english": "{{pointer}} {{counter}}, please.",
     "romaji": "{{pointer}} o {{counter}} kudasai.",
     "kana": "{{pointer}}を{{counter}}ください。",
     "story": "at-the-shop-2"
+  },
+  {
+    "english": "It's {{adjective}}.",
+    "romaji": "{{adjective}} desu.",
+    "kana": "{{adjective}}です。",
+    "story": "describing-things"
   },
   {
     "english": "{{pointer}} is a {{object}}.",

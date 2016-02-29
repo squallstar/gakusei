@@ -105,6 +105,19 @@
   },
   {
     "type": "object",
+    "english": "TV",
+    "romaji": "terebi",
+    "kana": "テレビ"
+  },
+  {
+    "type": "object",
+    "english": "chair",
+    "romaji": "isu",
+    "kana": "いす",
+    "kanji": "椅子"
+  },
+  {
+    "type": "object",
     "english": "notebook",
     "romaji": "nooto",
     "kana": "ノート"
@@ -628,6 +641,13 @@
   },
   {
     "type": "time-past",
+    "english": "last month",
+    "romaji": "sengetsu",
+    "kana": "せんげつ",
+    "kanji": "先月"
+  },
+  {
+    "type": "time-past",
     "english": "last year",
     "romaji": "sakunen",
     "kana": "さくねん",
@@ -1143,6 +1163,13 @@
     "kanji": "一つ"
   },
   {
+    "type": "counter",
+    "english": "two",
+    "romaji": "futatsu",
+    "kana": "ふたつ",
+    "kanji": "二つ"
+  },
+  {
     "type": "frequency",
     "english": "every morning",
     "romaji": "maiasa",
@@ -1169,5 +1196,47 @@
     "romaji": "kiiroi",
     "kana": "きいろい",
     "kanji": "黄色い"
+  },
+  {
+    "type": "adjective color",
+    "english": "blue",
+    "romaji": "aoi",
+    "kana": "あおい",
+    "kanji": "青い"
+  },
+  {
+    "type": "adjective color",
+    "english": "red",
+    "romaji": "akai",
+    "kana": "あかい",
+    "kanji": "赤い"
+  },
+  {
+    "type": "adjective temperature",
+    "english": "hot",
+    "romaji": "atsui",
+    "kana": "あつい",
+    "kanji": "暑い"
+  },
+  {
+    "type": "adjective temperature",
+    "english": "cold",
+    "romaji": "samui",
+    "kana": "さむい",
+    "kanji": "寒い"
+  },
+  {
+    "type": "adjective value",
+    "english": "expensive",
+    "romaji": "takai",
+    "kana": "たかい",
+    "kanji": "高い"
+  },
+  {
+    "type": "adjective value",
+    "english": "cheap",
+    "romaji": "yasui",
+    "kana": "やすい",
+    "kanji": "安い"
   }
 ]
