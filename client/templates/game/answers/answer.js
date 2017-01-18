@@ -1,5 +1,3 @@
-const WARN_ACCURACY = 50;
-
 Template.answer.helpers({
   isShowingWords: function () {
     return Template.instance().showWords.get();

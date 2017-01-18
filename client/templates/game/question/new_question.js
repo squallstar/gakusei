@@ -59,6 +59,8 @@ Template.newQuestion.onCreated(function () {
     if (typeof next === 'function') {
       next();
     }
+
+    this.speak();
   };
 
   this.fetchNextQuestion = () => {
@@ -85,14 +87,27 @@ Template.newQuestion.onCreated(function () {
       question:  this.question.get(),
       userAnswer: answer,
       timeSpent: this.timeSpent
-    }, (err, correct) => {
+    }, (err, res) => {
       // We allow the user to skip the next sentence if the previous one was correct
       // or he already had a credit to skip
-      Session.setPersistent(CAN_SKIP_QUESTION, correct || Session.get(CAN_SKIP_QUESTION));
+      Session.setPersistent(CAN_SKIP_QUESTION, res.correct || Session.get(CAN_SKIP_QUESTION));
+
+      Sound.sfx('tone-' + (res.accuracy >= WARN_ACCURACY ? 'correct' : 'wrong'));
 
       // Proceed to the next qestion
       this.fetchNextQuestion();
     });
+  };
+
+  this.speak = () => {
+    var question = this.question.get(),
+        src;
+
+    if ([GAME.ENGLISH].indexOf(question.type) === -1) {
+      return;
+    }
+
+    Sound.speak(cleanupSentence(question.description));
   };
 });
 

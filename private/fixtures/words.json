@@ -84,10 +84,37 @@
   },
   {
     "type": "object",
+    "english": "picture",
+    "romaji": "e",
+    "kana": "え",
+    "kanji": "絵"
+  },
+  {
+    "type": "object",
+    "english": "painting",
+    "romaji": "kaiga",
+    "kana": "かいが",
+    "kanji": "絵画"
+  },
+  {
+    "type": "object",
     "english": "watch",
     "romaji": "tokei",
     "kana": "とけい",
     "kanji": "時計"
+  },
+  {
+    "type": "object",
+    "english": "TV",
+    "romaji": "terebi",
+    "kana": "テレビ"
+  },
+  {
+    "type": "object",
+    "english": "chair",
+    "romaji": "isu",
+    "kana": "いす",
+    "kanji": "椅子"
   },
   {
     "type": "object",
@@ -130,14 +157,14 @@
     "kana": "ウサギ"
   },
   {
-    "type": "size",
+    "type": "adjective size",
     "english": "big",
     "romaji": "ooki",
     "kana": "おおき",
     "kanji": "大き"
   },
   {
-    "type": "size",
+    "type": "adjective size",
     "english": "small",
     "romaji": "chiisai",
     "kana": "ちいさい",
@@ -400,6 +427,13 @@
   },
   {
     "type": "place",
+    "english": "the temple",
+    "romaji": "otera",
+    "kana": "おてら",
+    "kanji": "お寺"
+  },
+  {
+    "type": "place",
     "english": "the village",
     "romaji": "mura",
     "kana": "むら",
@@ -490,6 +524,13 @@
     "kana": "インド"
   },
   {
+    "type": "verb-like",
+    "english": "like",
+    "romaji": "sukidesu",
+    "kana": "すきです",
+    "kanji": "好きです"
+  },
+  {
     "type": "verb-direction",
     "english": "going",
     "romaji": "ikimasu",
@@ -533,6 +574,20 @@
     "romaji": "kaerimashita",
     "kana": "かえりました",
     "kanji": "帰りました"
+  },
+  {
+    "type": "verb-see",
+    "english": "see",
+    "romaji": "mimasu",
+    "kana": "みます",
+    "kanji": "見ます"
+  },
+  {
+    "type": "verb-see-past",
+    "english": "saw",
+    "romaji": "mita",
+    "kana": "みた",
+    "kanji": "見た"
   },
   {
     "type": "verb-eat",
@@ -583,6 +638,13 @@
     "romaji": "senshuu",
     "kana": "せんしゅう",
     "kanji": "先週"
+  },
+  {
+    "type": "time-past",
+    "english": "last month",
+    "romaji": "sengetsu",
+    "kana": "せんげつ",
+    "kanji": "先月"
   },
   {
     "type": "time-past",
@@ -671,9 +733,9 @@
   {
     "type": "weekday",
     "english": "Thursday",
-    "romaji": "moyoubi",
-    "kana": "もようび",
-    "kanji": "も曜日"
+    "romaji": "mokuyoubi",
+    "kana": "もくようび",
+    "kanji": "木曜日"
   },
   {
     "type": "weekday",
@@ -982,6 +1044,12 @@
     "kana": "どこ"
   },
   {
+    "type": "when",
+    "english": "when",
+    "romaji": "itsu",
+    "kana": "いつ"
+  },
+  {
     "type": "status",
     "english": "busy",
     "romaji": "isogashii",
@@ -990,7 +1058,7 @@
   },
   {
     "type": "self",
-    "english": "private",
+    "english": "I",
     "romaji": "watashi",
     "kana": "わたし",
     "kanji": "私"
@@ -1005,9 +1073,16 @@
   {
     "type": "fraction",
     "english": "half",
-    "romaji": "hanpun",
-    "kana": "はんぷん",
+    "romaji": "hanbun",
+    "kana": "はんぶん",
     "kanji": "半分"
+  },
+  {
+    "type": "event",
+    "english": "work",
+    "romaji": "shigoto",
+    "kana": "しごと",
+    "kanji": "仕事"
   },
   {
     "type": "sign",
@@ -1050,5 +1125,118 @@
     "romaji": "minamiguchi",
     "kana": "みなみぐち",
     "kanji": "南口"
+  },
+  {
+    "type": "quantity",
+    "english": "a lot of",
+    "romaji": "ooi",
+    "kana": "おおい",
+    "kanji": "多い",
+    "next_plural": true
+  },
+  {
+    "type": "building",
+    "english": "temple",
+    "romaji": "otera",
+    "kana": "おてら",
+    "kanji": "お寺"
+  },
+  {
+    "type": "home",
+    "english": "home",
+    "romaji": "uchi",
+    "kana": "うち",
+    "kanji": "家"
+  },
+  {
+    "type": "month",
+    "english": "March",
+    "romaji": "sangatsu",
+    "kana": "さんがつ",
+    "kanji": "三月"
+  },
+  {
+    "type": "counter",
+    "english": "one",
+    "romaji": "hitotsu",
+    "kana": "ひとつ",
+    "kanji": "一つ"
+  },
+  {
+    "type": "counter",
+    "english": "two",
+    "romaji": "futatsu",
+    "kana": "ふたつ",
+    "kanji": "二つ"
+  },
+  {
+    "type": "frequency",
+    "english": "every morning",
+    "romaji": "maiasa",
+    "kana": "まいあさ",
+    "kanji": "毎朝"
+  },
+  {
+    "type": "adjective color",
+    "english": "white",
+    "romaji": "akarui",
+    "kana": "あかるい",
+    "kanji": "明るい"
+  },
+  {
+    "type": "adjective color",
+    "english": "black",
+    "romaji": "kuroi",
+    "kana": "くろい",
+    "kanji": "黒い"
+  },
+  {
+    "type": "adjective color",
+    "english": "yellow",
+    "romaji": "kiiroi",
+    "kana": "きいろい",
+    "kanji": "黄色い"
+  },
+  {
+    "type": "adjective color",
+    "english": "blue",
+    "romaji": "aoi",
+    "kana": "あおい",
+    "kanji": "青い"
+  },
+  {
+    "type": "adjective color",
+    "english": "red",
+    "romaji": "akai",
+    "kana": "あかい",
+    "kanji": "赤い"
+  },
+  {
+    "type": "adjective temperature",
+    "english": "hot",
+    "romaji": "atsui",
+    "kana": "あつい",
+    "kanji": "暑い"
+  },
+  {
+    "type": "adjective temperature",
+    "english": "cold",
+    "romaji": "samui",
+    "kana": "さむい",
+    "kanji": "寒い"
+  },
+  {
+    "type": "adjective value",
+    "english": "expensive",
+    "romaji": "takai",
+    "kana": "たかい",
+    "kanji": "高い"
+  },
+  {
+    "type": "adjective value",
+    "english": "cheap",
+    "romaji": "yasui",
+    "kana": "やすい",
+    "kanji": "安い"
   }
 ]
